@@ -13,13 +13,15 @@ epic is "Publish the kgbo stack to GitHub".
 All four repositories are public under `Hoodoo/`, MIT-licensed, with
 `main` pushed. The three tools install with `go install
 github.com/Hoodoo/<tool>/cmd/<tool>@latest`, verified in an empty GOPATH
-with `GOPROXY=direct`; without ldflags the binaries report their module
-pseudo-version (`v0.0.0-20261003153934-…`). Each tool's wiki was updated
+with `GOPROXY=direct`; `@latest` resolves to the `v0.1.0` tag and the
+binaries report `v0.1.0` from their build info. Each tool's wiki was updated
 after the rename and `owcli check` passes. A pattern scan of every
 repository's full history found no credentials or `/home/...` paths.
 
-Not done yet: release tags (`v0.1.0`), which would replace the
-pseudo-versions; prebuilt binaries.
+Not done yet: prebuilt binaries (kata issue b4ba).
+
+To release: `git tag -a vX.Y.Z -m vX.Y.Z && git push origin vX.Y.Z` in the
+tool's repository; `go install …@latest` picks up the highest semver tag.
 
 The preflight below is kept as the checklist for the next tool added to
 the stack.
