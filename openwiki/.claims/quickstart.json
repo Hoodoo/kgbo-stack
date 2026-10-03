@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:f0fab0f904ec98c57c0f993a1d52362a83f07a09ff92f24b0f9b3fcbb92b1eac",
+  "claims": [
+    {
+      "id": "claim_fc72b3a441bb8c4e9837ff7caec07238",
+      "statement": "kgbo-stack bundles kata, goatlassian, bossman, and owcli, and is defined by roles each filled by one provider.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L1-L8",
+          "version": "repo-lines-v1:sha256:a978bd4e0fbec706158ceff628fcd5c54febc9d52ba2c90ec0aac66377a87c92:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWJhN2EwYzAzNTJiZmQxMzA5N2IzYWI5NWYyM2Q3ODFiYWZkNThkNDQ0N2FlNTQ1NGIwOTEzNTFmYTIxYTFjOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzlmNzBmYTE1ZWZiMDhlMDNmZjA3YmQ3ZWY0MTc1OTRjNzUwZTE0YTRkN2JlMTU2YmE2MTcxY2ZiYmNiZjExMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzBlNDE1ZDdhM2JiODgxOTk1ODVkMTFkNTIxMDhkMWY3ODczZTAxODJmNjY3YzhhZTNkZDhjOTJjNTRlZTc4YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0ee60306d8fefba0450d2133b46b6ebf",
+      "statement": "The README links each provider's repository and gives a quick install with the kata install script and go install for owcli, bossman, and goatlassian.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L10-L24",
+          "version": "repo-lines-v1:sha256:bbce32fd2036e0affb55f2e183e9d2eeef3445b3b642e5067c6dbae68a0048c9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzMjg3Y2M3ZWQwMGJmMGFjMGRhNjA2M2VlOTY0ODc0YzNlMzBhYjBlNjhkZjRlY2Q0OTJmNDY5NTcyZTY4YzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkNmFjNDNhYzI2NTdkYmE4OTFkY2JmMWVhZWY4YTcyMzNlMjg1ODQ4OGMyYTg1YTgyMTM3YjRjMjlkYTUxZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc1NDQ1ZTZlMmM1MGE5Y2ZjNWU4MDcxY2UwOTllNDk1NWUyYWQxOTdkYWI2MGMwMzY1OTg3MmJjOTkwYmNkY2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_56b3201f7ca2caddb8609a2b8131ec8e",
+      "statement": "stack.toml is the source of truth for docs/install.md and docs/publishing.md.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L26-L27",
+          "version": "repo-lines-v1:sha256:ac280b0f2ce6ff454e7fc07ab06f1644f59c6918b58dd236d861a14cabe44507:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWYxODA2MmJmZGYzZmU1ZjQ1MTRiYTUyMzQ0OGFmM2U0ODAxNjNjOGI2ODI4MTEyYjcyMzQ2MWU2MDIxNTFmOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWFkMjgxNTQ1ODc2Yzc2ZmQyMmEzZTA2MzBjZjczYzBmOTI5MGZiYTllYjk1MjU1NDNkMzcwNTAzNjkxNzE1ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzhmMGM1YWQ1ODNhNDI3Y2NhZGZkMjg5MWY1OTlkN2NlMGI2ZTczNWFmM2I1M2ExZGQ0N2U2NTQ2NzY2MGFkNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzQ0OWMyYmVlNDZhY2I1Y2IwZDBlNzk4Yjk5YjRiYWRkMzVkOTIyYjI2MTkxZWI1MmZlMjA5YjNlZTI4ZjIxMSJ9"
+        },
+        {
+          "resource": "repo://stack.toml#L8-L8",
+          "version": "repo-lines-v1:sha256:da1f12c03bcec95e6c15d8de9680ef8a81443cee31ccac0388fc66dc1e994263:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGExZjEyYzAzYmNlYzk1ZTZjMTVkOGRlOTY4MGVmOGE4MTQ0M2NlZTMxY2NhYzAzODhmYzY2ZGMxZTk5NDI2MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGExZjEyYzAzYmNlYzk1ZTZjMTVkOGRlOTY4MGVmOGE4MTQ0M2NlZTMxY2NhYzAzODhmYzY2ZGMxZTk5NDI2MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDc1M2M5NDA3NWQ4NTllNTkyMDc4Njk4MzAxMTkzMDIxNTg2YjRkMjkyZDE5MDM2Njk1M2FkMzBlNDY1NjViYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWY3ZDdiYmIyY2EwNGM1ZTU0ZGRiYmRiODlhOWZjNjVkZmNmMjlhZWI1ZjgwMDE2ZTM1OWU2MjczY2RkMGUzNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f1035e0ab412a7539debfd418a58da70",
+      "statement": "This repository is bound to the kgbo-stack kata project and tracks bundle-level work there.",
+      "evidence": [
+        {
+          "resource": "repo://.kata.toml#L1-L4",
+          "version": "repo-lines-v1:sha256:a727445cfe39a997bdde04206eb8f9583fdf813fc6ec243bc0f6a14a581d6418:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJhYjEyNjY1ZDk4YWVmMDIxYmE2NDk1M2M2MWIwZWQ4YTkwOGNmYjU2YTFjMDFlMmZjYjRiMDUyYjcxYTJhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzY1ZmQ0M2QxMGM4YThlYmY2OTBkNjNjNDYxYTg4MDNkYTYzMDliZDdlZjBkMWZkNWMxMzY2NmRhZGNiODNiYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://README.md#L33-L35",
+          "version": "repo-lines-v1:sha256:ec2e6a9e6c5b83dc447094d0bba92059c0d8fef10d2914968d9be1e0a27bcbbe:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTgzNDY2MzFlMGE5YzBjMDBkNTM4ZjI3MTZkMzc4MDMwMTczYTkyNGEzNGFhOTk2YTYyNmZjMmZmNmE0OGZmNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGE2ODQyYzhhMGVmODU5MGU4ZWQ3ZjQ4YTE5YzdhNTNlY2MyNmNjOTVkODc4NWFlNDBjNjU3NWNjMWU3ODJhZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTQxNGRlZTI2MmJhYTVlOTg2MzNjMGZhNzBjZjc1MmU0NWE2YWVlOWY0Y2UyNDExNDhkYzI1YmVkZmNjZTAwYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDMwNDU1OGQ4YzMzZThjYWNlNTQxMDAwM2EwZjMxMTdkODQyMmE3ZDBhOWQ2OGFkZDY0OTBmMGM4ZWVkMWNhZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c0a083c27bfab8fb2c2bff94babddc72",
+      "statement": "The goatlassian provider's local checkout is ~/AISlop/oatlassian and its repository is github.com/Hoodoo/goatlassian.",
+      "evidence": [
+        {
+          "resource": "repo://stack.toml#L109-L114",
+          "version": "repo-lines-v1:sha256:712eab482674ffb7e681025149083199a0fbb28f738766b8be4c8cf3e4097093:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDE4N2RkNDYxZDc5MTY5ZDhjNDFhNTM4MDg1Mzk0YTg5ZmM1NWZjN2Y4NmE3NTBlNWRiNzJiMTU4MjYyY2FlYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTQyYjhhODRkYzM2Y2I0ZWU5N2U2OWJiZThmZWZjYzQ3NGIzNzhmNjUwNzNmNTA1Y2E3YTMyZWM0OGE3M2MwYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGU0NGY0ZjVjOWQ3ZjZlYTJhNjFhOTAyNzJkMmVkMTUxMjQ0YzFmMzA5MGVhNmYxNTQ3ZDE2Nzc4NDE4ZTgwMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGY4ODhiMTM3ZjI1ZWI5ZWY4MTlkOWZlN2I5ZjNlZjdlMjM1MmU2NGY0NTk1NzE2NTgxMDZiZGQ2MjUzNTEwZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3871ec0ed5993edeb05cd623754b1d5f",
+      "statement": "The repository is MIT-licensed.",
+      "evidence": [
+        {
+          "resource": "repo://LICENSE#L1-L1",
+          "version": "repo-lines-v1:sha256:267f7a2e19dfa9df99af774520985a0e521925293ea5b7e767ab06969d06bf91:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjY3ZjdhMmUxOWRmYTlkZjk5YWY3NzQ1MjA5ODVhMGU1MjE5MjUyOTNlYTViN2U3NjdhYjA2OTY5ZDA2YmY5MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjY3ZjdhMmUxOWRmYTlkZjk5YWY3NzQ1MjA5ODVhMGU1MjE5MjUyOTNlYTViN2U3NjdhYjA2OTY5ZDA2YmY5MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGEwNDMwMzBiZjdiNWFiYmNlMDMzOWYyMWRiNGU0NGIzYjBlYWNlNjJjNDI5MTM0YjhjOGYyNzk3YmFkYzkxOCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/v0.1.0",
+    "at": "2026-10-03T16:03:45.638Z"
+  }
+}

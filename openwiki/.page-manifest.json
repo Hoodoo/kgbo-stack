@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/concepts/roles-and-providers.md": {
+      "pageVersion": "sha256:1cda357754266b24e6f37b25d66233d52f35a61ffa960fa80bab70203e21c7e9",
+      "completedBy": "owcli/v0.1.0",
+      "completedRunId": "9fee8147-1aec-411c-8f99-3b287faebd26",
+      "gitHead": "a926e87cd3bda18764a758ea35f5ffb3a1dafe63",
+      "sourceFingerprint": "sha256:463e14acefdccabb1589994255e0ca749a757c55f7ba2173a2838c28aab55825"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:f0fab0f904ec98c57c0f993a1d52362a83f07a09ff92f24b0f9b3fcbb92b1eac",
+      "completedBy": "owcli/v0.1.0",
+      "completedRunId": "9fee8147-1aec-411c-8f99-3b287faebd26",
+      "gitHead": "a926e87cd3bda18764a758ea35f5ffb3a1dafe63",
+      "sourceFingerprint": "sha256:463e14acefdccabb1589994255e0ca749a757c55f7ba2173a2838c28aab55825"
+    },
+    "/openwiki/workflows/maintaining-the-stack.md": {
+      "pageVersion": "sha256:efcc39be814765c70578e21d2743f56ad358e69b753a2f9a25de338ba89ed1e6",
+      "completedBy": "owcli/v0.1.0",
+      "completedRunId": "9fee8147-1aec-411c-8f99-3b287faebd26",
+      "gitHead": "a926e87cd3bda18764a758ea35f5ffb3a1dafe63",
+      "sourceFingerprint": "sha256:463e14acefdccabb1589994255e0ca749a757c55f7ba2173a2838c28aab55825"
+    }
+  }
+}
