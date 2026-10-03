@@ -59,7 +59,7 @@ goatlassian_kind = "kata"
 
 [providers.beads]
 role = "tracker"
-upstream = "https://github.com/steveyegge/beads"
+upstream = "https://github.com/gastownhall/beads"
 ours = false
 install = "npm install -g @beads/bd"
 check = "bd doctor"
