@@ -1,0 +1,116 @@
+# kgbo-stack: the bundle manifest.
+#
+# The stack is defined by ROLES, not by tools. Each role is a job an agent's
+# working environment needs done; each provider is one tool that can do it.
+# A machine picks one provider per role ("active"); the others may be
+# installed for humans, but only the active one is wired into agent hosts.
+#
+# This file is the source of truth for docs/install.md and docs/publishing.md.
+# Keep it declarative: a future `kgbo` installer reads it (see kata issue in
+# this project), so every command here must be copy-pasteable as written.
+# {repo} is the repository being onboarded, {host} an agent host (claude|codex).
+
+version = 1
+
+# ---------------------------------------------------------------- roles
+
+[roles.tracker]
+purpose = "System of record for intent: what is being worked on, by whom, what is blocked, what needs a human."
+contract = [
+  "agent instructions live between managed markers in AGENTS.md (or are injected by a hook)",
+  "one project per repository, resolvable from the repository root",
+  "machine-readable output (--json) for issues, attention state, and deadlines",
+]
+default = "kata"
+
+[roles.knowledge]
+purpose = "Repository memory: an engineering wiki agents read just in time and update after merges."
+contract = [
+  "agent instructions live between managed markers in AGENTS.md, or an MCP server/skill — never both providers at once",
+  "wiki per repository, groupable into workspaces for cross-repo search",
+  "a model-free check that tells whether the wiki is current",
+]
+default = "owcli"
+
+[roles.sessions]
+purpose = "Keep, browse, and measure agent sessions before the hosts delete them."
+contract = ["archives Claude Code and Codex logs", "--json listing by directory"]
+default = "bossman"
+
+[roles.portfolio]
+purpose = "One view across repositories: what is in flight, stale, needs a human, costs money."
+contract = ["reads the other roles through their CLIs; never writes into repositories"]
+default = "goatlassian"
+
+# ------------------------------------------------------------ providers
+
+[providers.kata]
+role = "tracker"
+upstream = "https://github.com/kenn-io/kata"
+ours = false
+install = "curl -fsSL https://katatracker.com/install.sh | bash"   # macOS: brew install kata
+update = "kata update"
+check = "kata health"
+onboard = "kata init --with-agents"          # in {repo}; commits .kata.toml + AGENTS.md block
+host.claude = "kata init --with-hooks"       # work.attention hooks in {repo}/.claude/
+host.codex = "kata init --with-codex-hooks"
+markers = ["<!-- BEGIN KATA", "<!-- END KATA -->"]
+goatlassian_kind = "kata"
+
+[providers.beads]
+role = "tracker"
+upstream = "https://github.com/steveyegge/beads"
+ours = false
+install = "npm install -g @beads/bd"
+check = "bd doctor"
+onboard = "bd init"                          # then paste `bd onboard` output into AGENTS.md
+host.claude = "bd setup claude"           # bd hooks = git hooks for JSONL sync, not agent hooks
+goatlassian_kind = ""                        # no adapter yet: tracked in this project
+
+[providers.owcli]
+role = "knowledge"
+repo = "https://github.com/Hoodoo/owcli"
+local = "~/AISlop/owcli"
+ours = true
+install = "go install github.com/Hoodoo/owcli/cmd/owcli@latest"   # or: clone && make install
+update = "make update"                       # in a clone
+check = "owcli check"                        # in {repo}; exit 0 = wiki current
+onboard = "owcli agents-md"                  # then ask the agent: "initialize the wiki" (owcli run …)
+host.claude = ""                             # AGENTS.md block is the whole integration
+markers = ["<!-- OPENWIKI:START", "<!-- OPENWIKI:END -->"]
+conflicts = ["openwiki"]                     # its MCP server + skill shadow owcli for agents
+goatlassian_kind = "owcli-wiki"
+
+[providers.openwiki]
+role = "knowledge"
+upstream = "https://github.com/langchain-ai/openwiki"
+ours = false
+install = "npm install -g openwiki"
+check = ""                                   # no model-free check upstream
+onboard = "openwiki --init"                  # needs a model API key
+host.claude = "openwiki integrations install claude"
+host.codex = "openwiki integrations install codex"
+uninstall_host = "openwiki integrations uninstall {host}"
+# owcli wraps both directions: make -C <owcli> openwiki-install | openwiki-uninstall (OPENWIKI_HOSTS)
+conflicts = ["owcli"]
+goatlassian_kind = ""                        # no adapter yet: tracked in this project
+
+[providers.bossman]
+role = "sessions"
+repo = "https://github.com/Hoodoo/bossman"
+local = "~/AISlop/bossman"
+ours = true
+install = "go install github.com/Hoodoo/bossman/cmd/bossman@latest"
+check = "bossman sync"
+schedule = "17 * * * * $HOME/.local/bin/bossman sync >/dev/null"
+host.claude = "curl -fsSL https://raw.githubusercontent.com/Hoodoo/bossman/main/skills/session-catalogue-close/SKILL.md --create-dirs -o ~/.claude/skills/session-catalogue-close/SKILL.md"
+goatlassian_kind = "sessions"
+
+[providers.goatlassian]
+role = "portfolio"
+repo = "https://github.com/Hoodoo/goatlassian"
+local = "~/AISlop/oatlassian"
+ours = true
+install = "go install github.com/Hoodoo/goatlassian/cmd/goatlassian@latest"
+check = "goatlassian services"
+onboard = "goatlassian adopt {repo}"
