@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:efcc39be814765c70578e21d2743f56ad358e69b753a2f9a25de338ba89ed1e6",
+  "pageVersion": "sha256:7ee6fe3ce36b7e18c867650a2678f244af9e1d31d2c7de46dc3de57934712d9c",
   "claims": [
     {
       "id": "claim_d595e017c640e817a6e1f819ff280ed7",
@@ -47,26 +47,26 @@
       "statement": "The publishing preflight is kept as the checklist for the next tool added to the stack and covers module rename, version fallback, license, shipped assets, secret scan, wiki refresh, and tagging.",
       "evidence": [
         {
-          "resource": "repo://docs/publishing.md#L26-L27",
+          "resource": "repo://docs/publishing.md#L27-L28",
           "version": "repo-lines-v1:sha256:d22cec933059c4e073e686bbd9fec42059404eca72d7cf44196a393bd6f10927:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTc5MjJmY2U1ZDBiZjgzNGNjY2U4MmJhZjIwOTc0MzE1ZjhjMmUxMDE4OGRlOGM1ZWMwYzQ4MjVhNjE4ZjBhYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmNiZGIxYTk3MTU5YzI0N2U5MjAzMzMwYTQ3ZWY3Y2RhMTA1YWMyMjA5M2YwMWVkYzQ4OWJjZGExZGQ0MWFhZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTVjZjU1YjYxY2Q1ZDBiNmJhNmI3MzdlY2JlMTM5YTdhZWRjZDBjODgzYzc5NWI4NmFjMjRkOGU2Y2YzOTY2NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGM2MWNiMmNkNmMwZDIzNWMwZTQwODhjNjM2YzVmMTVlZjg0ZjkzMjhlMDhmODk3YTE2OWNjNzViMjIyNjNiNyJ9"
         },
         {
-          "resource": "repo://docs/publishing.md#L42-L68",
+          "resource": "repo://docs/publishing.md#L43-L69",
           "version": "repo-lines-v1:sha256:96db676cd85f41352cfa0761c6fcee4a0ee50d62cef5005fdfe0e12d4619bfd4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlYjlkN2UzNWM4MTFmYjhkYzE3YTg0MzM5NTUyNTU2ZDE3OGY2OGVmNjhkNmQ2NjY5ZTE1MThiMTgwMWRkM2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNDFhMDdkNDkxYTEzMTQ0NTYxYjcxMDU1YzQzYTY5N2JjNGY1NDUyY2ZkMWI5ZWVkYzQ3YWNhYWMyNDA2YjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0NjY0OGYyMTJmYTFhOGMxMzlmNjZkZDUyMWM5NzQ1ZGM4YzJmMGM2ZWQ3Nzg4MjQwOGRjNDlmYWUyZDUzMjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzMDkzMzg2MmNkOTVhMjc5ZTZiZTM5ODMxMmZjMDBiNTI3Y2I5YjA1ZDhhMDdiMTEzOTg1MTBmYzRhYTMwYzgifQ"
         }
       ]
     },
     {
       "id": "claim_0eac0c16a772cff808d609cc626ae825",
-      "statement": "All four repositories are public and MIT-licensed, and owcli, bossman, and goatlassian install via go install at v0.1.0.",
+      "statement": "All four repositories are public and MIT-licensed; owcli, bossman, and goatlassian install via go install, first released as v0.1.0, with owcli at v0.2.0.",
       "evidence": [
         {
           "resource": "repo://LICENSE#L1-L3",
           "version": "repo-lines-v1:sha256:d4d12a0c1469e104dad72f3ebf2f506429e396827aaa10d15174a22a599d15fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjY3ZjdhMmUxOWRmYTlkZjk5YWY3NzQ1MjA5ODVhMGU1MjE5MjUyOTNlYTViN2U3NjdhYjA2OTY5ZDA2YmY5MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2ZhM2JiMjdmODNkODkxZDBhNTc5YTEwYzQzN2E2Njk4YzM0ODNmNTZiMzExZjMwMWIzNDQ0MmIzMTk1MTk1ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjgyZjllOWZjNDZkNGU0OWU5NTc0YmVkNTgzOWJiMThiY2FkMDRiMDI3YWMyNTZkZWE4ZDllMzdjZGFmNDhjZCJ9"
         },
         {
-          "resource": "repo://docs/publishing.md#L11-L19",
-          "version": "repo-lines-v1:sha256:947dfd1cfcb121e5ffd1d23c7993aaeca87171691c4f9533b682f73148e86417:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjk1NTBjZmIyODIxOTkyMmQ5MzJkYWNhMTA3M2E1OTkxMDc1MmE3NTRiZWNjM2UwZTk4ZjBlMDgyOGUxYTk1NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGEwNTk5NjBjMjljMDM0MThmZDA5NTk3Y2M5ZGYxMTRkZDNkZGNlNDI0YzJhYmY1ODZjM2MzYzkxNTE1M2I2MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDM5NDMwZDQ0MjQ5Y2U5ZmE0MDk2M2RjZjc2ZWY3NDI1NmMwNGJhNmU0NmI5NzhjZmU5YmIyMzdjOTA4NTFkOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjRlOGEyOTlhZTQ2ZDQ1NjEzZDkzMjU4NDFlZTY3NWQ5NWEyZDc5YmM4MDZjOTI5MTcwYTU3Y2UxM2I3MDdiMCJ9"
+          "resource": "repo://docs/publishing.md#L11-L20",
+          "version": "repo-lines-v1:sha256:23e39adee11b3ca072b505322b1ffd16e73ba98a7e557463b1d95e3e88fbcc76:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NTUwY2ZiMjgyMTk5MjJkOTMyZGFjYTEwNzNhNTk5MTA3NTJhNzU0YmVjYzNlMGU5OGYwZTA4MjhlMWE5NTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhMDU5OTYwYzI5YzAzNDE4ZmQwOTU5N2NjOWRmMTE0ZGQzZGRjZTQyNGMyYWJmNTg2YzNjM2M5MTUxNTNiNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzOTQzMGQ0NDI0OWNlOWZhNDA5NjNkY2Y3NmVmNzQyNTZjMDRiYTZlNDZiOTc4Y2ZlOWJiMjM3YzkwODUxZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI0ZThhMjk5YWU0NmQ0NTYxM2Q5MzI1ODQxZWU2NzVkOTVhMmQ3OWJjODA2YzkyOTE3MGE1N2NlMTNiNzA3YjAifQ"
         }
       ]
     },
@@ -75,7 +75,7 @@
       "statement": "A release is a semver tag pushed in the tool's repository, which go install @latest resolves; prebuilt binaries are not produced yet.",
       "evidence": [
         {
-          "resource": "repo://docs/publishing.md#L21-L24",
+          "resource": "repo://docs/publishing.md#L22-L25",
           "version": "repo-lines-v1:sha256:82e4c008b8fc03e19946e55c0702c841c6b2d5291b68971ac4f02ed4803c211a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk4YWFlODllYTc5MDFkY2I0Y2Y1MmRmZDA3NjQzZDc5YWE0MTNjYWNmM2NhY2VjMTRlYzg2MDYyOTFiZjM0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzRiZDMyMTRkMDM5MjQxMDlhMmRiODFmYTZkZmIyNjNjMTEzNzFiMjAxYzI3NzlkNTdkNmYyZjJiOGM1MDhmZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2YwODUwYmZmNDQwYmUwYzEzYzMyZjYwYWNmOGUwYzIzZGQwMjIyYTExNWFkZjAzMTQzZDRkZmJiYzEyMjk5OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGE1NjBjNjk3YmM2NzQ0ZGM2MWM0OWE3MjhlOGVhODEyOTdjYTE5YTIxMzMwNTBhYWNmYmRmMzZjMmZiZDcxMSJ9"
         }
       ]
@@ -106,7 +106,7 @@
     }
   ],
   "verification": {
-    "by": "owcli/v0.1.0",
-    "at": "2026-10-03T16:03:28.746Z"
+    "by": "owcli/v0.2.0",
+    "at": "2026-10-05T08:04:56.078Z"
   }
 }
