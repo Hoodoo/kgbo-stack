@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ad80e9d295a8cb09c1a25f0b9e32f19e5744d8febbad8fecb12e6dee19519e30",
+  "claims": [
+    {
+      "id": "claim_ae17d40ab6f3294f953f1a338aae2b6f",
+      "statement": "The bundle root is ~/kgbo, overridable with KGBO_HOME, and snapshots never copy -wal, -shm, -journal, lock, or socket files.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L58-L59",
+          "version": "repo-lines-v1:sha256:24d297c14769bb5ab01718501fb03a37fba73b41d88b829312be1efb38dd1054:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzU3ZDUyYzFiMjQ2MTBiM2YyZjZiM2I2OGEyZmFiY2ZkNmQ5ZDY1YzQ3ODM1M2QzOTI0YzEyOTIxNTQyYzk5ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2Y3MzhiODhmMzk4NGZhZDAxYjI2ODYwZGQ4YWZlZWQ0YzE2OGVkMmMzZGRkZDllMThkMzJhM2ExYWVmZDRiMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDZjMzIxZGIxODU3NzdjZDIyYzY5MzlkZWQ2YTUwM2E5MTk3YTQ1NTdhNjYxYzMwYjAxMjMyYWFjMGIzN2UyZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTMwNzQ1N2ViODY2ZGU0MmJmOWM0MTMwZjU1NWZlN2IyZmM1NjMzYmRlNDIwMTQ4ODBjMjRhZDZkOTE3ZTBkMyJ9"
+        },
+        {
+          "resource": "repo://stack.toml#L26-L28",
+          "version": "repo-lines-v1:sha256:cbb5a6c09debe7f122c4cc9218cb29066516fc8cfc5c1761d92e0b3afa5a7445:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGViNWFlMTBlYmUzYjJlOGQxYjZlYzQ2ZDdmOGE2MTE5Y2UyYTY0ZGNlNWZhMDljMmIxMDEyODFjMWFhZDg5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzkyMjZmYzJjMDM4OWRkZjFkMzM0ZDAyMjRkNjkxYWQ1OTQ4MmJjODFkNjQ3ZmY3NWZhMjcxOWJmZDQ4YjY2NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDVhODBkMmUyNzBiOGVhYjMyM2FlMDFiNjRlMTAxNTc3OWJkMzc5NDJhMTYwOTQ2ZDRkZWFmMTJjY2VkNjFlNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGRhMTA4NzMzYTE5NDZhNTJhZmFiYTc3MzQ4MDdmNjU0YjQ5MTNkODAzNTMxMTMwM2YzZTI0YWQ4MjY1YzUyOCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_42ba8dcb5ff21e475fc354a534f84162",
+      "statement": "kata, owcli, bossman, and goatlassian declare home_env KATA_HOME, OWCLI_HOME, BOSSMAN_HOME, and GOATLASSIAN_HOME with bundle_dir kata, owcli, bossman, and goatlassian.",
+      "evidence": [
+        {
+          "resource": "repo://stack.toml#L102-L104",
+          "version": "repo-lines-v1:sha256:7e4a471d16b5040ce460a8e29595a1fd48ac72aac088040237cd87d54bc4662e:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTY4NDA3ZTFkZmQ4ZTAzYThkZThmYTQxMzU2NWJmZjVlMDUxMTdlYTAzNjI1ZTZlMDdlNDY2MjM1YjdiYjA4MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU0ODFjMDhkNzlhNjRkYWMwM2JmY2U1MTg0YjYyMWE5ZWYxY2Q5NTNhMWFiZGU4ZDBiNzliZWNiZTBiMDAxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTY1MTk4NzFiZThlYTFkMGM1NDhkMGY3YmVmYWEzYzFhZWUzMzdmZmIwNDUwMDQ3OTE5MjRmMjJmN2E5MjY1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjNhZDRhMjhhZmY3YzY0ZmI5NTUzNDUzYjc2NjRlNmM5ZDgyZTQzZjM2ZmIzOTczNDIyNmY5OTA1ZWQ0MzU0ZCJ9"
+        },
+        {
+          "resource": "repo://stack.toml#L130-L132",
+          "version": "repo-lines-v1:sha256:868e9ead1d3bae4e52b43577322ae2363d66281d7a7ec00da388db1878383326:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTFjOWIzYzMzMjY3MTJhNGU5NzJlOTAxZGFlMzk2ZGVkMzllOGE5ZDU4YzM2MDljMjY2NmM4NjkzZTgwZDgzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmFlN2IzZWMzOWNlNzliMzdmZGNhMGRhZTY4MWI0OThmZWRmNWQwMjFhMzc2NWM5OWMxZDRjZjAyNDdmYjMzZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDZlNjgzMWRkNzdmZDEzNjM3YmU3ZDEwNjA3YWQ0NzRjZTVjMWFmNTJkZWYyNDVjNTkzNmIyZThmMGE2NWQyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTk1ZmUzMDQ1ZWQ4NWVjNTY3ZThlYmRlZWVhZmVkYTViNTBhMmJkY2MxMDRiYzRjMWY0MTI4NWM1YTk4OGE2OCJ9"
+        },
+        {
+          "resource": "repo://stack.toml#L142-L145",
+          "version": "repo-lines-v1:sha256:a92f9e8ac013196972c693571331879a54bb5969f97a4768c9a6694e09e66b6a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTI3NGYzZjk4ODBiOTJkOGE2YWZlZGNkMjI1MTg2NWU2ZWU2MDIwZTgxNDE1NmUwNzAzOTIxNTQ0ZDU2OWIwOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ0MWNiNDllMjY3YmY1N2I4Zjk3MDgyM2MzNmE1YzljODM5ZTFjN2ZmYzdiMWY3YzUyZTEyMzk4MmQyOTQ5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTFmNzQwMDBiMTRkYjg1NWVlZmNlZTYzYzc0NDhkM2VlNTcxMjk1NWYwMzNjMGIyNGFhZjlkOGJmMDY3ZjM1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://stack.toml#L74-L77",
+          "version": "repo-lines-v1:sha256:5fdba283f88d3b5bb7bfe76ada01e0a9abfaaef1c4ae20d56a504acabcc34696:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjNjNzRhMGUxNTMxM2U3NzYwYWNmODkwOGNmNTM5ZjUwZmRkMTdlNGUwOTI3OGUwYWVkYzBlZWVkYThkMGVjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGRlMzIyZWM2YThmNzYzZmViYjNjY2NjZGU5ZWVmNmQ4MjJmZjM4OTYxMTllYTBkZGMwYjM5MjM2ZTE0ZjE0ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTZiMTAzYzEyNmRiZjMwZWFkODM4ZWJlYWI1ZmJlY2NkYWU1YjE0YWViYTE2ZDE5ZWI1MGZhZTdhZTQxYWU2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWJlMzc5NzUxNjg2ZDdiZWNlMDBmZmU3MWRmNmFhZjVhNTdlMTUzYzJhNDA3ZDliOTJjNDVhZjQ3N2M2OTQ2NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e068adb0e1bc68f22742a07f1a253ae8",
+      "statement": "Snapshots skip kata's runtime directory and goatlassian's logs directory.",
+      "evidence": [
+        {
+          "resource": "repo://stack.toml#L145-L145",
+          "version": "repo-lines-v1:sha256:ad41cb49e267bf57b8f970823c36a5c9c839e1c7ffc7b1f7c52e123982d2949a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ0MWNiNDllMjY3YmY1N2I4Zjk3MDgyM2MzNmE1YzljODM5ZTFjN2ZmYzdiMWY3YzUyZTEyMzk4MmQyOTQ5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ0MWNiNDllMjY3YmY1N2I4Zjk3MDgyM2MzNmE1YzljODM5ZTFjN2ZmYzdiMWY3YzUyZTEyMzk4MmQyOTQ5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWEzNjg2YWNhYjIxNjgyMzY3ZDVhMDg2NWRjNmE3OTk2ZjkxYTU2N2JlODYxMjA3ZWFjNmViY2E0MjBlMTVhMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://stack.toml#L77-L77",
+          "version": "repo-lines-v1:sha256:8de322ec6a8f763febb3ccccde9eef6d822ff3896119ea0ddc0b39236e14f14f:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGRlMzIyZWM2YThmNzYzZmViYjNjY2NjZGU5ZWVmNmQ4MjJmZjM4OTYxMTllYTBkZGMwYjM5MjM2ZTE0ZjE0ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGRlMzIyZWM2YThmNzYzZmViYjNjY2NjZGU5ZWVmNmQ4MjJmZjM4OTYxMTllYTBkZGMwYjM5MjM2ZTE0ZjE0ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODNkNDQwYTg2MTZkMmUxN2ZjYTJiY2YwZTg0OTFkZjVlZTZhMmIzODFiM2FiODg4ZmZmY2I4ZjA2ODk5NzkwOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWJlMzc5NzUxNjg2ZDdiZWNlMDBmZmU3MWRmNmFhZjVhNTdlMTUzYzJhNDA3ZDliOTJjNDVhZjQ3N2M2OTQ2NCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_d8c2cbfaedc2f3ba3a355f660e38e641",
+      "statement": "bin/kgbo locates stack.toml relative to itself and treats every provider with a home_env as bundled.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L36-L36",
+          "version": "repo-lines-v1:sha256:b5260fc3f0efdbdb35685ea986dfae75ae8ab89708b34d146722c139ab4fa217:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjUyNjBmYzNmMGVmZGJkYjM1Njg1ZWE5ODZkZmFlNzVhZThhYjg5NzA4YjM0ZDE0NjcyMmMxMzlhYjRmYTIxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjUyNjBmYzNmMGVmZGJkYjM1Njg1ZWE5ODZkZmFlNzVhZThhYjg5NzA4YjM0ZDE0NjcyMmMxMzlhYjRmYTIxNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ2Njg3ZjRkNjM1ZGUwZWMxZTZkN2I5MjJjNzQ4YjMwMGI0ZWY1NDQ2Mjg1NjJkMTc0NmIyYjhlODU3OGI4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTZlNmIzMDJkNDMyY2ZjZDQxOTkxNTg0N2UzMzhkNzVjZmQ1YmI3ZWY4ZTc2ZGIyYzQyODgxNGFjZTQxZmM3MCJ9"
+        },
+        {
+          "resource": "repo://bin/kgbo#L53-L55",
+          "version": "repo-lines-v1:sha256:53613c7418213c1b56f1f3448d728ac38771f16053f51f1723b84fe9ee3f8386:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzhmMThjOWJkOGNkZmQyMDg5Mjg0M2Q5OTEwZTdmZDg5NTc4ZmU5ZmY3OTBlMjVkOTcyOGMzNjc0NDI5NWZhZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmIyOTU3NzlmYTk4YjJjMTY3NTZiNThjM2ZjNGYxZjZlMGQzZTE1MjQzOTUzMjZmNGIxYjI2YTMzNTQ3NjQzMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmI5NzA1OTE4NjliNTA2ZWJiYjc1NDliNDIwNDA1ZmNhOWU4Y2VkM2MzYmYwMmJhYmMxMWQwYjc5NDljNTEyNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmFkMDY0ZjFkOTY4NDllZWM1NTU0ZmM2MmI0YmExZGM0YTA3ZWIyM2M0ODQ0ZGVmMjMxMDY1OWNhZmViZWY2MSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_edabcd07d721fc501c23a0d566ffd3b8",
+      "statement": "Paths resolve like the tools: the home variable if set, else defaults with ~/.config and ~/.local/share replaced by XDG_CONFIG_HOME and XDG_DATA_HOME when set.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L45-L50",
+          "version": "repo-lines-v1:sha256:ef75b3784535a60b39a154c4aa34804354878c89fb6369f6e88003d431abb06f:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzIwOTkxZTYzZGNiMjAzM2ZhM2E3Yzk0ZGZjZDlkYjY4NmUzYzQ2ODU5M2RlNGM4NzFkZmRhMzUwNTdlNWVhMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWVlNGJkZWRiOTk5ZTgwZjRlMTI4ODY4MmM3ZTIxYWU5OGJjNDE1NjIyMGYyZGM2ZjE1NmNiMzgyYjMwMTNmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDFlMTYzMWUyZjhmYjdiNmY3MjAyZmNiMjUzZmZiZTc3NTY5YjllZmY0NzVhOTMwYzhjNTA0ODcwY2Q4NjM5MyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzE1ZTY3YzI4NThkYTY2OTAyMGM1Nzk5MzdiMmMyOWY2YjkzOWRjYzdlNWVlZjJlZTRkNTA2MjNkYzRjM2Y0OCJ9"
+        },
+        {
+          "resource": "repo://bin/kgbo#L62-L66",
+          "version": "repo-lines-v1:sha256:05e1a3fcc0ab11d309c44f35826f7b55a13bee1122d873c2e21764134d2eaafe:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjZhZjEzOTA1MGY4YWYzNDU5OGViOTk5M2IyYjliOWJlZGMxODVmZWM4ZDE3ODgwZTI3ZGVjODgxZDMwYWUxOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWM4OTBkZGY2Yjk4ZjI5NjE1NGNlYWZhOTI0NjZiZjIxNGIxYzFlMzU2MDkzMDI1ZGZkNzE4YzQ2ZGQ0MWUxZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2M5NDBiYjlkYzA4MTM3MmE0YjUxNWJiZTZhZDgyZGUyMTAxZDFhOGJmYTAxZmVlOGNkYTZlM2E1YzliODA5NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2M5MWZiNWMxNDJiNzY3ZmQ1YTg5NzA3Y2MzMjRkNTg3NzczNDM3MzVkZTdkNGQ3NDYzMWJhNDBiYzU1YzA0ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ae5bcb6fd7516215961931f3c805539b",
+      "statement": "kgbo env prints shell exports, or KEY=VALUE lines with --plain, for KGBO_HOME and each provider's home variable.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L184-L190",
+          "version": "repo-lines-v1:sha256:d8f95a9405804914b3dfa88660da148c04eefe550e4bee0c097fb0f4ae1b8aae:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE1NTUxNzVmN2E5OTUxZGM5YzU3YTlhYTJjODQ0YjU4MGNhM2M1NjRmMDcwMDE5M2RkZTdmZTFjZTM0YmEyMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWJkNWVlMTM0MmE4OGEzNTk2YjZjMWMwN2E5Y2U5NzBlNzNlZTM2NjQ5ZDgwMTYyOGFlMmEyNDQyYTk2ODc3MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGVmZDRmMzQ5NDdmNDY4ODUwMjYwNzQxNjRmZjBjYTE3ZmU3OTZmNTgxMWNiNjE0YzI1MDUzNmJlOWNjNTlmZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODFjZGZmMGQ2NDhhYzI5ODBkZWVjMDU0OGJmMmY2YmM1YmE5YzAwZmUwNzU5MzliYjIxYTczNDM4NmFhNGI0YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_971b55b5ec687198da54ce6a6c34e9d2",
+      "statement": "Mixing symlinks and variables is unsafe because kata names its daemon after the literal KATA_HOME path without resolving symlinks.",
+      "evidence": [
+        {
+          "resource": "repo://docs/data-bundle.md#L33-L37",
+          "version": "repo-lines-v1:sha256:69f2c039c6f8cb410f971cd6c562a95c2f0aeb98278acdd2dc4141e62f474813:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmVlOTJiMTA2NmJlZDBhN2E0Mzc1NGFmYzk5ZDFjMWJiMWIwNWRkMGJiZmM4ZWU0NTk3Njc4NTc4N2U0NzkxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTUwZmQyNGVhMWU5ZmJhOTA1NzViYTk0NjgxMmU2OTM1NGU0MWM1OTA3ZThmNzA2OWIzMjJiODlmNGM5NjcyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjIwNjMxYzczNzNhYTJjYjUyNjFkZmZmNmFhZDE2NzZmNzA5MmVkZGZiOTcwY2RjNWU3ZjA0NThiNThmOGRiNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ce7c252a68a2675c7a7fe9ff0e2b5097",
+      "statement": "adopt refuses while any provider's home variable is set or while a process has files open under the directories it would move.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L144-L147",
+          "version": "repo-lines-v1:sha256:f3dbd5948a4f4e84eb6900125a93d2f97767f1e31549e77858ce2ac5f01a23e8:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmY3Y2I4YzA4ZTRiY2FkYzlkMDQ2MGE0YTljYjI3MjBkM2IyMTkyYjE1NzM3OGRiMjY1MDIzN2QzNjhlZWRmNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTJmM2IwM2FmNjNkNzc1OGY4ZWNjN2VmMjFmN2UyN2FlYzljNGM2YWNhZjA0YmM0OGFjODc4YmRmZGEwZGM1NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODNlZDI1OTdkNDc2YjI1MjA5Y2E3NjhkMTFlMzNiOGExMzI3OTFlNmIxMzZkMTY4NDI3ZmY5MzdiZjkyODYzYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTA5ODVkMWYzZDk1YjZkMjQzNTQyMmMzYTA2ZjQ5ZGI4MjQ4ZDUyZTRhY2Y1Zjg0MDY0ODE1ZGRjYmQ0M2U1YiJ9"
+        },
+        {
+          "resource": "repo://bin/kgbo#L163-L166",
+          "version": "repo-lines-v1:sha256:3c89660d4e7064a8427413c49a2d9b0f68f731e3a9e33fab2c3964c110993f82:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjBkYzhlM2Y1NTUwMmI5ODY5NTc3M2MzYmVjOGEzNzgwYTJiZjRjNTkyY2RlYTUxNWIxNDc3NDFlMWEyN2Q3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmJjZDI0ZDgwZWMxZDdlMWYzZGVhNTc3NjVmZDE1NDg5NmZhMzBhYzJiNThhMDUzOWJjMGZhYTVlNGE3Y2E2MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWY4ZWNkNjdlZTk4OGU5ODI1MjU4ODE4ZDkzOWRkYTNjODE4MjM0MmJjNzBmMmJiNmU3ZmNjOTBiZTI1ZDIyMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjM2MTU2NWM5M2Q0YTJkNzI2NDE3OTI0OTIyM2YxYmI1MjQwYjc0ZThjOTZjODY4MjE0MGI2ZDIxMWI4MmY4NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0dcd08e6a77e1aa7445efa6b31064a67",
+      "statement": "Open files are found by scanning /proc/*/fd, or with lsof where /proc does not exist.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L117-L139",
+          "version": "repo-lines-v1:sha256:63f8f807765f093baccba2d1aed74228b352b8a41843bc0bb3458dc9142b3fe1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU2YTczMWFmNTI5NTk5ZGJiMGVjZWEzYmI2YzcwOGU3YWQ2YTQ5NzVmMmQwNjg0NmZhYWMzMzVhNTNiMDIxM2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1ZDg2ODY2ZGRiNTVmODcxOWNjMGFiZGM5YjhmMGM4NjY5MzdhNDJmNTJjOWNmYjAzMGFiZWNhZjgyYzBmMmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMxY2EzNGRmZjgyOWVkNjU4NTA2Njc4NjQ0MzUxY2M4MmM0MTRkZDc0MTEzNTA4YmJiOWI3ODgzYWQxY2JkNTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_69ff7758a0313b3d73ab3781f5a3e3d5",
+      "statement": "adopt snapshots each default directory into the bundle, renames the original to <name>.pre-kgbo, and creates a symlink at the default location.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L168-L181",
+          "version": "repo-lines-v1:sha256:19fb37d509c225f7f41ce366363662ee509a0ce360930d57e47357211fe8cdc5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiNWM4MjYzMmZjODJkNGIyYzM0MGY0MjU1OGJhM2RmYTMxYzc2NTVkZjZmY2MxNjhiNGZkY2U1N2ZhYzYwNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3MjA0NzU3MjY3NTg2YWRlZGUyOTFiYTBiNDMwMThhODM1MTVhOTUwMzVjOWE5OTkxNGM4Y2JlOGQ1NDJlMGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2ZTdiYjUwMmM0MTA1MmQ5NjdkYzA0MThkMWRmM2I4NjVjYzk4MTNhN2U1ZjRlMjVhMTUwZWZlOWY4YWU1N2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEyNDIyMTFkNGE0YjhiNzIzMDliOGMzYmU3ODNkMzRhZmExYzQwOWE4ZGQ3Njk0ZTAxMTI3Mzg0Yjc4ZThkOGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_359427522f3b6d0594df4cff1726f594",
+      "statement": "SQLite databases are recognized by their header and copied through the online backup API from a read-only connection, then checked with PRAGMA integrity_check.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L37-L37",
+          "version": "repo-lines-v1:sha256:5d152c29e3ee0c460b86f058f75a32156504df229d9c4ab7ceea74fa6002f9d6:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQxNTJjMjllM2VlMGM0NjBiODZmMDU4Zjc1YTMyMTU2NTA0ZGYyMjlkOWM0YWI3Y2VlYTc0ZmE2MDAyZjlkNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQxNTJjMjllM2VlMGM0NjBiODZmMDU4Zjc1YTMyMTU2NTA0ZGYyMjlkOWM0YWI3Y2VlYTc0ZmE2MDAyZjlkNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2JmMGMyZjFmNzgyN2NlYjNkMjY3OGM2ZmE5M2RjNjQwZDMzMTE2YjI3NTU2NTQyNWFmYmRmNDY2NTE5NDg5MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODVjMmQ5MDJkMzJiNGUwZTgwN2IwMThiYzc4NTdhNzQ5OGI2MGIxNmZjYmRmZjc5MjgxMmZlMDgzYzVlYTU0NiJ9"
+        },
+        {
+          "resource": "repo://bin/kgbo#L69-L74",
+          "version": "repo-lines-v1:sha256:4e519a37b79ae21a0cd0d4f3e8742cb3fa658106c109f4cd211c2f934f866ba8:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc1YzRhYzdjOGEwMGJiNGRmZjA1MjdhZjBkZDU5MDFkZDRiYzUyZjIxYTYwY2QzY2RmNDg1M2RmMmRkOTIyMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjk3YzcxMjQ3YWYzY2QxZWRmNTU1YTdkMTA3NTkzMTU3ZjZkYzJhMjJhZjBkZTgyZTc3NzRhYmYxMGY4YWRlMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmM1ZjcwMzgyZGRjMGViOTQ3NDU1NmRlNmExMjM1NzMyZTBkYmE3ZDhjZWYwZmQwMTZlMWYzZTgxNzNmN2YxYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWZmZTFjZGJiYmRhYTViZmZjODA2Mzk1OGMzMDRmNzdiOTQ0YWRkOTFjNWQzOWM5MGFiMzUxZjA3MTUzNWJlZCJ9"
+        },
+        {
+          "resource": "repo://bin/kgbo#L81-L88",
+          "version": "repo-lines-v1:sha256:b35fc2a185f6d1b539124658ececeac8a123f800eac052c584117165a6e2f92c:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc2OGM5MDdlOTJlNTdlNTFhNjM0ZTE1MTU4ZjViMTVjNjRmMjJhNzgyZjI3MjdkMjA3MWIwOTA0NzY1MzA4ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTQ5ZjA2ZmNmZjdmZjdjZjVkM2I2ZTJkYTQ3NzMxNWQwYWRiN2Q0NmIwMmVlZjMwZTQ0OGY4Yzk2OWE1NDg5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODA4ODRkNzQ5NDE3NjZkNjYxNjdkYzMwNTMwMGM1YzA1M2VjYTM0MmI4Y2RkNjM0ZDYwYmM0ZTE2MWUxYzNmMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTYyMTYyMTc0OTM4ODI5MjkwNDNkZTVlZTk5MjAzY2NhNWM0Yzk5NDhiMWY4MDEyOTNkMmE0NWEyNDUzMGVlNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ab80e4adce3c67613e90a50d1bf6e65e",
+      "statement": "snapshot refuses a destination that already holds provider data and refuses to write into a provider's live directory.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L211-L228",
+          "version": "repo-lines-v1:sha256:e4e26caac9b3cdf4dda0077ef085557adea4db6c972df1ccfc6bf119a212ca7c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlZmEyNTgyYTg4MWFhMWVjZjg0ZWMwZTgzOTc3NTVkOTJiMTMxMDk3ODljZGY3YTk3MmViMzM4YjNlOGNmMTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlmMTU4YjQ2ZGQ4YWQ0MTc5NGM4MzY5YWRhNzBmOGVkNjZmNDI1Y2JlYjlmZGQzMThkY2E0Mjk2MzY1ZDIxYjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFiNzU0OTRiNThmZjFiNmJjMGE5ZmZmOWIwYzljYmNmMTllMzg5NmFiZTVhMWU2ZmVkNTllNjI2MDlmNzZiYTMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d8726ae33ac3065875735a56bc0f1969",
+      "statement": "owcli's two default directories are de-duplicated by resolved path so an adopted bundle is copied once.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L216-L217",
+          "version": "repo-lines-v1:sha256:5f410b281046f55ec8c47ea17be0f394e435dbefed4b8a8879c8c379cffd3dda:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTY2YjUzNWZkYmMwZmE4Zjk1MzY5YzQ2MmJhMTVmZDIyZWQxYjU1YWI1ZjVjMmI4Y2U1NTk1NjZmMjU2NWI1ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMThiYTQ5YzQ4YzE4Y2U2ZDQ0ODJmNzI5NTUxMjBiZmJkYTlkNmRhNDEyMWUxYzNkMGU2MjZiMzg2ZGJmN2ZiOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDE0YjRmY2EzNDYwMjFmNTc3YjQ1NWUxODZhNDAyY2FiZmViMTdhMDE2YjE5ZjcwZThjZDQ5MDczYzM3NjQ5OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjRmZjI0ZmRhNTQ3ZDkyYmRiZTRhY2VmODViNDFlNWJjNTViMjdjNTRiNTNlMTYxNzg4YmZjM2M1YTZmOWUwMyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/v0.2.0",
+    "at": "2026-10-05T08:11:07.957Z"
+  }
+}

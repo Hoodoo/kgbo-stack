@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:1cda357754266b24e6f37b25d66233d52f35a61ffa960fa80bab70203e21c7e9",
+  "pageVersion": "sha256:d34c0717b337be340ab925523dc7d2cb8bfb54349e38f5347f3c58100440c19c",
   "claims": [
     {
       "id": "claim_c8b0aaaf00798fdb681570ff20bdd2e6",
@@ -27,7 +27,7 @@
       "statement": "The four roles are tracker, knowledge, sessions, and portfolio, with defaults kata, owcli, bossman, and goatlassian.",
       "evidence": [
         {
-          "resource": "repo://stack.toml#L17-L43",
+          "resource": "repo://stack.toml#L32-L58",
           "version": "repo-lines-v1:sha256:f4359e0c69b1b3fa863b87e91038fd409bb6f181193b97dfab4eb16a17f04f4c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5YzhmNzI0NTE1NzVhMjI5MTliYTdkY2QzM2Y5MTBhMDYxMGIxMzg3MTY5OTUxZWRiMzQyZmI4N2UxOWQ1NTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzMDM4NTUyODJmNDQ3NzBkM2JmM2E1YWJkNzk3ZjdmYjQ1MDkxMDMxMjY3MjE2NmZlYmQzYzgyYTRjYjUyNDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhkYTEwODczM2ExOTQ2YTUyYWZhYmE3NzM0ODA3ZjY1NGI0OTEzZDgwMzUzMTEzMDNmM2UyNGFkODI2NWM1MjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFkNjQ3ZjYyMDZmYWNkZjNlMjEzYzMwNDA3MGZlZDVjNDI2MTZiMzQ3ODRiY2RiYjAwZDY0OTFjZmUwMTljNmYifQ"
         }
       ]
@@ -37,7 +37,7 @@
       "statement": "The tracker contract requires managed AGENTS.md markers or a hook, one project per repository, and --json output.",
       "evidence": [
         {
-          "resource": "repo://stack.toml#L17-L24",
+          "resource": "repo://stack.toml#L32-L39",
           "version": "repo-lines-v1:sha256:bbf1ce71716d0e91ea3cb17554de516beeadbe96fafe07f0b7d8bbeef78fd6b1:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTljOGY3MjQ1MTU3NWEyMjkxOWJhN2RjZDMzZjkxMGEwNjEwYjEzODcxNjk5NTFlZGIzNDJmYjg3ZTE5ZDU1NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBiNzAyN2M1NDdhNjdkMTZhNjY1NDM3Zjk5YTU4MmZiNGUwZDE3MGNjZGVlNTg1OGQyODY0NDhhMWVkZTUwMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGRhMTA4NzMzYTE5NDZhNTJhZmFiYTc3MzQ4MDdmNjU0YjQ5MTNkODAzNTMxMTMwM2YzZTI0YWQ4MjY1YzUyOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDY2MWQ5N2Q0NGUzMTZhYzVmZGNiMTAyOTFiY2IyZjcxODA0Y2Y2NDA4YTJiNzQxZDQyNmJiZGY5YTcyM2Y3ZSJ9"
         }
       ]
@@ -47,7 +47,7 @@
       "statement": "The knowledge contract forbids wiring both providers' agent instructions at once and requires workspaces and a model-free currency check.",
       "evidence": [
         {
-          "resource": "repo://stack.toml#L26-L33",
+          "resource": "repo://stack.toml#L41-L48",
           "version": "repo-lines-v1:sha256:781bfa0b33ec612ad1d474ffc4988f070bd4cbc9db94c1de3a034e8660897831:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZlZTM1M2MzZjdkYTk5MmNkMThjZTMyMjI5OTE0N2ZkMDNjZjdhNWY3MWJkYTdmMDUwMWNmNjVhNDU0MjQxYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjZjOTNlYTA1MTczOGE2NDkzZTdkNGVkZTA5N2VhMzJjODBiMWFiZjY4YjZiNzdmYzVhODQzY2ViMjVjN2IyMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzVkYzdmNzFhODRmMTk1ZjdmYjY1YTAzYWMyMGNiMTllMjQ3YTE3NjQyNjJkNzQwMWVhOWJiZTdlY2JmNWQxMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmEzOWZlMDAxMTk0YTAyNTgwZjJiZDQ1ZDE5YWJjYjdkN2EyODY5ODhkMWRkN2M4MWQwNjUwMDQ2ZGU0NjkzMSJ9"
         }
       ]
@@ -57,7 +57,7 @@
       "statement": "The portfolio role reads the other roles through their CLIs and never writes into repositories.",
       "evidence": [
         {
-          "resource": "repo://stack.toml#L40-L43",
+          "resource": "repo://stack.toml#L55-L58",
           "version": "repo-lines-v1:sha256:c99afff3dbd89d4d3bf2c9241bea5f58bb83307481cf344b0f4d49cd593d9850:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmMyNjIxNDgxZTY3OGYxZjIzMTVmYTFhMGIyMzVjNTEyNWQyODg5N2YyYTE5OGVmZTcyZDllZmE5Nzc3Mjk5MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDMwMzg1NTI4MmY0NDc3MGQzYmYzYTVhYmQ3OTdmN2ZiNDUwOTEwMzEyNjcyMTY2ZmViZDNjODJhNGNiNTI0NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzE0NzlhZmE2MThhYzNjNWY2ODU1ZTI1OThkYWRlZjE5ZmVmNmVmYTcxOTNiZmMwZGI4OTc2Yzk2ZmFjZjBmMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWQ2NDdmNjIwNmZhY2RmM2UyMTNjMzA0MDcwZmVkNWM0MjYxNmIzNDc4NGJjZGJiMDBkNjQ5MWNmZTAxOWM2ZiJ9"
         }
       ]
@@ -71,11 +71,11 @@
           "version": "repo-lines-v1:sha256:bf9d30d74bf546e367efbc267088258b71b6eac9d0cf55ea34372a6a4ecad722:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjIwZTY4ODUyMjM1Yjk1NDJjNmRhMzRmZDJkODIwMzNlNTVhYjdhZWZhMGMxZDk1OGVjY2E1MDRiMTdkMGZhYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdmNDdmM2RhZDg2OTdlOThiMmM3ZmFlYjVjOGNhOWNjZTkxMDg2Njg5M2NkOGZhMzVjYTA4ODNhMjlhY2FlYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTliNjU0MzA5YzVjZDJlZjNlMTAyNGU1OWE0ZjlhMmZmMTQ2MGE3YzRjODhlNjJlZTk0ZGI0MWFmMGNjOWZkNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzc1MDk3NTFiMDZlNmYwODgxZTU1YjFmODhkZDk0YTk1MGU3NTFhMDJlZTBjOWMxYmJhMjNmYzcyMDZjNGU2YiJ9"
         },
         {
-          "resource": "repo://stack.toml#L81-L81",
+          "resource": "repo://stack.toml#L100-L100",
           "version": "repo-lines-v1:sha256:464958bceefcc1cec3152b9fdda6bd71325af34702d224e968e335b09f8cfa0d:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDY0OTU4YmNlZWZjYzFjZWMzMTUyYjlmZGRhNmJkNzEzMjVhZjM0NzAyZDIyNGU5NjhlMzM1YjA5ZjhjZmEwZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDY0OTU4YmNlZWZjYzFjZWMzMTUyYjlmZGRhNmJkNzEzMjVhZjM0NzAyZDIyNGU5NjhlMzM1YjA5ZjhjZmEwZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMTkwYTY3N2UwMzRiZWQ5ODQxYWVmNWYzMDlmMTVhZTRiYzU3M2E0MzgwNTJmNTM5Yzc4MTJlN2Y2Njc0ODEwYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzAxYTdhY2IxZGNiNjA2Y2QyYjA4MWRjOTJhMDRlYzhjOWMyZDYwMzNmZjczZWFiOGViZTRhMDFhNDZmMzJjYSJ9"
         },
         {
-          "resource": "repo://stack.toml#L95-L95",
+          "resource": "repo://stack.toml#L117-L117",
           "version": "repo-lines-v1:sha256:aad7519e70706c31c214b17639ba2cd8c2375f086100367deb2e330153c41b11:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWFkNzUxOWU3MDcwNmMzMWMyMTRiMTc2MzliYTJjZDhjMjM3NWYwODYxMDAzNjdkZWIyZTMzMDE1M2M0MWIxMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWFkNzUxOWU3MDcwNmMzMWMyMTRiMTc2MzliYTJjZDhjMjM3NWYwODYxMDAzNjdkZWIyZTMzMDE1M2M0MWIxMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGY4YmU0ZjMyNzJjOTQwNWQ4ZGU4NjQyNWI4ZDE1MjcwZTg3N2I5OGJmZjJmYWNkZjU0OThjOTdkNTY3MmJlOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjk5YjdhODRjYzg0NDdmNjk3NGU1Yzk4NzI3MWI4YzMyNDViNmJiZjM0ZTBiM2IwZGVlOWJlNDkzNThmOThjMCJ9"
         }
       ]
@@ -85,27 +85,27 @@
       "statement": "owcli, bossman, and goatlassian install with go install github.com/Hoodoo/<tool>/cmd/<tool>@latest; kata uses its install script and beads and OpenWiki are npm packages.",
       "evidence": [
         {
-          "resource": "repo://stack.toml#L103-L103",
+          "resource": "repo://stack.toml#L125-L125",
           "version": "repo-lines-v1:sha256:eb8c6a7c832a06649512836b43584bfe0102a88804b22fe5e1f0b83879916c39:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWI4YzZhN2M4MzJhMDY2NDk1MTI4MzZiNDM1ODRiZmUwMTAyYTg4ODA0YjIyZmU1ZTFmMGI4Mzg3OTkxNmMzOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWI4YzZhN2M4MzJhMDY2NDk1MTI4MzZiNDM1ODRiZmUwMTAyYTg4ODA0YjIyZmU1ZTFmMGI4Mzg3OTkxNmMzOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjJiYjljYmU1MzJlYTU4N2YxMWNmM2EwOWMyYzQ0YmNhNzFlZDdmNzhjMjk5ODgzN2QxNmQ4ZWIzYzMyYTU4NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjY5ZTdkNGRmM2NkYzYwNjBlNjM3ZjlmYjc0OGE5YTJiYjE3ZmE4NDNmMmZhOWJlMjFjYWFmYzg3MjQ4YTZmZiJ9"
         },
         {
-          "resource": "repo://stack.toml#L114-L114",
+          "resource": "repo://stack.toml#L139-L139",
           "version": "repo-lines-v1:sha256:142b8a84dc36cb4ee97e69bbe8fefcc474b378f65073f505ca7a32ec48a73c0a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTQyYjhhODRkYzM2Y2I0ZWU5N2U2OWJiZThmZWZjYzQ3NGIzNzhmNjUwNzNmNTA1Y2E3YTMyZWM0OGE3M2MwYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTQyYjhhODRkYzM2Y2I0ZWU5N2U2OWJiZThmZWZjYzQ3NGIzNzhmNjUwNzNmNTA1Y2E3YTMyZWM0OGE3M2MwYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGIzNTQ4ZWM2ZWZhYTIxOTJkMmM3YTk3MzFiZGJlZjFjNWUzNTRkNWE4YTUyMjkzZDBiOTlmZjhhOGY2ZGZhMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGY4ODhiMTM3ZjI1ZWI5ZWY4MTlkOWZlN2I5ZjNlZjdlMjM1MmU2NGY0NTk1NzE2NTgxMDZiZGQ2MjUzNTEwZSJ9"
         },
         {
-          "resource": "repo://stack.toml#L51-L51",
+          "resource": "repo://stack.toml#L66-L66",
           "version": "repo-lines-v1:sha256:64cc425403869f2034ecd1aeb26663da8c5af09fff9edfeac28a75089956913c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRjYzQyNTQwMzg2OWYyMDM0ZWNkMWFlYjI2NjYzZGE4YzVhZjA5ZmZmOWVkZmVhYzI4YTc1MDg5OTU2OTEzYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRjYzQyNTQwMzg2OWYyMDM0ZWNkMWFlYjI2NjYzZGE4YzVhZjA5ZmZmOWVkZmVhYzI4YTc1MDg5OTU2OTEzYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzJmZmM0N2ViZDllNmZlNWUwYzM2YjNlYzA2YzZmNmViMGQwZmM0NjAxMzVkZjMyNmUyNmExNDUyMjNmZmYwYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTZkNjM3ZDM4MDllMmZlZDdkOWViZGMzOGQ4MzQyZWZhMDIzZTI3NmNkNTFiNzdiNmY2NTljYzNiYzNlYWJlOSJ9"
         },
         {
-          "resource": "repo://stack.toml#L64-L64",
+          "resource": "repo://stack.toml#L83-L83",
           "version": "repo-lines-v1:sha256:45cde4cedbffc0eb4ffe9a115b5f7b083eaea578427d73de26239d82a146487a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDVjZGU0Y2VkYmZmYzBlYjRmZmU5YTExNWI1ZjdiMDgzZWFlYTU3ODQyN2Q3M2RlMjYyMzlkODJhMTQ2NDg3YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDVjZGU0Y2VkYmZmYzBlYjRmZmU5YTExNWI1ZjdiMDgzZWFlYTU3ODQyN2Q3M2RlMjYyMzlkODJhMTQ2NDg3YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjdhNTYyZTY3N2E4MDBjZDQ5Nzg4OGQwOTBhMWI1NmFlODFlOTM0MmMxNDA1NWQwNTY2YTM3NGMzOTI2NzIzOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGFmZTdjM2EwYWEyYzYzYzRlY2JiODA3N2M1MjhiYjJlYTBlYjU1NjEyZWI4NjVkMDkzNjZlYzJhMTg5Y2QxMiJ9"
         },
         {
-          "resource": "repo://stack.toml#L75-L75",
+          "resource": "repo://stack.toml#L94-L94",
           "version": "repo-lines-v1:sha256:39eab9164ac77afbee9dd3435d17247a02942970713d99e2e1bbdc5babb2ed55:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzllYWI5MTY0YWM3N2FmYmVlOWRkMzQzNWQxNzI0N2EwMjk0Mjk3MDcxM2Q5OWUyZTFiYmRjNWJhYmIyZWQ1NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzllYWI5MTY0YWM3N2FmYmVlOWRkMzQzNWQxNzI0N2EwMjk0Mjk3MDcxM2Q5OWUyZTFiYmRjNWJhYmIyZWQ1NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGZmNjI0OTM2ZmRkYWIzMzY3NGQxZDcxMjUyMjk1YTUwNDNkODY5ZTAzNjUwMmY0NDRiYWQwNDk1YzFmNjllNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGFlNzgyM2M3MzA3ZGE1NzY3NjA5ZWRiNTY3ZDI1ZjJhMmZlYTIzNmY5MzBjOWUwZmUyNzA3N2FkZjY4MzYwNiJ9"
         },
         {
-          "resource": "repo://stack.toml#L88-L88",
+          "resource": "repo://stack.toml#L110-L110",
           "version": "repo-lines-v1:sha256:d928169574e94f180b5ac3125e5cb5230fa3573a466ba2ded61531d3865cb613:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDkyODE2OTU3NGU5NGYxODBiNWFjMzEyNWU1Y2I1MjMwZmEzNTczYTQ2NmJhMmRlZDYxNTMxZDM4NjVjYjYxMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDkyODE2OTU3NGU5NGYxODBiNWFjMzEyNWU1Y2I1MjMwZmEzNTczYTQ2NmJhMmRlZDYxNTMxZDM4NjVjYjYxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjdkODhiNzM1ZjNmZWQ3Mzk3YmM5NmExYzUwZGRjMmFkYjVmYmU5Yjg1MDFhN2JlMjRjMGNjYzRlNThiN2YwYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTBkMTMxZTkyNWM3Yzc0Y2MwMTgwOWVmOTk5ZTlmNTgyZmI4ZGJjNGVlZTM1NzViODk4MmUwMjBjMDFkYWE5OCJ9"
         }
       ]
@@ -119,18 +119,32 @@
           "version": "repo-lines-v1:sha256:542dfc6f4bfdcf01131d5b25bec06ac09d5e018f9817ce4e2482c3d2cd4a786f:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWU4MDQ4MmEzMDJhZTZkZmUzYzUzMGIxYWY1ZDEwMGNiYzZlMGY2ZWEwMjU4ZDc1ZGIwNWFiMzRhZmQ5NmU5MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWFlOGRkNjE5ODZiZWExNmQ1ZTBjZDUxM2QwZjY3OTkwMTIzYjhkYjI5NjJhOTUxMjU0MDY5MmIwYTdlZGM5NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODliZjBhMjFjODU3OThiNTVhOTcyZTNjNzBkOTk2YjQ0MWQ0ZjVhYzRlYWRlYTE5NDY1OWJmN2RhNDEzNDkzYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDIwZWJhMzkxMGU1OWE0YTY4ODZiYTgwOTYwYjNiY2M2MDRiZjEzZjQ4Nzg1NzAzODFhZmM4ODk1YjljMWIyMCJ9"
         },
         {
-          "resource": "repo://stack.toml#L68-L68",
+          "resource": "repo://stack.toml#L87-L87",
           "version": "repo-lines-v1:sha256:2c2a06e8cd19c52a75696d3bb5297301c5fc447ee04b60c5ba9e3e62e68cb83a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmMyYTA2ZThjZDE5YzUyYTc1Njk2ZDNiYjUyOTczMDFjNWZjNDQ3ZWUwNGI2MGM1YmE5ZTNlNjJlNjhjYjgzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmMyYTA2ZThjZDE5YzUyYTc1Njk2ZDNiYjUyOTczMDFjNWZjNDQ3ZWUwNGI2MGM1YmE5ZTNlNjJlNjhjYjgzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGFmZTdjM2EwYWEyYzYzYzRlY2JiODA3N2M1MjhiYjJlYTBlYjU1NjEyZWI4NjVkMDkzNjZlYzJhMTg5Y2QxMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q4ZWQyYTA4MTFhZDgxOWVmNjE3MWYzMDk4NDJkOGQ2YmNhMTYzNTMyNjhjMjhlOGQ4MmIwZTFlOThmYzU1MiJ9"
         },
         {
-          "resource": "repo://stack.toml#L96-L96",
+          "resource": "repo://stack.toml#L118-L118",
           "version": "repo-lines-v1:sha256:2c2a06e8cd19c52a75696d3bb5297301c5fc447ee04b60c5ba9e3e62e68cb83a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmMyYTA2ZThjZDE5YzUyYTc1Njk2ZDNiYjUyOTczMDFjNWZjNDQ3ZWUwNGI2MGM1YmE5ZTNlNjJlNjhjYjgzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmMyYTA2ZThjZDE5YzUyYTc1Njk2ZDNiYjUyOTczMDFjNWZjNDQ3ZWUwNGI2MGM1YmE5ZTNlNjJlNjhjYjgzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTMyYzY1ZWMxYmFlM2UwYjcxMWM0YmNmMjU0OGFkODM3N2MzOWI4MjM5MzYyZWFkNmZjMmJkMzI3Y2MxMmFlNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWE0MGYyMTg0NzM0ZDg5NDAzN2M2MmJhOWRjZWU0NmRjY2E0ZWYxZThlZjc4NmExMjEwZWVmMjVjNmZhYTczYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b36ae8ed8dd64bcbe5afaa6e17ab6645",
+      "statement": "Providers that keep state outside repositories declare home_env, home_default, and bundle_dir, and optionally snapshot_skip, alongside a top-level [bundle] table.",
+      "evidence": [
+        {
+          "resource": "repo://stack.toml#L15-L28",
+          "version": "repo-lines-v1:sha256:0c2ab8f5193118cfaf126f0cff7d14f2703821bbe0b3afb4984f222d83b02feb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkNjQ0YTg3YWY4MmIwZjgyNDg0MmYxZjg1YTdhMWNkN2U0YjBjMWE0YTAyMjJkNDI4MzI5NjM3NjdjOTdhMzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc5MjI2ZmMyYzAzODlkZGYxZDMzNGQwMjI0ZDY5MWFkNTk0ODJiYzgxZDY0N2ZmNzVmYTI3MTliZmQ0OGI2NjYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQxYzA3MjNjNTA5YjBjMjI0MDU1MzhmMDEyZWEzNDIyMDhkMGMxZDM4YzAwNzJiYjRlN2I4ZjBkNDk3MjM2NGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkYTEwODczM2ExOTQ2YTUyYWZhYmE3NzM0ODA3ZjY1NGI0OTEzZDgwMzUzMTEzMDNmM2UyNGFkODI2NWM1MjgifQ"
+        },
+        {
+          "resource": "repo://stack.toml#L74-L77",
+          "version": "repo-lines-v1:sha256:5fdba283f88d3b5bb7bfe76ada01e0a9abfaaef1c4ae20d56a504acabcc34696:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjNjNzRhMGUxNTMxM2U3NzYwYWNmODkwOGNmNTM5ZjUwZmRkMTdlNGUwOTI3OGUwYWVkYzBlZWVkYThkMGVjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGRlMzIyZWM2YThmNzYzZmViYjNjY2NjZGU5ZWVmNmQ4MjJmZjM4OTYxMTllYTBkZGMwYjM5MjM2ZTE0ZjE0ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTZiMTAzYzEyNmRiZjMwZWFkODM4ZWJlYWI1ZmJlY2NkYWU1YjE0YWViYTE2ZDE5ZWI1MGZhZTdhZTQxYWU2NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWJlMzc5NzUxNjg2ZDdiZWNlMDBmZmU3MWRmNmFhZjVhNTdlMTUzYzJhNDA3ZDliOTJjNDVhZjQ3N2M2OTQ2NCJ9"
         }
       ]
     }
   ],
   "verification": {
-    "by": "owcli/v0.1.0",
-    "at": "2026-10-03T16:02:59.808Z"
+    "by": "owcli/v0.2.0",
+    "at": "2026-10-05T08:11:18.759Z"
   }
 }

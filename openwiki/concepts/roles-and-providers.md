@@ -4,14 +4,14 @@ title: Roles and Providers
 description: How stack.toml defines the bundle as roles filled by interchangeable providers, what each role and provider declares, and why only one provider per role may face agents.
 tags: [stack, roles, providers, manifest]
 verified:
-  - by: owcli/v0.1.0
-    at: "2026-10-03T16:02:59.808Z"
+  - by: owcli/v0.2.0
+    at: "2026-10-05T08:11:18.759Z"
 sources:
   - id: openwiki-source-07dce1e07e2253eab6205a2e
     resource: repo://docs/install.md
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.1.0", at: "2026-10-03T16:03:45.720Z" }
+generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:11:36.857Z" }
 ---
 
 # Roles and Providers
@@ -62,6 +62,12 @@ it. Keys are optional; a provider declares the ones that apply:
 | `markers` | the managed-block markers the provider writes into `AGENTS.md` |
 | `conflicts` | providers of the same role that must not face agents at the same time |
 | `goatlassian_kind` | the goatlassian component kind that reads it; empty means no adapter yet |
+| `home_env`, `home_default`, `bundle_dir` | where the provider keeps state outside repositories: its home variable, its default directories, and its directory in the data bundle |
+| `snapshot_skip` | file or directory patterns a snapshot of its state leaves out |
+
+The `[bundle]` table and the bundle keys describe the
+[Data Bundle](data-bundle.md): one directory for all of the stack's
+machine-local state.
 
 The declared providers are `kata` and `beads` (tracker), `owcli` and
 `openwiki` (knowledge), `bossman` (sessions), and `goatlassian`
