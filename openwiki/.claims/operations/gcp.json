@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:0867dc7a6e6471b3bd758c2dab17f14005f507915a980c788be3e3870734ab6e",
+  "pageVersion": "sha256:c57f5fd3878b56cbe7ea45474319187ada37765fdbbc47cd96556c7eaee7889c",
   "claims": [
     {
       "id": "claim_3379e0662c0326ff4168d193b9f22a4e",
@@ -126,17 +126,17 @@
     },
     {
       "id": "claim_45dfa6676359b320b61ea3ac8f293833",
-      "statement": "docs/gcp.md lists the console steps for the IAP OAuth client: external audience, test users, a Web application client, and IAP's handleRedirect URI.",
+      "statement": "docs/gcp.md lists the console steps for the IAP OAuth client: external audience, test users, a Web application client, and exactly one redirect URI, IAP's handleRedirect for the full client ID.",
       "evidence": [
         {
           "resource": "repo://docs/gcp.md",
-          "version": "repo-file-v1:sha256:4f7bad35461fef7848502d31446dbafd00ed9ef9baee3903c88ba10453930095"
+          "version": "repo-file-v1:sha256:dc1a3e705ad2594b16101007928594c883b5fc3c6a32a0f00efe9745ba0e6fe6"
         }
       ]
     }
   ],
   "verification": {
     "by": "owcli/v0.4.0",
-    "at": "2026-10-05T10:23:24.954Z"
+    "at": "2026-10-05T10:30:30.888Z"
   }
 }

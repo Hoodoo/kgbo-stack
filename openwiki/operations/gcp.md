@@ -5,7 +5,7 @@ description: How deploy/gcp runs the container on one Compute Engine VM behind a
 tags: [gcp, terraform, iap, deployment, operations]
 verified:
   - by: owcli/v0.4.0
-    at: "2026-10-05T10:23:24.954Z"
+    at: "2026-10-05T10:30:30.888Z"
 sources:
   - id: openwiki-source-a6d1c018c21915521ee86941
     resource: repo://deploy/gcp/cloud-init.yaml.tftpl
@@ -17,7 +17,7 @@ sources:
     resource: repo://docs/gcp.md
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/v0.4.0", at: "2026-10-05T10:23:25.099Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-05T10:30:31.021Z" }
 ---
 
 # GCP Deployment
@@ -129,3 +129,7 @@ about a minute of a cold VM reset, the managed certificate became active
 within minutes, HTTP redirected to HTTPS, and each name redirected to
 Google sign-in with the project's OAuth client; a request carrying a
 forged IAP user header from outside was redirected to sign-in as well.
+Signing in failed with "Access blocked: This app's request is invalid"
+until the client's single redirect URI matched the `redirect_uri` IAP sends
+exactly, full client ID included; after that, browser sign-in reached the
+UIs.
