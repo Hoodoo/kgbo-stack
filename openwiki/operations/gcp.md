@@ -5,7 +5,7 @@ description: How deploy/gcp runs the container on one Compute Engine VM behind a
 tags: [gcp, terraform, iap, deployment, operations]
 verified:
   - by: owcli/v0.4.0
-    at: "2026-10-05T09:32:40.353Z"
+    at: "2026-10-05T10:23:24.954Z"
 sources:
   - id: openwiki-source-a6d1c018c21915521ee86941
     resource: repo://deploy/gcp/cloud-init.yaml.tftpl
@@ -13,9 +13,11 @@ sources:
     resource: repo://deploy/gcp/main.tf
   - id: openwiki-source-9d6f7265a587785486b0964e
     resource: repo://deploy/gcp/variables.tf
+  - id: openwiki-source-a9ebfd4901730d787b51d9c8
+    resource: repo://docs/gcp.md
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/v0.4.0", at: "2026-10-05T09:32:54.546Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-05T10:23:25.099Z" }
 ---
 
 # GCP Deployment
@@ -56,7 +58,15 @@ later kata federation).
 
 Each backend service is `EXTERNAL_MANAGED`, points at an unmanaged instance
 group whose named ports map each UI to its port, and has IAP enabled with
-Google's managed OAuth client. Health checks are TCP: an HTTP check would
+the project's own OAuth client (`iap_oauth_client_id`,
+`iap_oauth_client_secret`). Google's managed client only admits users of the
+project's Google Workspace organization, so in a personal project without
+one, IAP answered every request with a 502 ("Empty Google Account OAuth
+client ID(s)/secret(s)"). The API that created OAuth clients for IAP is shut
+down, so the client is made by hand in Google Auth Platform (external
+audience, testing status with the members as test users, a Web application
+client whose redirect URI is IAP's `handleRedirect` for that client ID);
+`docs/gcp.md` lists the steps. Health checks are TCP: an HTTP check would
 get the UIs' 401, since health checkers send no IAP header. Access is
 `roles/iap.httpsResourceAccessor` on each backend for every member in
 `iap_members`.
@@ -65,18 +75,29 @@ get the UIs' 401, since health checkers send no IAP header. Access is
 
 The VM runs Container-Optimized OS with a service account that may pull
 from the `kgbo` Artifact Registry repository and write logs. Its
-`user-data` is `cloud-init.yaml.tftpl`, which writes two systemd units and
-starts them:
+`user-data` is `cloud-init.yaml.tftpl`, which writes two scripts, a config
+file, and three systemd units, and starts the units:
 
-- `kgbo-disk` mounts the `kgbo-data` persistent disk at `/mnt/disks/kgbo`,
-  formatting it only when `blkid` finds no filesystem, and gives it to uid
-  1000. The unit escapes shell variables as `$$`, because systemd expands
-  `$VAR` in `Exec` lines itself.
-- `kgbo` configures Docker credentials for the registry, writes
-  goatlassian's `[services]` links to the public owcli and bossman URLs once,
-  and runs the image with `--network host`, the disk as `/kgbo`, the UIs on
-  `0.0.0.0`, their public names, and the IAP user header. `Restart=always`
-  keeps it up, including while the image is not pushed yet.
+- `kgbo-disk` runs `/etc/kgbo/mount-disk.sh`: it mounts the `kgbo-data`
+  persistent disk at `/mnt/disks/kgbo`, formatting it only when `blkid`
+  finds no filesystem, and gives it to uid 1000.
+- `kgbo-firewall` runs `/etc/kgbo/firewall.sh`. Container-Optimized OS has
+  its own host firewall whose INPUT policy drops everything but SSH, which
+  left every backend unhealthy on the first deploy; the script inserts
+  rules admitting the load balancer ranges to the UI ports, idempotently
+  (`iptables -C` before `-I`).
+- `kgbo` configures Docker credentials for the registry, copies
+  `/etc/kgbo/goatlassian-config.toml` (goatlassian's `[services]` links to
+  the public owcli and bossman URLs) into the bundle when goatlassian has no
+  config yet, and runs the image with `--network host`, the disk as
+  `/kgbo`, the UIs on `0.0.0.0`, their public names, and the IAP user
+  header. `Restart=always` keeps it up, including while the image is not
+  pushed yet.
+
+Shell logic lives in the scripts and the config is written by cloud-init,
+not built in `Exec` lines: systemd rewrites `$` and backslash escapes there,
+and an escaped `printf` once wrote goatlassian's config without its quotes,
+which crash-looped the container.
 
 The data disk has `prevent_destroy`: the data bundle lives there, so
 `terraform destroy` stops at it.
@@ -99,5 +120,12 @@ The bundle starts empty until the kata hub, server-side clones, bossman
 shipping, and backups exist. goatlassian's services status probes the
 public URLs from inside the VM and gets IAP's sign-in redirect, so it shows
 owcli and bossman as down although the links work. kata's own web UI is not
-exposed. The configuration was validated locally (`terraform validate`, the
-template rendered and parsed as YAML) before its first apply.
+exposed.
+
+## First deploy
+
+Applied to a personal project, all three backends turned healthy within
+about a minute of a cold VM reset, the managed certificate became active
+within minutes, HTTP redirected to HTTPS, and each name redirected to
+Google sign-in with the project's OAuth client; a request carrying a
+forged IAP user header from outside was redirected to sign-in as well.

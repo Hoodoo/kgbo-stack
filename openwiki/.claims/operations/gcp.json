@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:92dcfa6d6363af3ab840863790be43e15d2fdb5b6af12e1097d495fbd909d887",
+  "pageVersion": "sha256:0867dc7a6e6471b3bd758c2dab17f14005f507915a980c788be3e3870734ab6e",
   "claims": [
     {
       "id": "claim_3379e0662c0326ff4168d193b9f22a4e",
@@ -17,11 +17,11 @@
       "statement": "The URL map routes each host to its backend with goatlassian as default, and plain HTTP redirects to HTTPS.",
       "evidence": [
         {
-          "resource": "repo://deploy/gcp/main.tf#L252-L269",
+          "resource": "repo://deploy/gcp/main.tf#L256-L273",
           "version": "repo-lines-v1:sha256:97def942c94c692cd74b4cd44d4f1b5f2c50a30664e44c32919f9d3675d2e165:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNWYwMGM1ZWQ2NjY3Njg3YTMwYWQ2NDM0OGJmZmVmNDdlMDQ5NjJiNjE0MzQ2NGFkMDlkZGZhMTFlNmM4ZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjMmQ5NzBlMmY5NjMyZWZlNDI5ODk3MjM1NzEwZTI4MzJlNGI4ZjFmNTIwZTE1MWQ0YjE5YzY2OTIxMGM1MjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYzMzUzN2M2ZDNkNzA3NDhkMmNkMDcwMWU4YjBiOTY2NGQ5MzIzMWUxZGQ4OGZhZmFiYzU3NjlmZjMyZGJmZGQifQ"
         },
         {
-          "resource": "repo://deploy/gcp/main.tf#L293-L312",
+          "resource": "repo://deploy/gcp/main.tf#L297-L316",
           "version": "repo-lines-v1:sha256:95f8ae533dd40a5892a17b6440623f22d22ccda2549d0a30f7dda6a0cf33ca98:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmMmJkZTM2NWY5N2MzNDk2ZmVhZDkwNDRjYTNhODFlYmFiNjBkNTFiZTMxNmE0OWFiOTg3YTYyM2JiNjI5NDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjM2YzZWQwMzk5ZWZmM2QyNWJhMzdmOGVmNmNmYTkxNGJiMGZkYmQ3NTUwODZlYTJhNmE1MDJkNWRmZjk3M2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
@@ -52,11 +52,11 @@
     },
     {
       "id": "claim_65280a1e9cd203b631f7f44ea90b131e",
-      "statement": "Backends are EXTERNAL_MANAGED with IAP enabled and TCP health checks, and iap_members get roles/iap.httpsResourceAccessor on each.",
+      "statement": "Backends are EXTERNAL_MANAGED with IAP enabled using the project's OAuth client and TCP health checks, and iap_members get roles/iap.httpsResourceAccessor on each.",
       "evidence": [
         {
-          "resource": "repo://deploy/gcp/main.tf#L215-L250",
-          "version": "repo-lines-v1:sha256:a338f4bdc9e499b072112936e2acb8dfcad40ade41982305cb724ffeecc67106:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1ZmI4ZWFlZWUwNzA5MjU0ODM2MzcwODEzY2FiNDc5ZTVkYzIwZTJmYzg0MmRlOWEyZDlhZmMxMzIxZjEyY2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiMjcwMjlkOTIyZTU4YWE4N2YyNjkxODA5MzMwMmNkMWUxYzM3MGU5ZjE2ZTg5NDY2YzAwYWNlYmM1OGVjMzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhiMDk5YTY2Y2U4MDdkMGY2ZmZiNDcyYTkwZGEwNzEzMGZjMmVlM2E3MWE3YTc3ZjA2Zjg0ZTgwNTUwZmVjNDEifQ"
+          "resource": "repo://deploy/gcp/main.tf#L217-L254",
+          "version": "repo-lines-v1:sha256:7a678c0d6bcd8aa4fe4fe5e7568c9de34fc126b3ea37511696be144888aadfbf:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1ZmI4ZWFlZWUwNzA5MjU0ODM2MzcwODEzY2FiNDc5ZTVkYzIwZTJmYzg0MmRlOWEyZDlhZmMxMzIxZjEyY2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiMjcwMjlkOTIyZTU4YWE4N2YyNjkxODA5MzMwMmNkMWUxYzM3MGU5ZjE2ZTg5NDY2YzAwYWNlYmM1OGVjMzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhiMDk5YTY2Y2U4MDdkMGY2ZmZiNDcyYTkwZGEwNzEzMGZjMmVlM2E3MWE3YTc3ZjA2Zjg0ZTgwNTUwZmVjNDEifQ"
         }
       ]
     },
@@ -72,11 +72,11 @@
     },
     {
       "id": "claim_4541c96bfba03d4dd3f6c0d31db3d3e4",
-      "statement": "cloud-init writes kgbo-disk, which formats the data disk only without a filesystem and mounts it, and kgbo, which configures registry credentials, writes goatlassian's services links once, and runs the image with the disk as /kgbo, the UIs on 0.0.0.0, their public names, and the IAP user header.",
+      "statement": "cloud-init writes kgbo-disk, which formats the data disk only without a filesystem and mounts it, and kgbo, which configures registry credentials, copies goatlassian's services links into the bundle when it has no config, and runs the image with the disk as /kgbo, the UIs on 0.0.0.0, their public names, and the IAP user header.",
       "evidence": [
         {
-          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L1-L44",
-          "version": "repo-lines-v1:sha256:10ae43ebfdca7ebae7d1b89f410993f6556762c620f084c0fc442e8453f91f6a:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4Yzk1OTU1YjAyNDQwMmFhOTU3MmI2NjNmN2VlYjEzNGYwMTM0M2JiOTJhZjI3YjUwZTk3ZTcyYjIyYzU2NWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzZjk2OTg3MWZkY2Q3MGQ1YTYwMjNkNDUyZDA4YzNlOTM0MDI1YzY4YjQ0YzA4Nzc1OGRlMDQxZGRlNDUwMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L1-L88",
+          "version": "repo-lines-v1:sha256:ecaaaae8dc490813c3aeebf5dd38154291fbb55fd2f6b1c38b7c3c64fcab8a62:eyJzZWxlY3RlZExpbmVDb3VudCI6ODgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4Yzk1OTU1YjAyNDQwMmFhOTU3MmI2NjNmN2VlYjEzNGYwMTM0M2JiOTJhZjI3YjUwZTk3ZTcyYjIyYzU2NWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzZjk2OTg3MWZkY2Q3MGQ1YTYwMjNkNDUyZDA4YzNlOTM0MDI1YzY4YjQ0YzA4Nzc1OGRlMDQxZGRlNDUwMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
     },
@@ -99,10 +99,44 @@
           "version": "repo-lines-v1:sha256:8003b5e44293158c892dad12b6b584da3f728ce41e4c039ba854ba5f17266678:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU4NWM3ZDU3OGZkZDMyMjk3NGEzNzBmMjA2ZGQ5Yzk0MzgzYzZmMDAyZDczYTc0ODdkZDIwOTY3MzFiYmZkYTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
+    },
+    {
+      "id": "claim_502e1e1ec29369d6da7ad051dfbe215f",
+      "statement": "IAP uses a project-owned OAuth client given by iap_oauth_client_id and the sensitive iap_oauth_client_secret.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/main.tf#L236-L240",
+          "version": "repo-lines-v1:sha256:4d10e183a0663b861a9ad1c480689cce658a76b8d911cd7eb5ebe106af54ba40:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjBmOTBhYzZmZDVkOWM5NGI3YWZhMmNmMGQwZTU5OWUyNmU1YmQ2OGY4ODBjNjM5MDM1NDFmZjdiY2Q3MWVkNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWQ5NTFmYjYwZGM1Zjg0YjZjN2NmNDc5NGY5OTE3NWYxMjUwNDIxNmZhMzViOWJjMzU1ZmFhMGQ3YzdhYjU5YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTdkMzJkMjM0ZDBlYTkwMDI2N2Q5MDUzOTgxMTEyNTMzMTMxNWI1ZWYzZTQ0NTAwYjFiNTM2NTMzN2VjZWE5OCJ9"
+        },
+        {
+          "resource": "repo://deploy/gcp/variables.tf#L40-L49",
+          "version": "repo-lines-v1:sha256:884f6561683ff2e67953ef134f5e5b0d38ee3644b25980e8d6025052ded0b82b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjExMjcwYWM5NTA1MGY3Njg4MzY5MmMyYzZlMGY4NWFlY2IzNzM5OWVmMmEzYjlkYWEyZjkxNDgwNjUwNzg3Y2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI3MDliMWRhMGMxMDVlMDM2NWQ5YzU2ZjhlNjkxYTQxNDQ5M2UwZGMwZDMxNzZjZmVhMTQ5ZjlhZjU5M2NmY2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7a2e5623da20eabecffdb39a25a776a0",
+      "statement": "kgbo-firewall inserts host firewall rules admitting the load balancer ranges to the UI ports, checking each rule with iptables -C first.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L1-L88",
+          "version": "repo-lines-v1:sha256:ecaaaae8dc490813c3aeebf5dd38154291fbb55fd2f6b1c38b7c3c64fcab8a62:eyJzZWxlY3RlZExpbmVDb3VudCI6ODgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4Yzk1OTU1YjAyNDQwMmFhOTU3MmI2NjNmN2VlYjEzNGYwMTM0M2JiOTJhZjI3YjUwZTk3ZTcyYjIyYzU2NWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzZjk2OTg3MWZkY2Q3MGQ1YTYwMjNkNDUyZDA4YzNlOTM0MDI1YzY4YjQ0YzA4Nzc1OGRlMDQxZGRlNDUwMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_45dfa6676359b320b61ea3ac8f293833",
+      "statement": "docs/gcp.md lists the console steps for the IAP OAuth client: external audience, test users, a Web application client, and IAP's handleRedirect URI.",
+      "evidence": [
+        {
+          "resource": "repo://docs/gcp.md",
+          "version": "repo-file-v1:sha256:4f7bad35461fef7848502d31446dbafd00ed9ef9baee3903c88ba10453930095"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "owcli/v0.4.0",
-    "at": "2026-10-05T09:32:40.353Z"
+    "at": "2026-10-05T10:23:24.954Z"
   }
 }

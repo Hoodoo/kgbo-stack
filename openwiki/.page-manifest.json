@@ -23,11 +23,11 @@
       "sourceFingerprint": "sha256:6a7f8a5d5b170e85a3f2f8ab354e376ea2ba427462c421f0058e55355b0cea78"
     },
     "/openwiki/operations/gcp.md": {
-      "pageVersion": "sha256:92dcfa6d6363af3ab840863790be43e15d2fdb5b6af12e1097d495fbd909d887",
+      "pageVersion": "sha256:0867dc7a6e6471b3bd758c2dab17f14005f507915a980c788be3e3870734ab6e",
       "completedBy": "owcli/v0.4.0",
-      "completedRunId": "d2c94be3-d6da-4930-b1bb-42d0352d11b3",
-      "gitHead": "c8215c0833e9aaa9ef5caaacb1fc229e51ba1256",
-      "sourceFingerprint": "sha256:6a7f8a5d5b170e85a3f2f8ab354e376ea2ba427462c421f0058e55355b0cea78"
+      "completedRunId": "5f77caa8-34ba-4e5c-a987-c3ebb851e8d1",
+      "gitHead": "dbf4fd0302bf10e6469150465a5ef10f065b3531",
+      "sourceFingerprint": "sha256:f54d02e5a2ab2567107d575f10241e07b6c46c78e101533d44f2c40dc65b1455"
     },
     "/openwiki/quickstart.md": {
       "pageVersion": "sha256:a356143d9df1909d3d77d263c02ee08c8c7683a07ed6fee666d21a72e8463fa8",
