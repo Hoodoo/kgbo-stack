@@ -67,8 +67,15 @@ create one is shut down: make it in the console once.
    publishing needs no verification if you prefer that.
 3. **Client:** *Clients* → *Create client* → *Web application*, name
    `kgbo-iap`, create, and copy the client ID and secret.
-4. **Redirect:** edit the client and add the authorized redirect URI
+4. **Redirect:** edit the client and add exactly one authorized redirect
+   URI, with the full client ID (including `.apps.googleusercontent.com`):
    `https://iap.googleapis.com/v1/oauth/clientIds/<client ID>:handleRedirect`.
+   Leave *Authorized JavaScript origins* empty and do not add the nip.io
+   names: Google returns to IAP, which forwards to the page. A mismatch shows
+   as "Access blocked: This app's request is invalid"; the exact URI IAP
+   sends is the `redirect_uri` parameter of the sign-in redirect
+   (`curl -sI https://portfolio.<ip>.nip.io/`). Changes can take a few
+   minutes to apply.
 5. Put `iap_oauth_client_id` and `iap_oauth_client_secret` into
    `terraform.tfvars` (git-ignored; the secret also lands in the local
    Terraform state).
