@@ -28,6 +28,18 @@ write_files:
         iptables -w -C $rule 2>/dev/null || iptables -w -I $rule
       done
 
+  # Repositories the container clones and registers (kgbo-repos), copied
+  # into the bundle's server/ directory on every start: Terraform owns them.
+  - path: /etc/kgbo/repos.tsv
+    permissions: "0644"
+    content: |
+      ${indent(6, repos_tsv)}
+
+  - path: /etc/kgbo/workspaces.tsv
+    permissions: "0644"
+    content: |
+      ${indent(6, workspaces_tsv)}
+
   # goatlassian's links to the sibling UIs, copied into its bundle directory
   # only when it has no config yet (an edited config is kept). Written here,
   # not by a unit, because systemd rewrites backslash escapes in Exec lines.
@@ -71,6 +83,7 @@ write_files:
       ExecStartPre=/usr/bin/docker-credential-gcr configure-docker --registries=${registry_host}
       ExecStartPre=-/usr/bin/docker rm -f kgbo
       ExecStartPre=/bin/bash -c 'mkdir -p /mnt/disks/kgbo/goatlassian && cp -n /etc/kgbo/goatlassian-config.toml /mnt/disks/kgbo/goatlassian/config.toml; chown -R 1000:1000 /mnt/disks/kgbo/goatlassian'
+      ExecStartPre=/bin/bash -c 'mkdir -p /mnt/disks/kgbo/server && cp /etc/kgbo/repos.tsv /etc/kgbo/workspaces.tsv /mnt/disks/kgbo/server/ && chown -R 1000:1000 /mnt/disks/kgbo/server'
       ExecStart=/usr/bin/docker run --rm --name kgbo --network host \
         -v /mnt/disks/kgbo:/kgbo \
         -e BOSSMAN_ADDR=0.0.0.0:7788 -e OWCLI_ADDR=0.0.0.0:4321 -e GOATLASSIAN_ADDR=0.0.0.0:7799 \

@@ -45,7 +45,7 @@ RUN ln -s /opt/kgbo-stack/bin/kgbo /usr/local/bin/kgbo \
  && kgbo env --plain --root /kgbo | while IFS== read -r key value; do \
       [ "$(printenv "$key")" = "$value" ] || { echo "ENV $key drifted from stack.toml: want $value" >&2; exit 1; }; \
     done
-COPY deploy/container/kgbo-services /usr/local/bin/kgbo-services
+COPY deploy/container/kgbo-services deploy/container/kgbo-repos /usr/local/bin/
 USER kgbo
 WORKDIR /home/kgbo
 VOLUME /kgbo

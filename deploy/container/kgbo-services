@@ -7,6 +7,8 @@
 # Behind a reverse proxy (such as a load balancer with Google IAP):
 #   BOSSMAN_ADDR, OWCLI_ADDR, GOATLASSIAN_ADDR   listen addresses (host:port)
 #   BOSSMAN_HOST, OWCLI_HOST, GOATLASSIAN_HOST   public names to accept
+#   KGBO_REPOS_EVERY   how often kgbo-repos syncs the clones listed in
+#                      $KGBO_HOME/server/repos.tsv (default 15m; 0 disables)
 #   KGBO_USER_HEADER   trusted header naming the signed-in user, e.g.
 #                      X-Goog-Authenticated-User-Email; requests without it
 #                      are refused, so only set it when nothing but the
@@ -53,6 +55,13 @@ mapfile -t flags < <(proxy_flags "${OWCLI_HOST:-}")
 owcli serve --no-open --addr "$OWCLI_ADDR" "${flags[@]}" &
 mapfile -t flags < <(proxy_flags "${GOATLASSIAN_HOST:-}")
 goatlassian serve --addr "$GOATLASSIAN_ADDR" "${flags[@]}" &
+
+# Server-side clones: synced at start and then periodically. A failed sync
+# is logged and retried; it never stops the services.
+every=${KGBO_REPOS_EVERY:-15m}
+if [[ -f $KGBO_HOME/server/repos.tsv && $every != 0 ]]; then
+	(while true; do kgbo-repos || echo "kgbo-services: repository sync failed; retrying in $every" >&2; sleep "$every"; done) &
+fi
 
 trap 'kill $(jobs -p) 2>/dev/null; wait' TERM INT
 status=0

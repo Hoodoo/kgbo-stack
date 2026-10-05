@@ -185,6 +185,8 @@ resource "google_compute_instance" "kgbo" {
       owcli_host       = local.hosts.owcli
       bossman_host     = local.hosts.bossman
       lb_ranges        = join(" ", local.lb_ranges)
+      repos_tsv        = join("\n", [for name, url in var.repos : "${name} ${url}"])
+      workspaces_tsv   = join("\n", [for ws, names in var.workspaces : join(" ", concat([ws], names))])
       ui_ports         = join(",", [for p in values(local.ports) : tostring(p)])
     })
   }

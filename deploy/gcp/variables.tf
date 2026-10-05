@@ -47,3 +47,22 @@ variable "iap_oauth_client_secret" {
   type        = string
   sensitive   = true
 }
+
+variable "repos" {
+  description = "Repositories the server clones (name => git URL), into /kgbo/repos/<name>; each is bound in owcli and adopted as the goatlassian project <name>. Public HTTPS URLs; private ones need credentials, not set up yet."
+  type        = map(string)
+  default = {
+    owcli       = "https://github.com/Hoodoo/owcli.git"
+    bossman     = "https://github.com/Hoodoo/bossman.git"
+    goatlassian = "https://github.com/Hoodoo/goatlassian.git"
+    kgbo-stack  = "https://github.com/Hoodoo/kgbo-stack.git"
+  }
+}
+
+variable "workspaces" {
+  description = "owcli workspaces on the server (name => repository names from repos), for search across wikis."
+  type        = map(list(string))
+  default = {
+    kgbo-stack = ["kgbo-stack", "owcli", "bossman", "goatlassian"]
+  }
+}

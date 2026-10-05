@@ -1,0 +1,43 @@
+#!/bin/bash
+# Keeps server-side clones of the repositories the stack shows, and makes the
+# tools know them. Reads, from $KGBO_HOME/server/ (written by the deployment):
+#   repos.tsv        "<name> <git url>" per line: cloned to $KGBO_HOME/repos/<name>
+#   workspaces.tsv   "<workspace> <name>..." per line: owcli workspaces
+# Then binds every clone in owcli, puts it in its workspaces, and adopts it
+# into the goatlassian project named like it (created the first time, added
+# to afterwards). Safe to rerun: existing clones are fast-forwarded and every
+# registration is idempotent. Only the listed clones are adopted, never other
+# directories goatlassian knows from shipped sessions.
+#   kgbo-repos sync
+set -uo pipefail
+
+conf=$KGBO_HOME/server
+dest=$KGBO_HOME/repos
+[[ -f $conf/repos.tsv ]] || exit 0
+mkdir -p "$dest"
+status=0
+
+while read -r -u 3 name url _; do
+	[[ -z $name || $name == \#* ]] && continue
+	dir=$dest/$name
+	if [[ -d $dir/.git ]]; then
+		git -C "$dir" pull --ff-only --quiet || { echo "kgbo-repos: $name: pull failed" >&2; status=1; }
+	else
+		git clone --quiet "$url" "$dir" || { echo "kgbo-repos: $name: clone of $url failed" >&2; status=1; continue; }
+	fi
+	owcli bind "$dir" >/dev/null 2>&1 || true # already bound is fine
+	goatlassian adopt "$dir" --slug "$name" >/dev/null || { echo "kgbo-repos: $name: adopt failed" >&2; status=1; }
+done 3<"$conf/repos.tsv"
+
+if [[ -f $conf/workspaces.tsv ]]; then
+	while read -r -u 3 ws names; do
+		[[ -z $ws || $ws == \#* ]] && continue
+		paths=()
+		for n in $names; do [[ -d $dest/$n ]] && paths+=("$dest/$n"); done
+		((${#paths[@]})) || continue
+		owcli workspace create "$ws" "${paths[@]}" >/dev/null 2>&1 ||
+			owcli workspace add "$ws" "${paths[@]}" >/dev/null 2>&1 || true
+	done 3<"$conf/workspaces.tsv"
+fi
+
+exit "$status"
