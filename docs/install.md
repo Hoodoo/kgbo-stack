@@ -68,6 +68,12 @@ curl -fsSL https://raw.githubusercontent.com/Hoodoo/bossman/main/skills/session-
   -o ~/.claude/skills/session-catalogue-close/SKILL.md
 ```
 
+Optionally keep all of the stack's state in one directory, `~/kgbo`: with
+the tools stopped, `bin/kgbo adopt` (from this repository) moves it there
+and leaves symlinks at the default locations. See
+[data-bundle.md](data-bundle.md), which also covers consistent backups
+(`bin/kgbo snapshot`).
+
 If you chose owcli, make sure OpenWiki is not wired into your agents:
 `claude mcp list` should not show `openwiki`, and `~/.claude/skills/openwiki`
 should not exist. `openwiki integrations uninstall claude` (and `codex`)

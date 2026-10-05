@@ -12,6 +12,21 @@
 
 version = 1
 
+# --------------------------------------------------------------- bundle
+#
+# All machine-local state of the active providers can live in one directory:
+# each provider that keeps state outside repositories gets <root>/<bundle_dir>,
+# set through its own home variable (home_env). `bin/kgbo env` prints the
+# exports; `bin/kgbo snapshot DEST` copies every provider's state into the
+# same layout, SQLite databases through the backup API.
+# Not in the bundle: the repositories (in-repo wikis, .kata.toml, .beads/),
+# the agents' own logs (~/.claude, ~/.codex, which bossman archives into its
+# home), and services such as Ollama that kata search uses for embeddings.
+
+[bundle]
+root = "~/kgbo"                              # KGBO_HOME overrides
+snapshot_skip = ["*-wal", "*-shm", "*-journal", "*.lock", "*.sock"]
+
 # ---------------------------------------------------------------- roles
 
 [roles.tracker]
@@ -56,6 +71,10 @@ host.claude = "kata init --with-hooks"       # work.attention hooks in {repo}/.c
 host.codex = "kata init --with-codex-hooks"
 markers = ["<!-- BEGIN KATA", "<!-- END KATA -->"]
 goatlassian_kind = "kata"
+home_env = "KATA_HOME"
+home_default = "~/.kata"
+bundle_dir = "kata"
+snapshot_skip = ["runtime"]                  # daemon pid files and logs, per-run
 
 [providers.beads]
 role = "tracker"
@@ -80,6 +99,9 @@ host.claude = ""                             # AGENTS.md block is the whole inte
 markers = ["<!-- OPENWIKI:START", "<!-- OPENWIKI:END -->"]
 conflicts = ["openwiki"]                     # its MCP server + skill shadow owcli for agents
 goatlassian_kind = "owcli-wiki"
+home_env = "OWCLI_HOME"                      # owcli >= v0.2.0
+home_default = ["~/.config/owcli", "~/.local/share/owcli"]   # XDG config + data, merged in the bundle
+bundle_dir = "owcli"
 
 [providers.openwiki]
 role = "knowledge"
@@ -105,6 +127,9 @@ check = "bossman sync"
 schedule = "17 * * * * $HOME/.local/bin/bossman sync >/dev/null"
 host.claude = "curl -fsSL https://raw.githubusercontent.com/Hoodoo/bossman/main/skills/session-catalogue-close/SKILL.md --create-dirs -o ~/.claude/skills/session-catalogue-close/SKILL.md"
 goatlassian_kind = "sessions"
+home_env = "BOSSMAN_HOME"
+home_default = "~/.local/share/bossman"
+bundle_dir = "bossman"
 
 [providers.goatlassian]
 role = "portfolio"
@@ -114,3 +139,7 @@ ours = true
 install = "go install github.com/Hoodoo/goatlassian/cmd/goatlassian@latest"
 check = "goatlassian services"
 onboard = "goatlassian adopt {repo}"
+home_env = "GOATLASSIAN_HOME"
+home_default = "~/.local/share/goatlassian"
+bundle_dir = "goatlassian"
+snapshot_skip = ["logs"]                     # service logs

@@ -27,6 +27,9 @@ go install github.com/Hoodoo/goatlassian/cmd/goatlassian@latest
   onboarding, and agent-host commands. The source of truth for the docs.
 - [`docs/install.md`](docs/install.md): install the stack and point it at
   existing repositories.
+- [`docs/data-bundle.md`](docs/data-bundle.md): keep all of the stack's
+  state in one directory (`bin/kgbo adopt`), and back it up consistently
+  (`bin/kgbo snapshot`).
 - [`docs/publishing.md`](docs/publishing.md): runbook for publishing the
   in-house tools to GitHub.
 

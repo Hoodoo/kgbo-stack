@@ -1,0 +1,251 @@
+#!/usr/bin/env python3
+"""kgbo: work with the stack's data bundle, as declared in stack.toml.
+
+  kgbo env [--root DIR] [--plain]    print shell exports that put every provider's
+                                     state in the bundle (root: $KGBO_HOME or [bundle].root)
+  kgbo homes                         show where each provider's state is now
+  kgbo snapshot DEST [--provider P]  copy every provider's current state into
+                                     DEST/<bundle_dir>, consistently
+  kgbo adopt [--dry-run]             move state into the bundle and leave symlinks
+                                     at the default locations (no variables needed)
+
+A machine uses either the variables from `kgbo env` or the symlinks from
+`kgbo adopt`, never both: kata keys its daemon on the KATA_HOME string, so a
+symlinked path and its target would get two daemons on one database.
+
+A snapshot reads each provider's state where the provider itself would find
+it (its home variable if set, else its defaults), so it works both before and
+after moving into the bundle. SQLite databases are copied with SQLite's online
+backup API, which gives a consistent copy even while a daemon holds the
+database open; -wal and -shm files are never copied. Each copied database is
+checked with PRAGMA integrity_check.
+
+Uses only the Python standard library (3.11+ for tomllib).
+"""
+
+import argparse
+import fnmatch
+import os
+import shutil
+import sqlite3
+import sys
+import subprocess
+import tomllib
+from pathlib import Path
+
+MANIFEST = Path(__file__).resolve().parent.parent / "stack.toml"
+SQLITE_MAGIC = b"SQLite format 3\x00"
+
+
+def load_manifest():
+    with open(MANIFEST, "rb") as f:
+        return tomllib.load(f)
+
+
+def expand(path):
+    """Expand ~ and the XDG base directories the way the tools resolve them."""
+    for default, env in (("~/.config", "XDG_CONFIG_HOME"), ("~/.local/share", "XDG_DATA_HOME")):
+        if path.startswith(default + "/") and os.environ.get(env):
+            path = os.environ[env] + path[len(default):]
+    return Path(os.path.expanduser(path))
+
+
+def bundled(manifest):
+    """Providers that keep state outside repositories, in manifest order."""
+    return {name: p for name, p in manifest["providers"].items() if p.get("home_env")}
+
+
+def bundle_root(manifest, override=None):
+    return expand(override or os.environ.get("KGBO_HOME") or manifest["bundle"]["root"])
+
+
+def current_homes(provider):
+    """The directories holding a provider's state right now."""
+    if os.environ.get(provider["home_env"]):
+        return [Path(os.environ[provider["home_env"]]).expanduser()]
+    return default_homes(provider)
+
+
+def is_sqlite(path):
+    try:
+        with open(path, "rb") as f:
+            return f.read(16) == SQLITE_MAGIC
+    except OSError:
+        return False
+
+
+def skipped(rel, patterns):
+    return any(fnmatch.fnmatch(rel.name, p) or fnmatch.fnmatch(str(rel), p) for p in patterns)
+
+
+def copy_sqlite(src, dst):
+    # Read-only URI: never create or modify the source; the backup API takes a
+    # consistent snapshot that includes committed WAL contents.
+    with sqlite3.connect(f"file:{src}?mode=ro", uri=True) as s, sqlite3.connect(dst) as d:
+        s.backup(d)
+        ok = d.execute("PRAGMA integrity_check").fetchone()[0]
+    if ok != "ok":
+        raise RuntimeError(f"integrity_check failed for {dst}: {ok}")
+
+
+def snapshot_tree(src, dst, patterns, stats):
+    for dirpath, dirnames, filenames in os.walk(src):
+        here = Path(dirpath)
+        dirnames[:] = [d for d in dirnames if not skipped((here / d).relative_to(src), patterns)]
+        for name in filenames:
+            path = here / name
+            rel = path.relative_to(src)
+            if skipped(rel, patterns) or not path.is_file():
+                continue
+            out = dst / rel
+            out.parent.mkdir(parents=True, exist_ok=True)
+            if out.exists():
+                raise FileExistsError(f"{out} already exists; refusing to overwrite")
+            if is_sqlite(path):
+                copy_sqlite(path, out)
+                stats["databases"] += 1
+            else:
+                shutil.copy2(path, out, follow_symlinks=False)
+                stats["files"] += 1
+
+
+def default_homes(provider):
+    defaults = provider["home_default"]
+    return [expand(d) for d in ([defaults] if isinstance(defaults, str) else defaults)]
+
+
+def holders(paths):
+    """PIDs of processes with a file open under any of paths."""
+    roots = [str(p.resolve()) for p in paths if p.exists()]
+    if not roots:
+        return set()
+    if not Path("/proc").is_dir():
+        out = subprocess.run(["lsof", "-t", *[a for r in roots for a in ("+D", r)]],
+                             capture_output=True, text=True)
+        return {int(x) for x in out.stdout.split()}
+    pids = set()
+    for proc in Path("/proc").iterdir():
+        if not proc.name.isdigit():
+            continue
+        try:
+            for fd in (proc / "fd").iterdir():
+                target = os.readlink(fd)
+                if any(target == r or target.startswith(r + "/") for r in roots):
+                    pids.add(int(proc.name))
+                    break
+        except OSError:
+            continue
+    return pids
+
+
+def cmd_adopt(manifest, args):
+    root = bundle_root(manifest)
+    providers = bundled(manifest)
+    set_vars = [p["home_env"] for p in providers.values() if os.environ.get(p["home_env"])]
+    if set_vars:
+        sys.exit(f"kgbo: {', '.join(set_vars)} set; adopt makes symlinks for variable-free use. "
+                 "Unset them, or keep using `kgbo env` instead.")
+    plan = []  # (provider name, default home, bundle dir)
+    for name, p in providers.items():
+        target = root / p["bundle_dir"]
+        for home in default_homes(p):
+            if home.is_symlink():
+                if home.resolve() != target.resolve():
+                    sys.exit(f"kgbo: {home} is already a symlink to {home.resolve()}")
+                continue
+            plan.append((name, home, target))
+    if not plan:
+        print(f"everything already points into {root}")
+        return
+    for name, home, target in plan:
+        state = "exists" if home.exists() else "missing, link only"
+        print(f"{name}: {home} ({state}) -> {target}")
+    busy = holders([home for _, home, _ in plan])
+    if busy:
+        sys.exit(f"kgbo: processes {sorted(busy)} have files open there; stop them first "
+                 "(kata daemon stop, and any `serve` of owcli, bossman, goatlassian)")
+    if args.dry_run:
+        return
+    for name, home, target in plan:
+        if home.exists():
+            p = providers[name]
+            stats = {"files": 0, "databases": 0}
+            snapshot_tree(home, target, manifest["bundle"].get("snapshot_skip", []) +
+                          p.get("snapshot_skip", []), stats)
+            home.rename(home.with_name(home.name + ".pre-kgbo"))
+            print(f"{name}: copied {stats['databases']} database(s), {stats['files']} file(s); "
+                  f"original kept as {home.name}.pre-kgbo")
+        target.mkdir(parents=True, exist_ok=True)
+        home.parent.mkdir(parents=True, exist_ok=True)
+        home.symlink_to(target, target_is_directory=True)
+    print(f"done; state lives in {root}")
+
+
+def cmd_env(manifest, args):
+    root = bundle_root(manifest, args.root)
+    pairs = [("KGBO_HOME", root)] + [(p["home_env"], root / p["bundle_dir"])
+                                     for p in bundled(manifest).values()]
+    for key, value in pairs:
+        # --plain suits environment.d and crontab, which take KEY=VALUE lines.
+        print(f"{key}={value}" if args.plain else f'export {key}="{value}"')
+
+
+def cmd_homes(manifest, args):
+    root = bundle_root(manifest)
+    for name, p in bundled(manifest).items():
+        homes = current_homes(p)
+        where = ", ".join(f"{h}{'' if h.exists() else ' (missing)'}" for h in homes)
+        inside = all(h.resolve() == (root / p["bundle_dir"]).resolve() for h in homes)
+        print(f"{name:12} {p['home_env']:17} {where}{'  [bundle]' if inside else ''}")
+
+
+def cmd_snapshot(manifest, args):
+    dest = Path(args.dest).expanduser().resolve()
+    common = manifest["bundle"].get("snapshot_skip", [])
+    providers = bundled(manifest)
+    if args.provider:
+        unknown = set(args.provider) - providers.keys()
+        if unknown:
+            sys.exit(f"kgbo: unknown provider(s): {', '.join(sorted(unknown))}")
+        providers = {k: v for k, v in providers.items() if k in args.provider}
+    taken = [dest / p["bundle_dir"] for p in providers.values()
+             if (dest / p["bundle_dir"]).exists() and any((dest / p["bundle_dir"]).iterdir())]
+    if taken:
+        sys.exit(f"kgbo: not empty, snapshot somewhere else: {', '.join(map(str, taken))}")
+    for name, p in providers.items():
+        # owcli's two defaults both point at one bundle directory once adopted.
+        homes = list({h.resolve(): h for h in current_homes(p) if h.exists()}.values())
+        if not homes:
+            print(f"{name}: no state, skipped")
+            continue
+        out = dest / p["bundle_dir"]
+        if any(h.resolve() == out or out.is_relative_to(h.resolve()) for h in homes):
+            sys.exit(f"kgbo: {out} is {name}'s live state; snapshot somewhere else")
+        stats = {"files": 0, "databases": 0}
+        for home in homes:
+            snapshot_tree(home, out, common + p.get("snapshot_skip", []), stats)
+        print(f"{name}: {stats['databases']} database(s), {stats['files']} file(s) -> {out}")
+
+
+def main():
+    ap = argparse.ArgumentParser(prog="kgbo", description=__doc__.split("\n\n")[0])
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    e = sub.add_parser("env", help="print exports for the bundle")
+    e.add_argument("--root", help="bundle directory (default: $KGBO_HOME or [bundle].root)")
+    e.add_argument("--plain", action="store_true", help="KEY=VALUE lines, for environment.d and crontab")
+    sub.add_parser("homes", help="show where each provider's state is now")
+    s = sub.add_parser("snapshot", help="copy every provider's state into DEST")
+    s.add_argument("dest")
+    s.add_argument("--provider", action="append", help="only this provider (repeatable)")
+    a = sub.add_parser("adopt", help="move state into the bundle, symlink the defaults")
+    a.add_argument("--dry-run", action="store_true", help="show the plan and check for open files")
+    args = ap.parse_args()
+    manifest = load_manifest()
+    try:
+        {"env": cmd_env, "homes": cmd_homes, "snapshot": cmd_snapshot, "adopt": cmd_adopt}[args.cmd](manifest, args)
+    except (OSError, RuntimeError, sqlite3.Error) as e:
+        sys.exit(f"kgbo: {e}")
+
+
+if __name__ == "__main__":
+    main()
