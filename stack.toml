@@ -26,6 +26,9 @@ version = 1
 [bundle]
 root = "~/kgbo"                              # KGBO_HOME overrides
 snapshot_skip = ["*-wal", "*-shm", "*-journal", "*.lock", "*.sock"]
+# `bin/kgbo remap` runs each provider's `relocate` command in this order:
+# goatlassian matches old wiki components by the owcli IDs owcli then changes.
+relocate_order = ["goatlassian", "owcli"]
 
 # ---------------------------------------------------------------- roles
 
@@ -98,6 +101,7 @@ onboard = "owcli agents-md"                  # then ask the agent: "initialize t
 host.claude = ""                             # AGENTS.md block is the whole integration
 markers = ["<!-- OPENWIKI:START", "<!-- OPENWIKI:END -->"]
 conflicts = ["openwiki"]                     # its MCP server + skill shadow owcli for agents
+relocate = "owcli relocate {old} {new}"      # after v0.2.0; bin/kgbo remap runs it after goatlassian's
 goatlassian_kind = "owcli-wiki"
 home_env = "OWCLI_HOME"                      # owcli >= v0.2.0
 home_default = ["~/.config/owcli", "~/.local/share/owcli"]   # XDG config + data, merged in the bundle
@@ -143,3 +147,4 @@ home_env = "GOATLASSIAN_HOME"
 home_default = "~/.local/share/goatlassian"
 bundle_dir = "goatlassian"
 snapshot_skip = ["logs"]                     # service logs
+relocate = "goatlassian relocate {old} {new}"   # after v0.1.1; must run before owcli's

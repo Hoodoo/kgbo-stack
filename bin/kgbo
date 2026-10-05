@@ -8,6 +8,8 @@
                                      DEST/<bundle_dir>, consistently
   kgbo adopt [--dry-run]             move state into the bundle and leave symlinks
                                      at the default locations (no variables needed)
+  kgbo remap OLD NEW [--dry-run]     after repositories (or a home directory) moved:
+                                     rewrite the paths every tool stored under OLD
 
 A machine uses either the variables from `kgbo env` or the symlinks from
 `kgbo adopt`, never both: kata keys its daemon on the KATA_HOME string, so a
@@ -25,6 +27,7 @@ Uses only the Python standard library (3.11+ for tomllib).
 
 import argparse
 import fnmatch
+import json
 import os
 import shutil
 import sqlite3
@@ -181,6 +184,93 @@ def cmd_adopt(manifest, args):
     print(f"done; state lives in {root}")
 
 
+def run(cmd, check=True):
+    """Run a tool; its stdout is returned, its failure ends kgbo."""
+    out = subprocess.run(cmd, capture_output=True, text=True)
+    if check and out.returncode != 0:
+        sys.exit(f"kgbo: {' '.join(cmd)} failed:\n{out.stderr or out.stdout}")
+    return out
+
+
+def has_subcommand(tool, sub):
+    if not shutil.which(tool):
+        return False
+    return run([tool, sub, "--help"], check=False).returncode == 0
+
+
+def moved_path(path, old, new):
+    if path == old:
+        return new
+    if path.startswith(old + "/"):
+        return new + path[len(old):]
+    return None
+
+
+def remap_kata(old, new, dry_run):
+    """Bind each kata project at its new path and drop its old local:// alias."""
+    if not shutil.which("kata"):
+        print("kata: not installed, skipped")
+        return
+    projects = json.loads(run(["kata", "projects", "list", "--json"]).stdout)["projects"]
+    found = False
+    for p in projects:
+        aliases = json.loads(run(["kata", "projects", "show", p["name"], "--json"]).stdout)["aliases"]
+        for a in aliases:
+            ident = a["alias_identity"]
+            if a["alias_kind"] != "local" or not ident.startswith("local://"):
+                continue
+            path = ident[len("local://"):]
+            target = moved_path(path, old, new)
+            if target is None:
+                continue
+            found = True
+            if not (Path(target) / ".kata.toml").exists():
+                print(f"kata: {p['name']}: {target} has no .kata.toml; kept {ident}")
+                continue
+            print(f"kata: {p['name']}: local://{path} -> local://{target}")
+            if not dry_run:
+                run(["kata", "init", "--workspace", target])
+                run(["kata", "projects", "detach", ident, "--force"])
+    if not found:
+        print(f"kata: no local alias under {old}")
+
+
+def remap_symlinks(manifest, old, new, dry_run):
+    """Re-point bundle symlinks whose target moved."""
+    for p in bundled(manifest).values():
+        for home in default_homes(p):
+            if not home.is_symlink():
+                continue
+            target = moved_path(os.readlink(home), old, new)
+            if target is None:
+                continue
+            print(f"bundle: {home} -> {target}")
+            if not dry_run:
+                home.unlink()
+                home.symlink_to(target, target_is_directory=True)
+
+
+def cmd_remap(manifest, args):
+    old = os.path.abspath(os.path.expanduser(args.old))
+    new = os.path.abspath(os.path.expanduser(args.new))
+    if old == new:
+        sys.exit("kgbo: old and new path are the same")
+    providers = manifest["providers"]
+    for name in manifest["bundle"].get("relocate_order", []):
+        template = providers[name]["relocate"].split()
+        if not has_subcommand(*template[:2]):
+            print(f"{name}: not installed or too old for `{' '.join(template[:2])}`, skipped")
+            continue
+        cmd = [part.format(old=old, new=new) for part in template]
+        if args.dry_run:
+            cmd.insert(2, "--dry-run")
+        out = run(cmd).stdout
+        print("".join(f"{name}: {line}\n" for line in out.splitlines()), end="")
+    remap_kata(old, new, args.dry_run)
+    remap_symlinks(manifest, old, new, args.dry_run)
+    print("bossman: nothing to rewrite; sessions keep the directory they ran in")
+
+
 def cmd_env(manifest, args):
     root = bundle_root(manifest, args.root)
     pairs = [("KGBO_HOME", root)] + [(p["home_env"], root / p["bundle_dir"])
@@ -237,12 +327,16 @@ def main():
     s = sub.add_parser("snapshot", help="copy every provider's state into DEST")
     s.add_argument("dest")
     s.add_argument("--provider", action="append", help="only this provider (repeatable)")
+    r = sub.add_parser("remap", help="rewrite stored paths after repositories moved")
+    r.add_argument("old")
+    r.add_argument("new")
+    r.add_argument("--dry-run", action="store_true", help="show what every tool would change")
     a = sub.add_parser("adopt", help="move state into the bundle, symlink the defaults")
     a.add_argument("--dry-run", action="store_true", help="show the plan and check for open files")
     args = ap.parse_args()
     manifest = load_manifest()
     try:
-        {"env": cmd_env, "homes": cmd_homes, "snapshot": cmd_snapshot, "adopt": cmd_adopt}[args.cmd](manifest, args)
+        {"env": cmd_env, "homes": cmd_homes, "snapshot": cmd_snapshot, "adopt": cmd_adopt, "remap": cmd_remap}[args.cmd](manifest, args)
     except (OSError, RuntimeError, sqlite3.Error) as e:
         sys.exit(f"kgbo: {e}")
 

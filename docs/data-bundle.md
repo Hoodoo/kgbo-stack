@@ -102,5 +102,5 @@ again.
 ## Related work
 
 Moving repositories or machines also needs the absolute paths the tools
-store rewritten (kata issue g1n5); running the services in a container on
-the bundle is q7f7.
+store rewritten: see [moving.md](moving.md) (`bin/kgbo remap`). Running the
+services in a container on the bundle is kata issue q7f7.

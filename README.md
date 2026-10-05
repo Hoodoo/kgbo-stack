@@ -30,6 +30,8 @@ go install github.com/Hoodoo/goatlassian/cmd/goatlassian@latest
 - [`docs/data-bundle.md`](docs/data-bundle.md): keep all of the stack's
   state in one directory (`bin/kgbo adopt`), and back it up consistently
   (`bin/kgbo snapshot`).
+- [`docs/moving.md`](docs/moving.md): after moving repositories or to a new
+  machine, rewrite the paths every tool stored (`bin/kgbo remap`).
 - [`docs/publishing.md`](docs/publishing.md): runbook for publishing the
   in-house tools to GitHub.
 
