@@ -32,6 +32,8 @@ go install github.com/Hoodoo/goatlassian/cmd/goatlassian@latest
   (`bin/kgbo snapshot`).
 - [`docs/moving.md`](docs/moving.md): after moving repositories or to a new
   machine, rewrite the paths every tool stored (`bin/kgbo remap`).
+- [`docs/container.md`](docs/container.md): the stack's services in one
+  image (`make image`), with the bundle as a volume.
 - [`docs/publishing.md`](docs/publishing.md): runbook for publishing the
   in-house tools to GitHub.
 

@@ -1,0 +1,37 @@
+#!/bin/bash
+# Runs the stack's services in one container and exits when any of them
+# does, so the container's restart policy brings the set back together.
+#   kgbo-services [run]   start kata's daemon and the three web UIs
+#   kgbo-services check   exit 0 when every service answers
+set -euo pipefail
+# The bundle's home variables (KATA_HOME and the rest) come from the image.
+
+BOSSMAN_ADDR=${BOSSMAN_ADDR:-127.0.0.1:7788}
+OWCLI_PORT=${OWCLI_PORT:-4321}
+GOATLASSIAN_ADDR=${GOATLASSIAN_ADDR:-127.0.0.1:7799}
+
+if [[ ${1:-run} == check ]]; then
+	kata health >/dev/null
+	curl -fsS -o /dev/null "http://$BOSSMAN_ADDR/api/facets"
+	curl -fsS -o /dev/null "http://127.0.0.1:$OWCLI_PORT/api/wikis"
+	curl -fsS -o /dev/null "http://$GOATLASSIAN_ADDR/api/meta"
+	exit 0
+fi
+
+mkdir -p "$KATA_HOME" "$OWCLI_HOME" "$BOSSMAN_HOME" "$GOATLASSIAN_HOME"
+
+# KATA_LISTEN (host:port) also serves the daemon over TCP, for spokes.
+kata daemon start --foreground ${KATA_LISTEN:+--listen "$KATA_LISTEN"} &
+# The server's bossman has no agent logs of its own: it shows what is
+# shipped into the bundle, so it never syncs.
+bossman serve --addr "$BOSSMAN_ADDR" --no-sync &
+owcli serve --no-open --port "$OWCLI_PORT" &
+goatlassian serve --addr "$GOATLASSIAN_ADDR" &
+
+trap 'kill $(jobs -p) 2>/dev/null; wait' TERM INT
+status=0
+wait -n || status=$?
+echo "kgbo-services: a service exited ($status); stopping the rest" >&2
+kill $(jobs -p) 2>/dev/null || true
+wait || true
+exit "$status"

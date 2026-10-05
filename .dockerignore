@@ -1,0 +1,5 @@
+# The image needs only these; keep .git, openwiki/, and docs out of the context.
+*
+!stack.toml
+!bin/kgbo
+!deploy/container/
