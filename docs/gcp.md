@@ -26,8 +26,10 @@ browser ─HTTPS─> load balancer + IAP ─HTTP─> VM (no external IP), kgbo-s
   to IAP's TCP forwarding range.
 - **VM:** Container-Optimized OS, `e2-small`, shielded with secure boot, OS
   Login. cloud-init mounts the data disk (formatting it only when it has no
-  filesystem), writes goatlassian's `[services]` links once, and runs the
-  image under systemd with the reverse-proxy settings.
+  filesystem), opens the UI ports to the load balancer's ranges in COS's own
+  host firewall (whose default drops everything but SSH), writes
+  goatlassian's `[services]` links once, and runs the image under systemd
+  with the reverse-proxy settings.
 - **Data disk:** `kgbo-data`, 20 GB, with `prevent_destroy`: the data bundle
   lives there.
 - **Load balancer:** a static address, three backends (one per UI, each with
@@ -49,14 +51,40 @@ storage. About $35–40 in all; the load balancer dominates. `terraform
 destroy` removes everything except the data disk, which you delete by hand
 after removing its `prevent_destroy`.
 
+## OAuth client for IAP
+
+IAP signs people in through an OAuth client. Google's managed client only
+admits users of the project's own Google Workspace organization, so a
+personal project (no organization) needs its own, and the API that used to
+create one is shut down: make it in the console once.
+
+1. **Branding:** open Google Auth Platform
+   (`https://console.cloud.google.com/auth/overview?project=<project>`),
+   *Get started*: app name `kgbo`, your support email, audience
+   **External**, your contact email.
+2. **Audience:** leave publishing status at *Testing* and add every account
+   in `iap_members` as a test user. IAP asks only for your email, so
+   publishing needs no verification if you prefer that.
+3. **Client:** *Clients* → *Create client* → *Web application*, name
+   `kgbo-iap`, create, and copy the client ID and secret.
+4. **Redirect:** edit the client and add the authorized redirect URI
+   `https://iap.googleapis.com/v1/oauth/clientIds/<client ID>:handleRedirect`.
+5. Put `iap_oauth_client_id` and `iap_oauth_client_secret` into
+   `terraform.tfvars` (git-ignored; the secret also lands in the local
+   Terraform state).
+
+Without it, IAP answers every request with a 502 ("Empty Google Account
+OAuth client ID(s)/secret(s)").
+
 ## Deploying
 
 Prerequisites: `gcloud` signed in to the account that owns the project,
-Terraform, and Docker or podman.
+Terraform, Docker or podman, and the OAuth client above.
 
 ```sh
 gcloud auth login
 gcloud auth application-default login          # credentials for Terraform
+# (or: export GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token))
 
 cd deploy/gcp
 cp terraform.tfvars.example terraform.tfvars   # project, iap_members; image_tag comes next

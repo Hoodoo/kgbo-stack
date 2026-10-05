@@ -184,6 +184,8 @@ resource "google_compute_instance" "kgbo" {
       goatlassian_host = local.hosts.goatlassian
       owcli_host       = local.hosts.owcli
       bossman_host     = local.hosts.bossman
+      lb_ranges        = join(" ", local.lb_ranges)
+      ui_ports         = join(",", [for p in values(local.ports) : tostring(p)])
     })
   }
 
@@ -232,7 +234,9 @@ resource "google_compute_backend_service" "ui" {
     group = google_compute_instance_group.kgbo.id
   }
   iap {
-    enabled = true
+    enabled              = true
+    oauth2_client_id     = var.iap_oauth_client_id
+    oauth2_client_secret = var.iap_oauth_client_secret
   }
   depends_on = [google_project_service.apis]
 }

@@ -2,5 +2,8 @@
 project     = "my-gcp-project"
 iap_members = ["user:me@example.com"]
 image_tag   = "abc1234"   # printed by: make push PROJECT=my-gcp-project
+# OAuth client for IAP, created in the console (docs/gcp.md, "OAuth client").
+iap_oauth_client_id     = "123-abc.apps.googleusercontent.com"
+iap_oauth_client_secret = "GOCSPX-..."
 # region = "europe-west2"
 # zone   = "europe-west2-b"

@@ -36,3 +36,14 @@ variable "data_disk_gb" {
   type        = number
   default     = 20
 }
+
+variable "iap_oauth_client_id" {
+  description = "OAuth client (Web application) IAP signs people in with. Projects outside an organization need their own: Google's managed client only admits users of the same organization, and the API that created clients is shut down, so create it in the console (docs/gcp.md)."
+  type        = string
+}
+
+variable "iap_oauth_client_secret" {
+  description = "Secret of iap_oauth_client_id. Kept in terraform.tfvars and the state, both git-ignored."
+  type        = string
+  sensitive   = true
+}
