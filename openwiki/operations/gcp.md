@@ -5,7 +5,7 @@ description: How deploy/gcp runs the container on one Compute Engine VM behind a
 tags: [gcp, terraform, iap, deployment, operations]
 verified:
   - by: owcli/v0.4.0
-    at: "2026-10-05T10:30:30.888Z"
+    at: "2026-10-05T10:41:43.869Z"
 sources:
   - id: openwiki-source-a6d1c018c21915521ee86941
     resource: repo://deploy/gcp/cloud-init.yaml.tftpl
@@ -17,7 +17,7 @@ sources:
     resource: repo://docs/gcp.md
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/v0.4.0", at: "2026-10-05T10:30:31.021Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-05T10:41:44.012Z" }
 ---
 
 # GCP Deployment
@@ -101,6 +101,19 @@ which crash-looped the container.
 
 The data disk has `prevent_destroy`: the data bundle lives there, so
 `terraform destroy` stops at it.
+
+## Repositories
+
+The `repos` variable (name => git URL) and `workspaces` (name => repository
+names) choose what the server clones and how owcli groups it; the defaults
+are the four public stack repositories in a `kgbo-stack` workspace. Terraform
+renders them into `/etc/kgbo/repos.tsv` and `/etc/kgbo/workspaces.tsv`, and
+the `kgbo` unit copies both into `/mnt/disks/kgbo/server/` on every start
+(Terraform owns them, unlike goatlassian's config, which is only seeded).
+The container's `kgbo-repos` does the cloning and registration (see
+[Container Image](container.md)). Changing the lists takes an apply and a
+VM reset, since cloud-init writes the files at boot. Only public HTTPS URLs
+work so far.
 
 ## Deploying
 

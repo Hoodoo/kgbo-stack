@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:c57f5fd3878b56cbe7ea45474319187ada37765fdbbc47cd96556c7eaee7889c",
+  "pageVersion": "sha256:49a280a400ac7e914b0033eba0dc367f6f0d59f0478a7923cb320494352d9358",
   "claims": [
     {
       "id": "claim_3379e0662c0326ff4168d193b9f22a4e",
@@ -17,11 +17,11 @@
       "statement": "The URL map routes each host to its backend with goatlassian as default, and plain HTTP redirects to HTTPS.",
       "evidence": [
         {
-          "resource": "repo://deploy/gcp/main.tf#L256-L273",
+          "resource": "repo://deploy/gcp/main.tf#L258-L275",
           "version": "repo-lines-v1:sha256:97def942c94c692cd74b4cd44d4f1b5f2c50a30664e44c32919f9d3675d2e165:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNWYwMGM1ZWQ2NjY3Njg3YTMwYWQ2NDM0OGJmZmVmNDdlMDQ5NjJiNjE0MzQ2NGFkMDlkZGZhMTFlNmM4ZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjMmQ5NzBlMmY5NjMyZWZlNDI5ODk3MjM1NzEwZTI4MzJlNGI4ZjFmNTIwZTE1MWQ0YjE5YzY2OTIxMGM1MjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYzMzUzN2M2ZDNkNzA3NDhkMmNkMDcwMWU4YjBiOTY2NGQ5MzIzMWUxZGQ4OGZhZmFiYzU3NjlmZjMyZGJmZGQifQ"
         },
         {
-          "resource": "repo://deploy/gcp/main.tf#L297-L316",
+          "resource": "repo://deploy/gcp/main.tf#L299-L318",
           "version": "repo-lines-v1:sha256:95f8ae533dd40a5892a17b6440623f22d22ccda2549d0a30f7dda6a0cf33ca98:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmMmJkZTM2NWY5N2MzNDk2ZmVhZDkwNDRjYTNhODFlYmFiNjBkNTFiZTMxNmE0OWFiOTg3YTYyM2JiNjI5NDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjM2YzZWQwMzk5ZWZmM2QyNWJhMzdmOGVmNmNmYTkxNGJiMGZkYmQ3NTUwODZlYTJhNmE1MDJkNWRmZjk3M2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
@@ -55,7 +55,7 @@
       "statement": "Backends are EXTERNAL_MANAGED with IAP enabled using the project's OAuth client and TCP health checks, and iap_members get roles/iap.httpsResourceAccessor on each.",
       "evidence": [
         {
-          "resource": "repo://deploy/gcp/main.tf#L217-L254",
+          "resource": "repo://deploy/gcp/main.tf#L219-L256",
           "version": "repo-lines-v1:sha256:7a678c0d6bcd8aa4fe4fe5e7568c9de34fc126b3ea37511696be144888aadfbf:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1ZmI4ZWFlZWUwNzA5MjU0ODM2MzcwODEzY2FiNDc5ZTVkYzIwZTJmYzg0MmRlOWEyZDlhZmMxMzIxZjEyY2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiMjcwMjlkOTIyZTU4YWE4N2YyNjkxODA5MzMwMmNkMWUxYzM3MGU5ZjE2ZTg5NDY2YzAwYWNlYmM1OGVjMzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhiMDk5YTY2Y2U4MDdkMGY2ZmZiNDcyYTkwZGEwNzEzMGZjMmVlM2E3MWE3YTc3ZjA2Zjg0ZTgwNTUwZmVjNDEifQ"
         }
       ]
@@ -75,8 +75,12 @@
       "statement": "cloud-init writes kgbo-disk, which formats the data disk only without a filesystem and mounts it, and kgbo, which configures registry credentials, copies goatlassian's services links into the bundle when it has no config, and runs the image with the disk as /kgbo, the UIs on 0.0.0.0, their public names, and the IAP user header.",
       "evidence": [
         {
-          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L1-L88",
-          "version": "repo-lines-v1:sha256:ecaaaae8dc490813c3aeebf5dd38154291fbb55fd2f6b1c38b7c3c64fcab8a62:eyJzZWxlY3RlZExpbmVDb3VudCI6ODgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4Yzk1OTU1YjAyNDQwMmFhOTU3MmI2NjNmN2VlYjEzNGYwMTM0M2JiOTJhZjI3YjUwZTk3ZTcyYjIyYzU2NWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzZjk2OTg3MWZkY2Q3MGQ1YTYwMjNkNDUyZDA4YzNlOTM0MDI1YzY4YjQ0YzA4Nzc1OGRlMDQxZGRlNDUwMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L10-L18",
+          "version": "repo-lines-v1:sha256:2a3fb47b047f8107e5cf10789e6183997c23c4870698d7fb15818f03a1d1ea36:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDExMmJlMzdiYzYwYjRhYTZhMDhiOTQwMDBlZjQzMDVkMDMyNTVmZWRiYjBhZjk0ZTE1ZjU1YmM0Y2U4ZjFiNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGIyODIyMWEwM2Y5YTkxZjU1MjIyZmNlZWU2M2M0OTNiYjczOTRkNDgzNGNiYmU5N2NiZmIyYWVmZjM4NjBjYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDliMWU4ZDc2NzQxMzY0OGNjZDQ0NWJkZjExNjNkZjUxYTk0OTgyODBlNjI1Yjc3ZTU4OGMwODQ3YzlhYzljOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYThhZGU5YWU4MTFkMzk4Yzc5MGVjMzZiMGNiM2ExY2Y2M2Y3OGViYWIzYWNmMTFmYmRmZjczNzkwMDlhMDIyZSJ9"
+        },
+        {
+          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L53-L96",
+          "version": "repo-lines-v1:sha256:322ef3374143d301048c4a615105996b32d71f2513902806bc7f4257d52f52de:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxYjcxM2UwNGMzNzYxNzdiYTZlODhjM2RlOWNmMTkwNjY2YTQ1YTc5OTk4ZjRiMzY3MjQ2ZDBlNTdjODFiNDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljMjQ0N2ExNjA3MTFhMDYxYTJkMmNmZTlmOTU0OWExMDBkMjhhZDQxOGM1MDU3MDJiNDFmMWQ1ODE1NGNjYzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhmY2U4ZmQ5ZTkxNjQxYzc5YjE1ZDBhYWI3ZTA0MjUwMTBiOGU2MzM2ZjNjMDAwMGNlMzc0Mjg4MDMwMmViYjEifQ"
         }
       ]
     },
@@ -105,7 +109,7 @@
       "statement": "IAP uses a project-owned OAuth client given by iap_oauth_client_id and the sensitive iap_oauth_client_secret.",
       "evidence": [
         {
-          "resource": "repo://deploy/gcp/main.tf#L236-L240",
+          "resource": "repo://deploy/gcp/main.tf#L238-L242",
           "version": "repo-lines-v1:sha256:4d10e183a0663b861a9ad1c480689cce658a76b8d911cd7eb5ebe106af54ba40:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjBmOTBhYzZmZDVkOWM5NGI3YWZhMmNmMGQwZTU5OWUyNmU1YmQ2OGY4ODBjNjM5MDM1NDFmZjdiY2Q3MWVkNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWQ5NTFmYjYwZGM1Zjg0YjZjN2NmNDc5NGY5OTE3NWYxMjUwNDIxNmZhMzViOWJjMzU1ZmFhMGQ3YzdhYjU5YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTdkMzJkMjM0ZDBlYTkwMDI2N2Q5MDUzOTgxMTEyNTMzMTMxNWI1ZWYzZTQ0NTAwYjFiNTM2NTMzN2VjZWE5OCJ9"
         },
         {
@@ -119,8 +123,12 @@
       "statement": "kgbo-firewall inserts host firewall rules admitting the load balancer ranges to the UI ports, checking each rule with iptables -C first.",
       "evidence": [
         {
-          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L1-L88",
-          "version": "repo-lines-v1:sha256:ecaaaae8dc490813c3aeebf5dd38154291fbb55fd2f6b1c38b7c3c64fcab8a62:eyJzZWxlY3RlZExpbmVDb3VudCI6ODgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4Yzk1OTU1YjAyNDQwMmFhOTU3MmI2NjNmN2VlYjEzNGYwMTM0M2JiOTJhZjI3YjUwZTk3ZTcyYjIyYzU2NWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzZjk2OTg3MWZkY2Q3MGQ1YTYwMjNkNDUyZDA4YzNlOTM0MDI1YzY4YjQ0YzA4Nzc1OGRlMDQxZGRlNDUwMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L20-L31",
+          "version": "repo-lines-v1:sha256:1bbc1e843f8c2057c7a7d985e1006bf8137b9808c61ade1a49ec9ab716f4251b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0Y2FlZmY0YjBiN2JmMDY1MDEwZjQ2OGE1MzM0M2ZlMWRmMTE5MmI0NTA0ZDNmMzBlNzY1MjgyNWFiM2ViZjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhOGRiZGZkYmFhN2VmOWNjZGM0ODkxZWZiZThmOGUwNWQ1Mzk2YTE4MmI3N2E4ZTJjODllOTVlYWIyMDhmYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU0MDk5NWFiZDdkNDM1NGZhMjQ1MzhlOWVmNGQ3YjEwZjEzYTE5NTU0ZTYwZmExZDE2Yzc4NjI4ODFhMGJmOGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZlOTdmODExZjhmMmVhYjYzZTBkMmE2Mjg0YzgwOWUwYzRlYzFmNzNmOTgwMzFkZWU0ODU3M2RhZmJjMTVhMDcifQ"
+        },
+        {
+          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L63-L71",
+          "version": "repo-lines-v1:sha256:2fa38e7111a812a45191d610468593c51d96c01428fbe0956115c92764c5bc48:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGE5YjVhOWI5MzRkM2RmYjAzZTlhMjUzMmE4NDBkODlkNDE5NDUxNTFhMWQ2ZDZiNjYyYWJiZTEzY2MzMDljYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTlkZTFhYzI5NGI2MWNkMDdhNDg0NTNjOWUyOTUzOWNhYzFiZDE0OTI5ZTkzZDgxMjZiZGE5MjkyYjQ3YzQ1NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGNjNzQ2NmJhMmNhZGJiMTlmNjI4NjM0MGMzODI1MDJmZTFmMmQxZGEyYzE0NTZkZmVlZjI0ZDc3MjA4Y2I1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTM4NTRkY2I2M2NmZGNhNDFlNzJhNjU3ZTAwNDBkMDAzMzIxZjM2NjY0YjJjYzVmODkxMjU3OThkNjdmMTEwMSJ9"
         }
       ]
     },
@@ -129,14 +137,42 @@
       "statement": "docs/gcp.md lists the console steps for the IAP OAuth client: external audience, test users, a Web application client, and exactly one redirect URI, IAP's handleRedirect for the full client ID.",
       "evidence": [
         {
-          "resource": "repo://docs/gcp.md",
-          "version": "repo-file-v1:sha256:dc1a3e705ad2594b16101007928594c883b5fc3c6a32a0f00efe9745ba0e6fe6"
+          "resource": "repo://docs/gcp.md#L54-L85",
+          "version": "repo-lines-v1:sha256:f973aab093ecb72c8665f3eed4943635fdadb8a3182fa367b5d850f6979bbb95:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjM2U3NWY1NTYyMWY2YmU5ZDQ0MTRkZGI3M2YyMWFhMzQ0NTU0MDIxN2I5YjZmN2Q1NDcwZTM5YWM4NDk4NjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzOTAwNWIyYjZkZjkyN2MzMTA4YWQyODY4MGI3M2ZkZTE0NTI1NTdjN2NkOGU3ZGZhOTc0YzQ4YTlhOGVhZTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI3OGRiMGNjYjhhMjQ1MTUyMDM2ZjllOTdjNjk1NGNkNmM0NTk1YzQ4Nzc0MzkwMjMzN2EwNmM2NTFkZGI1YzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ba59aadd2042057ff090c0058bc4fa50",
+      "statement": "The repos and workspaces variables default to the four public stack repositories and a kgbo-stack workspace.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/variables.tf#L51-L68",
+          "version": "repo-lines-v1:sha256:0d14b9188c58d885f72ad26812b83794f1334a7204357041d5c3d07a874b9a9d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwZWYzZmQzNjQxMmFiNDNiMTgxNWE1OThiYTk2YzNjYjhmNjBjNzIxMmI0ZjI0ODA0MzQ2NTg1ODYwODE1OTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM2N2IzOGQ2MThmYTkwZTZiZWUzZGE2NWJkMmZiYzQyMWNmNmNmMGE1YWMxMmE3NzRlZmRmNTAwNWFiY2RhNDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2e38cae30d59c272b38ccd9d3c7236e5",
+      "statement": "Terraform renders repos and workspaces into /etc/kgbo/repos.tsv and workspaces.tsv, and the kgbo unit copies both into the bundle's server directory on every start.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L33-L44",
+          "version": "repo-lines-v1:sha256:f59f92e9a82f1c9ebc581a88dc4619e974bc82762d2612ee9c27b22efdd8b93f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIwZDdlNDE3NjcwYTY5NmI4ZmQ0ZDBlNzcyNmRiOTYxYzc5OGRhNmVmM2UyYjdhMmM2MTRiN2I2NzY1NzM4ZDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlOGQwOWU5ZmZlZWI1MzY5NWUyMjQ5ODUzNDNlOGM2MjQ2M2E3NTQ3M2Y3MDVkNjZiMTdjZGViOGM5YTE5MTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdlZWJlYmM0NjQwMDRjNGNlNDMwNmNlY2I2YzVkYmNiZDg0NWVkMmM5ZmY1MWE3NjFhOGY3OWE0MmNkZjQ2NTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUxODUyNjlmN2QxNmMwZGM0YjI5YTNlNTVhYjg1OWRlMzI3OTk1ODlmZmI3Mjg2MTcyNDUwNGM3ZmQyNDllMzgifQ"
+        },
+        {
+          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L86-L86",
+          "version": "repo-lines-v1:sha256:1ac5a3295eef0d868624de4f0be366d55afd1c3b8b5e7cf19406ddf6ed49fb87:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWFjNWEzMjk1ZWVmMGQ4Njg2MjRkZTRmMGJlMzY2ZDU1YWZkMWMzYjhiNWU3Y2YxOTQwNmRkZjZlZDQ5ZmI4NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWFjNWEzMjk1ZWVmMGQ4Njg2MjRkZTRmMGJlMzY2ZDU1YWZkMWMzYjhiNWU3Y2YxOTQwNmRkZjZlZDQ5ZmI4NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTFhYzI0YmI5YjIwNDYwNmIwNWI4ZjYzOTgxZTE5NmJkYWFiMmQ4YzBlYzU5ZjQ3OWViOGYxZWYwZTg2MjE1YSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmUxZmJmYjhmYWYzNmJhYjliODg3NDZmMzE1NGUwN2FjODIwMzRiODZhZGIyOTFkZGJjMDMwY2Y1OWExMTdkMCJ9"
+        },
+        {
+          "resource": "repo://deploy/gcp/main.tf#L188-L189",
+          "version": "repo-lines-v1:sha256:cf3ba161193eb7460fffb3cef002cc966e6817c762febf42ecb5a8798b87bde7:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDQwMGFiZGQ3ZmUyZWZmZTRiODZlNjRkNjkzY2NjYTAxMDY1MjdkNDRjZDcxYWMxYzAwZDFmNjQ1ODU3NDJjYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzYxZmJlYzMxMjhkZGUwNTE4Zjc0Njc0ZGIxZTE2MWNjMTVkMGM4ZDE1OGU2MzI4MDJmNWRlZmNiNjI1MjJlYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDVlNmFjYWVkMDk5YWVlNGI0MGEyZDNjMjFlOTk3ZDZmN2E0NDE5Y2FhYjg5MzA5MGM0Njg5ODZkYmEzZjc2MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjJlY2Q4ZDUyYjQxMzk5ZjNmNThkYWIwNGYxODIxNDU1NWE2NDk5MWRmZjMyNzIzY2NjM2NiOGU4NDlkOTgwZSJ9"
         }
       ]
     }
   ],
   "verification": {
     "by": "owcli/v0.4.0",
-    "at": "2026-10-05T10:30:30.888Z"
+    "at": "2026-10-05T10:41:43.869Z"
   }
 }

@@ -4,8 +4,8 @@ title: Data Bundle
 description: How the stack's machine-local state is gathered into one directory, the two ways tools are pointed at it and why they must not be mixed, and how bin/kgbo snapshots state consistently.
 tags: [bundle, backup, state, kgbo, sqlite]
 verified:
-  - by: owcli/v0.2.0-1-g3d84f34
-    at: "2026-10-05T08:57:12.701Z"
+  - by: owcli/v0.4.0
+    at: "2026-10-05T10:40:50.666Z"
 sources:
   - id: openwiki-source-4295305d9bd805a055f92696
     resource: repo://bin/kgbo

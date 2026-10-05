@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:e333ea3236cef7642f5e6a4b3b217a194f06128fc4e543acc5ae4e9c8ab1e93a",
+  "pageVersion": "sha256:0946855457997bb06625c373a182148f0b6311f861327578bf80f18d1407425f",
   "claims": [
     {
       "id": "claim_ae17d40ab6f3294f953f1a338aae2b6f",
@@ -85,7 +85,7 @@
       "statement": "kgbo env prints shell exports, or KEY=VALUE lines with --plain, for KGBO_HOME and each provider's home variable.",
       "evidence": [
         {
-          "resource": "repo://bin/kgbo#L274-L280",
+          "resource": "repo://bin/kgbo#L287-L293",
           "version": "repo-lines-v1:sha256:d8f95a9405804914b3dfa88660da148c04eefe550e4bee0c097fb0f4ae1b8aae:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWE1NTUxNzVmN2E5OTUxZGM5YzU3YTlhYTJjODQ0YjU4MGNhM2M1NjRmMDcwMDE5M2RkZTdmZTFjZTM0YmEyMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWJkNWVlMTM0MmE4OGEzNTk2YjZjMWMwN2E5Y2U5NzBlNzNlZTM2NjQ5ZDgwMTYyOGFlMmEyNDQyYTk2ODc3MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGVmZDRmMzQ5NDdmNDY4ODUwMjYwNzQxNjRmZjBjYTE3ZmU3OTZmNTgxMWNiNjE0YzI1MDUzNmJlOWNjNTlmZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODFjZGZmMGQ2NDhhYzI5ODBkZWVjMDU0OGJmMmY2YmM1YmE5YzAwZmUwNzU5MzliYjIxYTczNDM4NmFhNGI0YiJ9"
         }
       ]
@@ -157,7 +157,7 @@
       "statement": "snapshot refuses a destination that already holds provider data and refuses to write into a provider's live directory.",
       "evidence": [
         {
-          "resource": "repo://bin/kgbo#L301-L318",
+          "resource": "repo://bin/kgbo#L314-L331",
           "version": "repo-lines-v1:sha256:e4e26caac9b3cdf4dda0077ef085557adea4db6c972df1ccfc6bf119a212ca7c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlZmEyNTgyYTg4MWFhMWVjZjg0ZWMwZTgzOTc3NTVkOTJiMTMxMDk3ODljZGY3YTk3MmViMzM4YjNlOGNmMTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlmMTU4YjQ2ZGQ4YWQ0MTc5NGM4MzY5YWRhNzBmOGVkNjZmNDI1Y2JlYjlmZGQzMThkY2E0Mjk2MzY1ZDIxYjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFiNzU0OTRiNThmZjFiNmJjMGE5ZmZmOWIwYzljYmNmMTllMzg5NmFiZTVhMWU2ZmVkNTllNjI2MDlmNzZiYTMifQ"
         }
       ]
@@ -167,7 +167,7 @@
       "statement": "owcli's two default directories are de-duplicated by resolved path so an adopted bundle is copied once.",
       "evidence": [
         {
-          "resource": "repo://bin/kgbo#L306-L307",
+          "resource": "repo://bin/kgbo#L319-L320",
           "version": "repo-lines-v1:sha256:5f410b281046f55ec8c47ea17be0f394e435dbefed4b8a8879c8c379cffd3dda:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTY2YjUzNWZkYmMwZmE4Zjk1MzY5YzQ2MmJhMTVmZDIyZWQxYjU1YWI1ZjVjMmI4Y2U1NTk1NjZmMjU2NWI1ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMThiYTQ5YzQ4YzE4Y2U2ZDQ0ODJmNzI5NTUxMjBiZmJkYTlkNmRhNDEyMWUxYzNkMGU2MjZiMzg2ZGJmN2ZiOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDE0YjRmY2EzNDYwMjFmNTc3YjQ1NWUxODZhNDAyY2FiZmViMTdhMDE2YjE5ZjcwZThjZDQ5MDczYzM3NjQ5OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjRmZjI0ZmRhNTQ3ZDkyYmRiZTRhY2VmODViNDFlNWJjNTViMjdjNTRiNTNlMTYxNzg4YmZjM2M1YTZmOWUwMyJ9"
         }
       ]
@@ -177,14 +177,14 @@
       "statement": "The container image sets the bundle's home variables with ENV for every process and fails the build if they drift from stack.toml.",
       "evidence": [
         {
-          "resource": "repo://deploy/container/Dockerfile#L36-L47",
-          "version": "repo-lines-v1:sha256:55c941dde5283b9334fa60deb076813e1ddbc2d294f3d259613d1c0be16ae434:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMWM1OGIyMzdlOWI4MWZkZjdmZWYwNzE2YTRhNzBjNzMwNjVhODAzNTkxZTk4ZDE4NDExNGVmY2Y0ZmM2MGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3YzA3ZDViNjk2NWFiNWNlOTMxMjI5ZGVjNDA0ZmExMmMwZDljMDQxN2Y3NmNmZmEzZmIxOTc0MDVlOTc5MjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2YTY2MmI1N2E2YzRkZWQ1NGJkMTMzMWY2ZDI0NGY2NjljOTU3YjYyYzkzNDNlNDliY2ZmYjk3MTJlYjRlMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjODRhMGNmMjZiM2JmNDNjZTFlNmIzNGYzMzRiM2I1YTAyYWY1MzRhNDNkODYzOTI2ZjFlNmEyMTVkYjczZWIifQ"
+          "resource": "repo://deploy/container/Dockerfile#L36-L49",
+          "version": "repo-lines-v1:sha256:1c3944211680d96ff8ff93ba80011189b00bc035674d391d7d9a7dcb61e45f56:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMWM1OGIyMzdlOWI4MWZkZjdmZWYwNzE2YTRhNzBjNzMwNjVhODAzNTkxZTk4ZDE4NDExNGVmY2Y0ZmM2MGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3YzA3ZDViNjk2NWFiNWNlOTMxMjI5ZGVjNDA0ZmExMmMwZDljMDQxN2Y3NmNmZmEzZmIxOTc0MDVlOTc5MjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2YTY2MmI1N2E2YzRkZWQ1NGJkMTMzMWY2ZDI0NGY2NjljOTU3YjYyYzkzNDNlNDliY2ZmYjk3MTJlYjRlMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRlY2YxNzlmNmUxZjhmMTMwOGIzOGUxYTdiYmQ5NGRjOGIzNDY1YjA1NDMzNmNmZWVjNjkzYTI5MzY0ODgyNWEifQ"
         }
       ]
     }
   ],
   "verification": {
-    "by": "owcli/v0.2.0-1-g3d84f34",
-    "at": "2026-10-05T08:57:12.701Z"
+    "by": "owcli/v0.4.0",
+    "at": "2026-10-05T10:40:50.666Z"
   }
 }

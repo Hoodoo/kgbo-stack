@@ -5,17 +5,19 @@ description: How the stack's services run in one container image, what it contai
 tags: [container, docker, deployment, bundle, operations]
 verified:
   - by: owcli/v0.4.0
-    at: "2026-10-05T09:32:05.440Z"
+    at: "2026-10-05T10:41:17.026Z"
 sources:
   - id: openwiki-source-715dace563ef484b6e8bd1e2
     resource: repo://.dockerignore
   - id: openwiki-source-cea96ae8f357252ff94e036c
     resource: repo://deploy/container/Dockerfile
+  - id: openwiki-source-fe4f45cdc237709501707dc6
+    resource: repo://deploy/container/kgbo-repos
   - id: openwiki-source-aba0804f4b63f288f9daec3a
     resource: repo://deploy/container/kgbo-services
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/v0.4.0", at: "2026-10-05T09:32:54.546Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-05T10:41:44.012Z" }
 ---
 
 # Container Image
@@ -77,6 +79,34 @@ any `ENV` value differs, so `stack.toml` stays the source of truth.
 
 The web UIs listen on loopback (bossman 7788, owcli 4321, goatlassian 7799,
 adjustable with `BOSSMAN_ADDR`, `OWCLI_ADDR`, `GOATLASSIAN_ADDR`).
+
+## Kata start order
+
+`kgbo-services` starts kata's daemon first and starts nothing else until
+`kata health` answers (it gives up after a minute), and the image sets
+`KATA_AUTOSTART=0`. Without that, the first `kata` call from another process
+(goatlassian adopting a clone, for instance) found no daemon yet, started
+one of its own, and the supervisor's `kata daemon start --foreground` then
+exited with "already listening", restarting the container on the VM. With
+autostart off, a kata command that finds no daemon fails instead.
+
+## Server-side clones
+
+`kgbo-repos` keeps clones of the repositories listed in
+`/kgbo/server/repos.tsv` (`<name> <git url>` per line) in
+`/kgbo/repos/<name>`: it clones a missing one, fast-forwards an existing
+one, binds each in owcli, and runs `goatlassian adopt <dir> --slug <name>`,
+which creates the project the first time and adds to it afterwards. Only
+listed clones are adopted, never other directories goatlassian knows from
+shipped sessions. It then creates or extends the owcli workspaces listed in
+`/kgbo/server/workspaces.tsv` (`<workspace> <name>...`). It reads both files
+on file descriptor 3, so commands inside the loops cannot swallow their
+lines. Every step is idempotent.
+
+When `repos.tsv` exists, `kgbo-services` runs it at start and every
+`KGBO_REPOS_EVERY` (default 15m, `0` disables) in a background loop; a failed
+sync is logged and retried and never stops the services. Locally, three
+fresh starts that each cloned repositories ran without a restart.
 
 ## Proxy mode
 

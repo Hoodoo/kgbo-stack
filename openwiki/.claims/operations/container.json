@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:bd2803f8556adc59796e57930fa84c63db8b48022c5fec3dd88f118cfd29e31d",
+  "pageVersion": "sha256:baaada40861047f8830d2477af0d1c8555465d3ff83dfae1fb5f2b240a4cbef9",
   "claims": [
     {
       "id": "claim_8187eb75e7fd48124b9abaeb4d5acb0b",
@@ -47,8 +47,8 @@
       "statement": "The bundle home variables are image ENV, and a build step fails if they differ from kgbo env output.",
       "evidence": [
         {
-          "resource": "repo://deploy/container/Dockerfile#L36-L47",
-          "version": "repo-lines-v1:sha256:55c941dde5283b9334fa60deb076813e1ddbc2d294f3d259613d1c0be16ae434:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMWM1OGIyMzdlOWI4MWZkZjdmZWYwNzE2YTRhNzBjNzMwNjVhODAzNTkxZTk4ZDE4NDExNGVmY2Y0ZmM2MGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3YzA3ZDViNjk2NWFiNWNlOTMxMjI5ZGVjNDA0ZmExMmMwZDljMDQxN2Y3NmNmZmEzZmIxOTc0MDVlOTc5MjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2YTY2MmI1N2E2YzRkZWQ1NGJkMTMzMWY2ZDI0NGY2NjljOTU3YjYyYzkzNDNlNDliY2ZmYjk3MTJlYjRlMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjODRhMGNmMjZiM2JmNDNjZTFlNmIzNGYzMzRiM2I1YTAyYWY1MzRhNDNkODYzOTI2ZjFlNmEyMTVkYjczZWIifQ"
+          "resource": "repo://deploy/container/Dockerfile#L36-L49",
+          "version": "repo-lines-v1:sha256:1c3944211680d96ff8ff93ba80011189b00bc035674d391d7d9a7dcb61e45f56:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMWM1OGIyMzdlOWI4MWZkZjdmZWYwNzE2YTRhNzBjNzMwNjVhODAzNTkxZTk4ZDE4NDExNGVmY2Y0ZmM2MGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3YzA3ZDViNjk2NWFiNWNlOTMxMjI5ZGVjNDA0ZmExMmMwZDljMDQxN2Y3NmNmZmEzZmIxOTc0MDVlOTc5MjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2YTY2MmI1N2E2YzRkZWQ1NGJkMTMzMWY2ZDI0NGY2NjljOTU3YjYyYzkzNDNlNDliY2ZmYjk3MTJlYjRlMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRlY2YxNzlmNmUxZjhmMTMwOGIzOGUxYTdiYmQ5NGRjOGIzNDY1YjA1NDMzNmNmZWVjNjkzYTI5MzY0ODgyNWEifQ"
         }
       ]
     },
@@ -57,8 +57,8 @@
       "statement": "The image runs kgbo-services under tini, uses its check mode as the health check, and declares /kgbo as a volume.",
       "evidence": [
         {
-          "resource": "repo://deploy/container/Dockerfile#L48-L53",
-          "version": "repo-lines-v1:sha256:f4af735a5a3b54af355874b93bf2e86e2cb1f200f57ddc5f32e7b1a42004685b:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWZiZjg1MjE4N2Y3ODI5NmE3NGY0NjBhYmFjYWVlYjA2NTZmMjMwNGJiMmNkNWJlNTZlZjMzZGUyOTc1OTg4YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1NDNlYTExMWI2YWQ0NGNmODE1ZjM4NjMzODhkNzgxOTQ2ZjVhZDNkYTZjZmU3MjdjYTA0ZTc2ZjMwZTY5YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjAxZDk2OTU1MjcyZjA5MmRjNTM1ODIyOWM1OGViMjFhN2UzOWI2OWI1ZGU0MDg1YmQ0ZWIxMGQxZmU3MTU4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+          "resource": "repo://deploy/container/Dockerfile#L50-L55",
+          "version": "repo-lines-v1:sha256:d1ffe46c90cbdda0d8a8eab103a38dff62ccadaa3e9a6bbfdf4f87656edc6b2d:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzVjYmI2YjU2NjE5OWJlZTViOThhY2M0MWEyMGFlOTA4MTUzYzk3YWRmNjMwZTMxNGUwMzcwYmYxNGVkYjY4MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1NDNlYTExMWI2YWQ0NGNmODE1ZjM4NjMzODhkNzgxOTQ2ZjVhZDNkYTZjZmU3MjdjYTA0ZTc2ZjMwZTY5YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjAxZDk2OTU1MjcyZjA5MmRjNTM1ODIyOWM1OGViMjFhN2UzOWI2OWI1ZGU0MDg1YmQ0ZWIxMGQxZmU3MTU4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
         }
       ]
     },
@@ -67,7 +67,7 @@
       "statement": "kgbo-services check runs kata health and requests each web UI's API on 127.0.0.1 at its port, sending the configured user header itself.",
       "evidence": [
         {
-          "resource": "repo://deploy/container/kgbo-services#L29-L42",
+          "resource": "repo://deploy/container/kgbo-services#L31-L44",
           "version": "repo-lines-v1:sha256:a501faca9eb6c505388c50d7168359fa7bc7b9ad543968d5cef1bbe03efbdd8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyYjdkOTg0ZWE1NDRkNDk4YWRjZTdhYWFhMjhhODIwYTM4ZGE5YWNkN2I3MGQyZjYzOTU5ZDk3NTI2OGM5NDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NjlkMjM3Y2Q0MjBiOWQzOGI5ODFhMGE0ZjY3NzAxOTBhNGE4M2RjYTFmZTU2YzRmNWJhMWUyY2JjMGVmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJhZjdjMzNmNDY4ZTVkNTY4ODhmYWZhNjg3ODRmNTA2M2NjMTEwOGQ3NGNmMzI3MjNlMjRlYzU2MzgwZTJmYjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFkYjdhN2I2ZjA5ZThiODc2Zjc0NmUzMDgyYmY4ZjczNGIzNjQ4NTNhYzlmNTFiNmQwZjk2MDk5ZWNkZGU1ZmIifQ"
         }
       ]
@@ -77,8 +77,8 @@
       "statement": "kgbo-services starts kata's daemon (with --listen from KATA_LISTEN), bossman serve without syncing, owcli serve, and goatlassian serve, and exits with the status of the first one to stop after stopping the rest.",
       "evidence": [
         {
-          "resource": "repo://deploy/container/kgbo-services#L44-L63",
-          "version": "repo-lines-v1:sha256:d3e8a3e5e6e24ff97b35cb52e2da77a7236c728c1719c69a102964b31fa9e258:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NzlkYjJlMDFlNjExZWFjMmY3ZTE4NjdkMDA0MTQ0NmM0MGU5ZDM0YTIwODg0MDE4YWEyZWVmYWZiN2ZiOGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZDc4MTllYjQ2MjQ5OWQzZTJlZGQ1OGJlZGQzNjczZDkxNDc2OWIyODAyNTgzYjVlYmY1OTM4MmQ3MTA2MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdjNDA4YzMxMzI3ZDk3MTBhMmQ1OTg3YTQzOTM4ODBlYjgyODQ0YWEwYTk3MTUxMTFlYmE0MTJkNTg5MmRkNDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+          "resource": "repo://deploy/container/kgbo-services#L47-L78",
+          "version": "repo-lines-v1:sha256:13390fa3b93ce8ee4004e6fe3362091e00dde54966981af80d14513b49d3ab4a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZDc4MTllYjQ2MjQ5OWQzZTJlZGQ1OGJlZGQzNjczZDkxNDc2OWIyODAyNTgzYjVlYmY1OTM4MmQ3MTA2MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyNWYzMWViYzlhYjdkYTEwM2MzMDBmNGEzOWZmYzMxYjFjNTYyOWQ1MmNjYmM3NzBkMGIwM2Q2YWE4M2Y1YjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
     },
@@ -97,18 +97,52 @@
       "statement": "kgbo-services turns BOSSMAN_HOST, OWCLI_HOST, GOATLASSIAN_HOST into --allow-host and KGBO_USER_HEADER into --user-header for each UI.",
       "evidence": [
         {
-          "resource": "repo://deploy/container/kgbo-services#L48-L55",
-          "version": "repo-lines-v1:sha256:d1b68d3d786563dbd814095aad763bd9cfab7ca04b8ca13db063938ad6a0af3d:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRhMjNkN2FhMjVlNDgwNWJjMTc4NmJjZDQ4Yjk5YzA3MTVlMjE2YzY4MWFjMTVhMjA0YzUwM2E0ZGIzYjBhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGQzY2E4OWEzZWQ5MmMxNjFiNGRmMDI4OTlmMTVlN2JkNTYyNWNjZGRhNzFkYjdlMGM4YTcxZTVkYTg3MzE4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWVkNjkwM2RjMWYxMjFkZGVmZTc5YWMzMjBjYjBlY2FkNjUyNWRiZDAyZTEyOTgwZmFiOTJkNTI2MDQ0YTc4YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzM0MTU2MGExZDkxN2M5ZWI0MGM1ZTU5OWQzM2E0YTVjYjAyMmYxYjk2NjQ2NjUyNjM2ZDJiNmJkODZhYzU3ZCJ9"
+          "resource": "repo://deploy/container/kgbo-services#L57-L63",
+          "version": "repo-lines-v1:sha256:a5ea0072c9f481285dd8960f7ba3562a3402a19b9568c82b97542a249d21881a:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmU2OWFkODM2NTc1MGM3OWNiOWZmYWM4ZGQwNjA2MzRmYzhmNGQ2ZTA1MGFjN2YyN2RjNWQxMzlmMDRhZTBmMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGQzY2E4OWEzZWQ5MmMxNjFiNGRmMDI4OTlmMTVlN2JkNTYyNWNjZGRhNzFkYjdlMGM4YTcxZTVkYTg3MzE4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWNmYjdhODMzNjdjYzRhZDgzZDExMWY2ZDk3MjNlZTdiODA5ZDQyMGJjN2E3YWUxZjNkNTUyNmEyMDdiMjk2YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzg4NTc5Y2Q2NTVjZDUzNDIzYjkwZTU4YTQ5Y2U2NTU4YzEzYWE0NTU5YTdiMTlmMjkwMjY0Y2MyZTdiZTk5YyJ9"
         },
         {
-          "resource": "repo://deploy/container/kgbo-services#L7-L27",
-          "version": "repo-lines-v1:sha256:665ff92d09801f60abcad713f984b2c3ce48f3a4cc8c57192ab305f3b3e5833e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlOGE3ODU2N2Y2Y2EzYmZlMDdmODc4N2MxZjgzYTY1N2FkMDE2OTc5YzJjYzk3Y2FmMWMwN2NiNzMwZDI3NGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4NTZiYmMxNDRhMDI1Mzg5MGFiNTk5M2UxNmU5MDRmNjNjYjkyMDI3ZjNhMThlNWNkYWZiYjMwZmMzNTFlM2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1NDg1MmY1MDJhNDAxNzhhODNhMzRkYjM3MDcyZDEzZTUzNDc3OTk1ZmI0N2Y1ZjA2YzE1YTBmNTFkYjZlZTIifQ"
+          "resource": "repo://deploy/container/kgbo-services#L7-L29",
+          "version": "repo-lines-v1:sha256:856bb63ce2eb04b101d9e43ebafbc37eb09bdc9099df97817f2211aad74c24a9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlOGE3ODU2N2Y2Y2EzYmZlMDdmODc4N2MxZjgzYTY1N2FkMDE2OTc5YzJjYzk3Y2FmMWMwN2NiNzMwZDI3NGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4NTZiYmMxNDRhMDI1Mzg5MGFiNTk5M2UxNmU5MDRmNjNjYjkyMDI3ZjNhMThlNWNkYWZiYjMwZmMzNTFlM2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1NDg1MmY1MDJhNDAxNzhhODNhMzRkYjM3MDcyZDEzZTUzNDc3OTk1ZmI0N2Y1ZjA2YzE1YTBmNTFkYjZlZTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6153ab45a425cf7418db08a6dfd497a3",
+      "statement": "kgbo-services waits for kata health before starting anything else, and the image sets KATA_AUTOSTART=0 so no other kata command starts a daemon.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/Dockerfile#L44-L45",
+          "version": "repo-lines-v1:sha256:081be57cfd08d3c976de27fd83e7e44ebf671d9746c33873b69517ed1a772d91:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzFlZjJhOWM5NzI2NjgyYTRmYWI0MGFmZGRhYzg0NWQ4OTBhOWM2NjZmMTkzOWY3ODM5YzVjNjhhN2ZiZmM0MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2UxZmY0NjAyMWFmNTFlMmFlNDkxOTc2ZTRkZDA3MTgwMDRkY2VkMDVjMjEyNjdiYzQzNTQzYjkzNWI0ZjgzYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTM2ZWM1ODJjZTQ0YzEzZDhlOTUzZTk3YWJlYzc0M2Y3MTUzYmU3YzM1NWQ3ZjE2ODcwOTVlOTNlMWVmMmUwMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2Y1YzRlYmE2MzE4Yzc1YWQ1MTY1YWYyYWUwM2MwYjVmZWMxYWRjZGJlMjM3MWZkNjRjNTdkN2ZiMjA2Zjg3ZiJ9"
+        },
+        {
+          "resource": "repo://deploy/container/kgbo-services#L47-L55",
+          "version": "repo-lines-v1:sha256:9ddcf3323f3bf10f996127a98e9d9b38252e33f77e2b26b995c002176dac51a6:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRmNTkxMjVhNGIzMWE3MTBkZDgxYjgzOTFkNmEyOTc5MmE2MDQwODhjM2JiMjkzN2E5MDYyYTc3OThkNmYyZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTI1ZjMxZWJjOWFiN2RhMTAzYzMwMGY0YTM5ZmZjMzFiMWM1NjI5ZDUyY2NiYzc3MGQwYjAzZDZhYTgzZjViNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTI1YzljYzNkYjRhNzU3ZGY4ZGM4NmFkNjE1ZGIwMmQ4NDMyYTBiZjFkZTUyNTJkNzIyY2ViNTNkMzk1NWU1MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_667ae76dc2423ff516dd2691f12b5cfc",
+      "statement": "kgbo-repos clones or fast-forwards each repository in repos.tsv into /kgbo/repos/<name>, binds it in owcli, adopts it with --slug <name>, and builds the workspaces in workspaces.tsv, reading both files on descriptor 3.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/kgbo-repos#L1-L43",
+          "version": "repo-lines-v1:sha256:769ed348c525cb361039f1eb13f1abccfe39ea6b103df870deac42e515fa5aff:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4NzVmOTI4NTQ2YWVlNzg1NWNiMWRiOWFmYzhhYjNmMWE4YTM0ZDQzZGU1YmJkNjJmNzA3NmQ3YmE5ZjM5MTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZDc4MTllYjQ2MjQ5OWQzZTJlZGQ1OGJlZGQzNjczZDkxNDc2OWIyODAyNTgzYjVlYmY1OTM4MmQ3MTA2MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_59a00da097f3b9ae905a6e2e0750e06d",
+      "statement": "When repos.tsv exists, kgbo-services runs kgbo-repos at start and every KGBO_REPOS_EVERY (default 15m) in a loop that logs and retries failures.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/kgbo-services#L65-L70",
+          "version": "repo-lines-v1:sha256:79c1889db5fb80693d037c2ec8712fcb3dbd51565f8659eafcfd2ff57999ab72:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjFkYTExYTRhMzgwZDAxM2FhNzQzNzM4ZmRiYWZhYTMwNDBlMmJkYTgwMmM1NzkwYjJhODU5M2E4Y2NhMjhjZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc2OWQyMzdjZDQyMGI5ZDM4Yjk4MWEwYTRmNjc3MDE5MGE0YTgzZGNhMWZlNTZjNGY1YmExZTJjYmMwZWY3NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjJhOWViYjA0NTlmMzVkN2VlZjRhNGQ5YjdmMzIxMTc5MGQ0MTNhYjU4NTA0ZWU1ZjA2MDA0ZmUxMWI1MWQwOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzM0MTU2MGExZDkxN2M5ZWI0MGM1ZTU5OWQzM2E0YTVjYjAyMmYxYjk2NjQ2NjUyNjM2ZDJiNmJkODZhYzU3ZCJ9"
         }
       ]
     }
   ],
   "verification": {
     "by": "owcli/v0.4.0",
-    "at": "2026-10-05T09:32:05.440Z"
+    "at": "2026-10-05T10:41:17.026Z"
   }
 }
