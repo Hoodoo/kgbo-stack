@@ -5,7 +5,7 @@ description: What kgbo-stack is, what each file in it is for, and which page or 
 tags: [quickstart, overview, stack]
 verified:
   - by: owcli/v0.2.0-1-g3d84f34
-    at: "2026-10-05T08:58:06.950Z"
+    at: "2026-10-05T08:58:22.198Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
