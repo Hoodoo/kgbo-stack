@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:39de2ef5d0809f0ce56154e681918cf71b15af6ea61b70946898eeffa12a905f",
+  "pageVersion": "sha256:bd2803f8556adc59796e57930fa84c63db8b48022c5fec3dd88f118cfd29e31d",
   "claims": [
     {
       "id": "claim_8187eb75e7fd48124b9abaeb4d5acb0b",
-      "statement": "make image builds deploy/container/Dockerfile from the repository root with $(CONTAINER), docker by default.",
+      "statement": "make image builds deploy/container/Dockerfile from the repository root with $(CONTAINER), docker by default, tagged with git describe; make push pushes it to the project's Artifact Registry.",
       "evidence": [
         {
-          "resource": "repo://Makefile#L1-L9",
-          "version": "repo-lines-v1:sha256:f234508249d3740eb02e49f207e8c2d8ca54dceb90dac20f5f67324771e87f81:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjAzNGY0ZWNlMDcyZmY5NDhiMmI1NWU1OGVhMjA3Y2UwYzEyZmY5MTYxMGM2YTY3YjcyMTRkYTY4MDAxNWU0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzUyNTMyYmY0YzQwZjlkMDZhODllZmU5Y2ZlYzE5YmM5M2Y1M2RhMjVlMmI1MWJmMjliMzFmOTVjMTZkNzRjZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+          "resource": "repo://Makefile#L1-L20",
+          "version": "repo-lines-v1:sha256:cce528c0bdc1be20cb3ef7560daa84fab2ebd5ef5b7869fb8418f4607f4820fd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ZjdhMmIxNmQyNDRjMjU4NmIyMGU2OGNhMTZlMzc4MTg1Yjc5MzNjNzFkOWFhMjJhNzM0YTNiZjJiOWFjZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkMTVlYzViMWRmNjAwMDA2M2QyZDMwODM5OTJiMzI2MjdmNjI4YzI2ZjFhMmY2M2I5ODJlZWRkMzEwZDgyMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
     },
@@ -109,6 +109,6 @@
   ],
   "verification": {
     "by": "owcli/v0.4.0",
-    "at": "2026-10-05T09:27:12.249Z"
+    "at": "2026-10-05T09:32:05.440Z"
   }
 }

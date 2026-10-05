@@ -16,18 +16,25 @@
       "sourceFingerprint": "sha256:48f03c7d6e69d09eaedfab79f4e5f1bd9406eef423fa7f3756b0d9596031c07a"
     },
     "/openwiki/operations/container.md": {
-      "pageVersion": "sha256:39de2ef5d0809f0ce56154e681918cf71b15af6ea61b70946898eeffa12a905f",
+      "pageVersion": "sha256:bd2803f8556adc59796e57930fa84c63db8b48022c5fec3dd88f118cfd29e31d",
       "completedBy": "owcli/v0.4.0",
-      "completedRunId": "47a396e4-d693-43de-a081-09207a97095b",
-      "gitHead": "e7b2c6d30002c4479c00c5f27ed6f45819911c32",
-      "sourceFingerprint": "sha256:0e6dd7057b08bc4a155e7e139ef106d0cae87834fb9b692fb22056ecdb5848a4"
+      "completedRunId": "d2c94be3-d6da-4930-b1bb-42d0352d11b3",
+      "gitHead": "c8215c0833e9aaa9ef5caaacb1fc229e51ba1256",
+      "sourceFingerprint": "sha256:6a7f8a5d5b170e85a3f2f8ab354e376ea2ba427462c421f0058e55355b0cea78"
+    },
+    "/openwiki/operations/gcp.md": {
+      "pageVersion": "sha256:92dcfa6d6363af3ab840863790be43e15d2fdb5b6af12e1097d495fbd909d887",
+      "completedBy": "owcli/v0.4.0",
+      "completedRunId": "d2c94be3-d6da-4930-b1bb-42d0352d11b3",
+      "gitHead": "c8215c0833e9aaa9ef5caaacb1fc229e51ba1256",
+      "sourceFingerprint": "sha256:6a7f8a5d5b170e85a3f2f8ab354e376ea2ba427462c421f0058e55355b0cea78"
     },
     "/openwiki/quickstart.md": {
-      "pageVersion": "sha256:2030a257c04916ca30caf6d79ccc9d83df72313ae8122be1f12d93594b7c66f3",
-      "completedBy": "owcli/v0.2.0-1-g3d84f34",
-      "completedRunId": "78b4f497-2b2f-48d9-96a6-aa35a8ae31bf",
-      "gitHead": "18c6f416d32791b7ef5f867c3232b39482c2f86d",
-      "sourceFingerprint": "sha256:323cabc86c6a70420bbf02f2b177623cfaa40cde862897d3955a416676d4a316"
+      "pageVersion": "sha256:a356143d9df1909d3d77d263c02ee08c8c7683a07ed6fee666d21a72e8463fa8",
+      "completedBy": "owcli/v0.4.0",
+      "completedRunId": "d2c94be3-d6da-4930-b1bb-42d0352d11b3",
+      "gitHead": "c8215c0833e9aaa9ef5caaacb1fc229e51ba1256",
+      "sourceFingerprint": "sha256:6a7f8a5d5b170e85a3f2f8ab354e376ea2ba427462c421f0058e55355b0cea78"
     },
     "/openwiki/workflows/maintaining-the-stack.md": {
       "pageVersion": "sha256:c9fb7656eb978d533ec9f2b08ee0eb29da9b0fedca337943ea76c01f56da49b4",

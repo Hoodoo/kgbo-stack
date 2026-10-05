@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:92dcfa6d6363af3ab840863790be43e15d2fdb5b6af12e1097d495fbd909d887",
+  "claims": [
+    {
+      "id": "claim_3379e0662c0326ff4168d193b9f22a4e",
+      "statement": "Host names are portfolio, wiki, and bossman under the load balancer address via nip.io, mapped to goatlassian 7799, owcli 4321, and bossman 7788.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/main.tf#L27-L45",
+          "version": "repo-lines-v1:sha256:637bac608f5c8989cb2eb21e27213b40ef8368468bd3616c5d248b19f156eb88:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwYjM4M2IxNTQzYjkxYWRlNzI1MmMwOTZjZjBlNDQ5MDEwODQ5NzczMGVhNmNkMTAyM2FjZjAyZjI3ZmY0ZmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkwZWEyYmQ3YmIxYmRkMzJjMjMzMTRiN2U0MjFjOTZiMmJiNDE2NWU1NDdjZDc1ZGRhNGIxZWFlMDQ2NTk3ODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBjM2JjNDJjYzQ1MTZjZmJjMTJkZmQ1ZTQzYTIzOGNhNTU1YWUzMjMxNTYyNDEzMmU3ZTEyZTZkNjBiZmJmOWQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_aa9f39766f862e4ccbd45e8940d7211b",
+      "statement": "The URL map routes each host to its backend with goatlassian as default, and plain HTTP redirects to HTTPS.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/main.tf#L252-L269",
+          "version": "repo-lines-v1:sha256:97def942c94c692cd74b4cd44d4f1b5f2c50a30664e44c32919f9d3675d2e165:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNWYwMGM1ZWQ2NjY3Njg3YTMwYWQ2NDM0OGJmZmVmNDdlMDQ5NjJiNjE0MzQ2NGFkMDlkZGZhMTFlNmM4ZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjMmQ5NzBlMmY5NjMyZWZlNDI5ODk3MjM1NzEwZTI4MzJlNGI4ZjFmNTIwZTE1MWQ0YjE5YzY2OTIxMGM1MjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYzMzUzN2M2ZDNkNzA3NDhkMmNkMDcwMWU4YjBiOTY2NGQ5MzIzMWUxZGQ4OGZhZmFiYzU3NjlmZjMyZGJmZGQifQ"
+        },
+        {
+          "resource": "repo://deploy/gcp/main.tf#L293-L312",
+          "version": "repo-lines-v1:sha256:95f8ae533dd40a5892a17b6440623f22d22ccda2549d0a30f7dda6a0cf33ca98:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmMmJkZTM2NWY5N2MzNDk2ZmVhZDkwNDRjYTNhODFlYmFiNjBkNTFiZTMxNmE0OWFiOTg3YTYyM2JiNjI5NDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjM2YzZWQwMzk5ZWZmM2QyNWJhMzdmOGVmNmNmYTkxNGJiMGZkYmQ3NTUwODZlYTJhNmE1MDJkNWRmZjk3M2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8572e6ee2d214a4588f7dd3c36481da2",
+      "statement": "The VM has no external address, and the only firewall rule to the UI ports admits the load balancer and health-check ranges; SSH is admitted only from IAP's range.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/main.tf#L112-L134",
+          "version": "repo-lines-v1:sha256:2e0495cf4bb6abe2964c0cb0db714424969037c167ac7681d5da32493ebe2155:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2NjlhM2JlNjg0ODY5MTRlZTMwMDMxMDM5ZDhkNmQyYmRlODQ2NDAyYTQzNDc4ODRiZjRlZTFjOGJmNTFjNDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFjNWIyZjE1NzI3ZWUwYzE5N2U4NjZjYmRmZTZjOGMyZDc2MWM2ZmFiYTA4MGIxNjliYzIzMWQ5YWNhYjlhMzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAzYjk4MjU1MzlhODE3MGM0NTdlNTEyMGM5YTViMzhjNTU1M2YwNzA0MWQzODZhMmQyZGZkY2JlNTZkOGQ1MGUifQ"
+        },
+        {
+          "resource": "repo://deploy/gcp/main.tf#L164-L168",
+          "version": "repo-lines-v1:sha256:fba2fdb6d8dc2aa16e7d57643c786d83527a4cb8548ab89b0417e37b7d86dcf9:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjdlNTc4OGQ1ZDlkNzNkMjRhODFkYmMwYTVhNzRiZmE4MmM5YzNiM2FmOTllNTJhZjc5NmU5MGI0NjhhOGEzZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDUxZjZkZDkxMmM2MDgzOGU4NTEyYjAxMTc4YmRmNmIyNzA2MWViYjBkZjY0YmE2NTFlOWEyZjI0ODFmZmZiZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjQyZjgyYmNlZDNiOWM4N2MyMjA0ZDM0ODVhYTNlMzRmMjg0YmJmNGZhZDkyMmRmNmJkNzc5MGNiNjBhNTEwZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_eb97b8a7267d0560ad0c3703877fde7b",
+      "statement": "The subnet has Private Google Access and Cloud NAT provides other egress.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/main.tf#L89-L110",
+          "version": "repo-lines-v1:sha256:0338e25329f4599289c6831eef411baf998e4894a5a886b55a7d30f3dbc767c9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwMjNkZWQyOTQ5OTRhYmY1YjIwYmVkMTQ3OGQ5Mzg4ZGE3NGEwOTM0MjZjZWQ1YjVmMzllOTAxZGNiNzUwNmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcyMWFlMGVhOTA3MWM3ZDZmMzhlZWJiNGViOWQ0ZmJjYzQ4YjllMjA3NzlkOWRmYzFkM2UyODllZWMwMTI2Y2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5MTJlMzJjM2Q5NWNkMGJhYzQ5ZWFiOTdkNzliMzNlZDIyYjVjNTA2N2NiMDRmOTljZDBlMzg4MGY0YjMwMmQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_65280a1e9cd203b631f7f44ea90b131e",
+      "statement": "Backends are EXTERNAL_MANAGED with IAP enabled and TCP health checks, and iap_members get roles/iap.httpsResourceAccessor on each.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/main.tf#L215-L250",
+          "version": "repo-lines-v1:sha256:a338f4bdc9e499b072112936e2acb8dfcad40ade41982305cb724ffeecc67106:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1ZmI4ZWFlZWUwNzA5MjU0ODM2MzcwODEzY2FiNDc5ZTVkYzIwZTJmYzg0MmRlOWEyZDlhZmMxMzIxZjEyY2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiMjcwMjlkOTIyZTU4YWE4N2YyNjkxODA5MzMwMmNkMWUxYzM3MGU5ZjE2ZTg5NDY2YzAwYWNlYmM1OGVjMzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhiMDk5YTY2Y2U4MDdkMGY2ZmZiNDcyYTkwZGEwNzEzMGZjMmVlM2E3MWE3YTc3ZjA2Zjg0ZTgwNTUwZmVjNDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_58915f80fa13f4152a3c64869cd74a65",
+      "statement": "The data disk has prevent_destroy.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/main.tf#L137-L145",
+          "version": "repo-lines-v1:sha256:c558c4802191a374582f3318dc621473b710dd5782b1bc9a4f0e85124ffa9b38:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzkyM2Q1ZTg1OTIxOGJjZGY0NDZiMzhjYmQ1ZTU1ZTQyMWU2YTBkMTJhYTBlMjliNjdiNmZmMjliYjVhMGU3YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmMwNDA2NWY5NTFkNmFlYzgwYTQzNGEwZjY5MjAyNmFkMjg2N2RjYzk5ZDM5OTgxMGU3YTliN2ZiNzNhMDU4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTY4ZjNlODg2ZThmYjAwMDdjZjliMjFkNDFhNTAyZTNmZGU4MjNjZDVlMTE2ZDg2Njc1MTE4ODcwNzkzMmI1OSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4541c96bfba03d4dd3f6c0d31db3d3e4",
+      "statement": "cloud-init writes kgbo-disk, which formats the data disk only without a filesystem and mounts it, and kgbo, which configures registry credentials, writes goatlassian's services links once, and runs the image with the disk as /kgbo, the UIs on 0.0.0.0, their public names, and the IAP user header.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/cloud-init.yaml.tftpl#L1-L44",
+          "version": "repo-lines-v1:sha256:10ae43ebfdca7ebae7d1b89f410993f6556762c620f084c0fc442e8453f91f6a:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4Yzk1OTU1YjAyNDQwMmFhOTU3MmI2NjNmN2VlYjEzNGYwMTM0M2JiOTJhZjI3YjUwZTk3ZTcyYjIyYzU2NWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzZjk2OTg3MWZkY2Q3MGQ1YTYwMjNkNDUyZDA4YzNlOTM0MDI1YzY4YjQ0YzA4Nzc1OGRlMDQxZGRlNDUwMzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_83796e679058e6c1a4291988fc74ea2a",
+      "statement": "make push logs in with a gcloud access token, pushes the git-describe tagged image to the project's Artifact Registry, and prints image_tag.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L1-L20",
+          "version": "repo-lines-v1:sha256:cce528c0bdc1be20cb3ef7560daa84fab2ebd5ef5b7869fb8418f4607f4820fd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ZjdhMmIxNmQyNDRjMjU4NmIyMGU2OGNhMTZlMzc4MTg1Yjc5MzNjNzFkOWFhMjJhNzM0YTNiZjJiOWFjZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkMTVlYzViMWRmNjAwMDA2M2QyZDMwODM5OTJiMzI2MjdmNjI4YzI2ZjFhMmY2M2I5ODJlZWRkMzEwZDgyMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_801b2a99467f52470ef36a78037d0562",
+      "statement": "Variables are project, iap_members, and image_tag, with defaults for region europe-west2, zone, machine type e2-small, and a 20 GB data disk.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/gcp/variables.tf#L1-L38",
+          "version": "repo-lines-v1:sha256:8003b5e44293158c892dad12b6b584da3f728ce41e4c039ba854ba5f17266678:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU4NWM3ZDU3OGZkZDMyMjk3NGEzNzBmMjA2ZGQ5Yzk0MzgzYzZmMDAyZDczYTc0ODdkZDIwOTY3MzFiYmZkYTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/v0.4.0",
+    "at": "2026-10-05T09:32:40.353Z"
+  }
+}

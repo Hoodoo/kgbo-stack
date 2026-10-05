@@ -5,7 +5,7 @@ description: How the stack's services run in one container image, what it contai
 tags: [container, docker, deployment, bundle, operations]
 verified:
   - by: owcli/v0.4.0
-    at: "2026-10-05T09:27:12.249Z"
+    at: "2026-10-05T09:32:05.440Z"
 sources:
   - id: openwiki-source-715dace563ef484b6e8bd1e2
     resource: repo://.dockerignore
@@ -15,7 +15,7 @@ sources:
     resource: repo://deploy/container/kgbo-services
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/v0.4.0", at: "2026-10-05T09:27:12.379Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-05T09:32:54.546Z" }
 ---
 
 # Container Image
@@ -29,7 +29,10 @@ installed on their own machines. `docs/container.md` is the operator guide.
 ## Building
 
 `make image` runs `$(CONTAINER) build -f deploy/container/Dockerfile` from
-the repository root (`CONTAINER` defaults to `docker`; podman works too).
+the repository root (`CONTAINER` defaults to `docker`; podman works too) and
+tags the image `kgbo-stack:<git describe>`. `make push PROJECT=<id>` pushes
+it to that project's Artifact Registry for the
+[GCP Deployment](gcp.md).
 `.dockerignore` limits the build context to `stack.toml`, `bin/kgbo`, and
 `deploy/container/`. Base images are fully qualified
 (`docker.io/library/...`) because podman refuses short names without a

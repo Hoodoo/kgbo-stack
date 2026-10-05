@@ -4,13 +4,15 @@ title: Quickstart
 description: What kgbo-stack is, what each file in it is for, and which page or document to read for a given task.
 tags: [quickstart, overview, stack]
 verified:
-  - by: owcli/v0.2.0-1-g3d84f34
-    at: "2026-10-05T08:58:22.198Z"
+  - by: owcli/v0.4.0
+    at: "2026-10-05T09:32:54.380Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
   - id: openwiki-source-4295305d9bd805a055f92696
     resource: repo://bin/kgbo
+  - id: openwiki-source-d51d92c71c8f62b9fb8bae44
+    resource: repo://deploy/gcp/main.tf
   - id: openwiki-source-6215ef1e20210625bdbea089
     resource: repo://docs/data-bundle.md
   - id: openwiki-source-47d02fca3524898d5aae2b3b
@@ -21,7 +23,7 @@ sources:
     resource: repo://README.md
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:58:07.074Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-05T09:32:54.546Z" }
 ---
 
 # Quickstart
@@ -52,6 +54,7 @@ working environment needs, and each provider is a tool that can do it
 | `bin/kgbo` | the bundle tool: `env`, `homes`, `snapshot`, `adopt`, `remap`; reads `stack.toml` |
 | `deploy/container/`, `Makefile` | the container image for the stack's services (`make image`) |
 | `docs/container.md` | running that image with the bundle as a volume |
+| `deploy/gcp/`, `docs/gcp.md` | Terraform for the image on a GCP VM behind a load balancer with IAP |
 | `AGENTS.md` | agent instructions: the kata workflow and owcli wiki routing |
 | `.kata.toml` | binds this repository to the `kgbo-stack` kata project |
 | `LICENSE` | MIT |
@@ -66,6 +69,7 @@ working environment needs, and each provider is a tool that can do it
 | publish or release a tool | `docs/publishing.md` and [Maintaining the Stack](workflows/maintaining-the-stack.md) |
 | move state into one directory, or back it up | `docs/data-bundle.md` and [Data Bundle](concepts/data-bundle.md) |
 | build or run the services in a container | `docs/container.md` and [Container Image](operations/container.md) |
+| host the stack on GCP behind IAP | `docs/gcp.md` and [GCP Deployment](operations/gcp.md) |
 | move repositories or set up a new machine | `docs/moving.md` and [Moving Repositories or Machines](workflows/moving-repositories.md) |
 | see open bundle-level work | `kata list` in this repository |
 
