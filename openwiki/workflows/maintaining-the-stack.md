@@ -4,8 +4,8 @@ title: Maintaining the Stack
 description: How to onboard a repository onto the stack, add a tool or provider, publish and release one of our tools, and keep stack.toml, the docs, and the kata issues in this repository consistent.
 tags: [workflow, onboarding, publishing, release, kata]
 verified:
-  - by: owcli/v0.2.0
-    at: "2026-10-05T08:25:42.215Z"
+  - by: owcli/v0.2.0-1-g3d84f34
+    at: "2026-10-05T08:37:21.482Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
@@ -19,7 +19,7 @@ sources:
     resource: repo://LICENSE
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:25:42.315Z" }
+generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:38:10.671Z" }
 ---
 
 # Maintaining the Stack
@@ -61,6 +61,10 @@ safe while the tools run; never copy the live directories with plain `tar`.
 To keep that state in one directory in the first place, stop the tools and
 run `bin/kgbo adopt`. See [Data Bundle](../concepts/data-bundle.md).
 
+After repositories move, or on a new machine, `bin/kgbo remap OLD NEW`
+rewrites the paths every tool stored; see
+[Moving Repositories or Machines](moving-repositories.md).
+
 ## Adding a provider or tool
 
 1. Add a `[providers.<name>]` table to `stack.toml` with its `role` and the
@@ -73,6 +77,9 @@ run `bin/kgbo adopt`. See [Data Bundle](../concepts/data-bundle.md).
 3. Update `docs/install.md` (and the README table) from the manifest.
 4. If goatlassian cannot read it, leave `goatlassian_kind` empty and file a
    kata issue here; the beads and OpenWiki adapters are tracked that way.
+5. If it stores absolute repository paths, give it a `relocate` command
+   (`{old}` and `{new}` placeholders) and a place in `[bundle]`
+   `relocate_order`, so `bin/kgbo remap` rewrites them.
 
 A new role is a larger change: add `[roles.<name>]` with `purpose`,
 `contract`, and `default`, then a provider for it.

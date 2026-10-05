@@ -4,8 +4,8 @@ title: Quickstart
 description: What kgbo-stack is, what each file in it is for, and which page or document to read for a given task.
 tags: [quickstart, overview, stack]
 verified:
-  - by: owcli/v0.2.0
-    at: "2026-10-05T08:11:36.760Z"
+  - by: owcli/v0.2.0-1-g3d84f34
+    at: "2026-10-05T08:38:10.548Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
@@ -19,7 +19,7 @@ sources:
     resource: repo://README.md
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:11:36.857Z" }
+generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:38:10.671Z" }
 ---
 
 # Quickstart
@@ -27,7 +27,7 @@ generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:11:36.857Z" }
 kgbo-stack is the organizational repository for a local "Atlassian suite"
 for agent-driven development: **k**ata (issue tracker), **g**oatlassian
 (portfolio across repositories), **b**ossman (agent session archive and
-metrics), and **o**wcli (grounded repository wiki). Its only code is `bin/kgbo`, a small script for the data bundle. It
+metrics), and **o**wcli (grounded repository wiki). Its only code is `bin/kgbo`, a small script for the data bundle and for moving repositories. It
 defines how the tools form one bundle, documents how to install the bundle
 and point it at existing repositories, and tracks bundle-level work in its
 own kata project.
@@ -45,8 +45,9 @@ working environment needs, and each provider is a tool that can do it
 | `stack.toml` | the manifest: roles, providers, and their install, check, onboarding, and agent-host commands; the source of truth for the docs |
 | `docs/install.md` | installing the stack and onboarding existing repositories |
 | `docs/data-bundle.md` | keeping all of the stack's state in one directory, and consistent backups |
+| `docs/moving.md` | rewriting stored paths after repositories move or on a new machine |
 | `docs/publishing.md` | publishing and releasing our tools (owcli, bossman, goatlassian) |
-| `bin/kgbo` | the bundle tool: `env`, `homes`, `snapshot`, `adopt`; reads `stack.toml` |
+| `bin/kgbo` | the bundle tool: `env`, `homes`, `snapshot`, `adopt`, `remap`; reads `stack.toml` |
 | `AGENTS.md` | agent instructions: the kata workflow and owcli wiki routing |
 | `.kata.toml` | binds this repository to the `kgbo-stack` kata project |
 | `LICENSE` | MIT |
@@ -60,6 +61,7 @@ working environment needs, and each provider is a tool that can do it
 | add a provider or tool | [Maintaining the Stack](workflows/maintaining-the-stack.md) |
 | publish or release a tool | `docs/publishing.md` and [Maintaining the Stack](workflows/maintaining-the-stack.md) |
 | move state into one directory, or back it up | `docs/data-bundle.md` and [Data Bundle](concepts/data-bundle.md) |
+| move repositories or set up a new machine | `docs/moving.md` and [Moving Repositories or Machines](workflows/moving-repositories.md) |
 | see open bundle-level work | `kata list` in this repository |
 
 ## The tools

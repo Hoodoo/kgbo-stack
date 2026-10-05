@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:aa44437a7849ae3b4b23f1dcc574a0b58be4b03714cd9e91c5d2f9505768c798",
+  "pageVersion": "sha256:6a3c3064d0b7f4fab2f3e066b3e3dd5a2af181ae83f61708702d9c83fdbe3bde",
   "claims": [
     {
       "id": "claim_fc72b3a441bb8c4e9837ff7caec07238",
@@ -45,7 +45,7 @@
           "version": "repo-lines-v1:sha256:a727445cfe39a997bdde04206eb8f9583fdf813fc6ec243bc0f6a14a581d6418:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJhYjEyNjY1ZDk4YWVmMDIxYmE2NDk1M2M2MWIwZWQ4YTkwOGNmYjU2YTFjMDFlMmZjYjRiMDUyYjcxYTJhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzY1ZmQ0M2QxMGM4YThlYmY2OTBkNjNjNDYxYTg4MDNkYTYzMDliZDdlZjBkMWZkNWMxMzY2NmRhZGNiODNiYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
         },
         {
-          "resource": "repo://README.md#L36-L38",
+          "resource": "repo://README.md#L38-L40",
           "version": "repo-lines-v1:sha256:ec2e6a9e6c5b83dc447094d0bba92059c0d8fef10d2914968d9be1e0a27bcbbe:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTgzNDY2MzFlMGE5YzBjMDBkNTM4ZjI3MTZkMzc4MDMwMTczYTkyNGEzNGFhOTk2YTYyNmZjMmZmNmE0OGZmNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGE2ODQyYzhhMGVmODU5MGU4ZWQ3ZjQ4YTE5YzdhNTNlY2MyNmNjOTVkODc4NWFlNDBjNjU3NWNjMWU3ODJhZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTQxNGRlZTI2MmJhYTVlOTg2MzNjMGZhNzBjZjc1MmU0NWE2YWVlOWY0Y2UyNDExNDhkYzI1YmVkZmNjZTAwYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDMwNDU1OGQ4YzMzZThjYWNlNTQxMDAwM2EwZjMxMTdkODQyMmE3ZDBhOWQ2OGFkZDY0OTBmMGM4ZWVkMWNhZiJ9"
         }
       ]
@@ -55,7 +55,7 @@
       "statement": "The goatlassian provider's local checkout is ~/AISlop/oatlassian and its repository is github.com/Hoodoo/goatlassian.",
       "evidence": [
         {
-          "resource": "repo://stack.toml#L134-L139",
+          "resource": "repo://stack.toml#L138-L143",
           "version": "repo-lines-v1:sha256:712eab482674ffb7e681025149083199a0fbb28f738766b8be4c8cf3e4097093:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDE4N2RkNDYxZDc5MTY5ZDhjNDFhNTM4MDg1Mzk0YTg5ZmM1NWZjN2Y4NmE3NTBlNWRiNzJiMTU4MjYyY2FlYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTQyYjhhODRkYzM2Y2I0ZWU5N2U2OWJiZThmZWZjYzQ3NGIzNzhmNjUwNzNmNTA1Y2E3YTMyZWM0OGE3M2MwYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGU0NGY0ZjVjOWQ3ZjZlYTJhNjFhOTAyNzJkMmVkMTUxMjQ0YzFmMzA5MGVhNmYxNTQ3ZDE2Nzc4NDE4ZTgwMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGY4ODhiMTM3ZjI1ZWI5ZWY4MTlkOWZlN2I5ZjNlZjdlMjM1MmU2NGY0NTk1NzE2NTgxMDZiZGQ2MjUzNTEwZSJ9"
         }
       ]
@@ -72,14 +72,14 @@
     },
     {
       "id": "claim_f6014ef1164134b8000a6d97ebec3535",
-      "statement": "bin/kgbo offers env, homes, snapshot, and adopt subcommands for the data bundle, driven by stack.toml.",
+      "statement": "bin/kgbo offers env, homes, snapshot, adopt, and remap subcommands for the data bundle and moved repositories, driven by stack.toml.",
       "evidence": [
         {
-          "resource": "repo://bin/kgbo#L1-L12",
-          "version": "repo-lines-v1:sha256:a212fd8b266f813075a5d25bd3fd60bb16761ee155949a451b564652e0de4c0c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2ODJjYmRiNGM4YjA3NTE4YmY0ODZjNTg5OTBmYzM5MTc4M2FhMjBhOTE2YmZiMjdhZDIxMWViMWQ1YzM2NDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1NzFhNjdkODk4MjI4ZjViODllZmY4ZTI0NjBmOThiOTlkNWFlMDYxNjZhZDU4MjJmOTY4YzZlZjI0MGMyYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZjMDhhYjliMjkzNGFkYWRkMGEzN2YzNjc3M2EwZDkyOTA4MmZmNTVlZWViNzc5ZTdkMWNhNTRlYzgwZDYyOWUifQ"
+          "resource": "repo://bin/kgbo#L1-L14",
+          "version": "repo-lines-v1:sha256:69b713bb8a898162b5bb67fe3b1adda5bc14d8d4bf2e939e6193d9c218ccb904:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2ODJjYmRiNGM4YjA3NTE4YmY0ODZjNTg5OTBmYzM5MTc4M2FhMjBhOTE2YmZiMjdhZDIxMWViMWQ1YzM2NDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1NzFhNjdkODk4MjI4ZjViODllZmY4ZTI0NjBmOThiOTlkNWFlMDYxNjZhZDU4MjJmOTY4YzZlZjI0MGMyYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZjMDhhYjliMjkzNGFkYWRkMGEzN2YzNjc3M2EwZDkyOTA4MmZmNTVlZWViNzc5ZTdkMWNhNTRlYzgwZDYyOWUifQ"
         },
         {
-          "resource": "repo://bin/kgbo#L36-L36",
+          "resource": "repo://bin/kgbo#L39-L39",
           "version": "repo-lines-v1:sha256:b5260fc3f0efdbdb35685ea986dfae75ae8ab89708b34d146722c139ab4fa217:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjUyNjBmYzNmMGVmZGJkYjM1Njg1ZWE5ODZkZmFlNzVhZThhYjg5NzA4YjM0ZDE0NjcyMmMxMzlhYjRmYTIxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjUyNjBmYzNmMGVmZGJkYjM1Njg1ZWE5ODZkZmFlNzVhZThhYjg5NzA4YjM0ZDE0NjcyMmMxMzlhYjRmYTIxNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ2Njg3ZjRkNjM1ZGUwZWMxZTZkN2I5MjJjNzQ4YjMwMGI0ZWY1NDQ2Mjg1NjJkMTc0NmIyYjhlODU3OGI4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTZlNmIzMDJkNDMyY2ZjZDQxOTkxNTg0N2UzMzhkNzVjZmQ1YmI3ZWY4ZTc2ZGIyYzQyODgxNGFjZTQxZmM3MCJ9"
         }
       ]
@@ -100,7 +100,7 @@
     }
   ],
   "verification": {
-    "by": "owcli/v0.2.0",
-    "at": "2026-10-05T08:11:36.760Z"
+    "by": "owcli/v0.2.0-1-g3d84f34",
+    "at": "2026-10-05T08:38:10.548Z"
   }
 }

@@ -16,18 +16,25 @@
       "sourceFingerprint": "sha256:48f03c7d6e69d09eaedfab79f4e5f1bd9406eef423fa7f3756b0d9596031c07a"
     },
     "/openwiki/quickstart.md": {
-      "pageVersion": "sha256:aa44437a7849ae3b4b23f1dcc574a0b58be4b03714cd9e91c5d2f9505768c798",
-      "completedBy": "owcli/v0.2.0",
-      "completedRunId": "6ebeb053-dd2e-4f90-8d76-eab2e6c93225",
-      "gitHead": "c3137a71bbd2b7ed771c4998cc378697c8a44df7",
-      "sourceFingerprint": "sha256:48f03c7d6e69d09eaedfab79f4e5f1bd9406eef423fa7f3756b0d9596031c07a"
+      "pageVersion": "sha256:6a3c3064d0b7f4fab2f3e066b3e3dd5a2af181ae83f61708702d9c83fdbe3bde",
+      "completedBy": "owcli/v0.2.0-1-g3d84f34",
+      "completedRunId": "c04b5c35-ffe8-4bc4-af28-7434d15400ed",
+      "gitHead": "d4686d781a087d7b544cdd502c55ac40e82241fd",
+      "sourceFingerprint": "sha256:dfb117f2de60dd031f3f9795ea6fb8b6856ac14886d6f401c12342a49cf2bf2e"
     },
     "/openwiki/workflows/maintaining-the-stack.md": {
-      "pageVersion": "sha256:ee0b9c26004088d069c4b6a6e9dd7b8ae7fa979c748a15c48e55655e7cddb414",
-      "completedBy": "owcli/v0.2.0",
-      "completedRunId": "bef53291-d6a2-4cbb-a95b-09156fcae790",
-      "gitHead": "09fa7082ba1fc58215493c2324d5fd72d6911ebb",
-      "sourceFingerprint": "sha256:3e60a9a8ede0f14f57340dfc8edd421f0dcf89b0861428b697f1b0da2653a0fc"
+      "pageVersion": "sha256:a62b57a65d229c080af6dbf56fd42134b243da5c9214c45c8f4c0705f6d30bd9",
+      "completedBy": "owcli/v0.2.0-1-g3d84f34",
+      "completedRunId": "c04b5c35-ffe8-4bc4-af28-7434d15400ed",
+      "gitHead": "d4686d781a087d7b544cdd502c55ac40e82241fd",
+      "sourceFingerprint": "sha256:dfb117f2de60dd031f3f9795ea6fb8b6856ac14886d6f401c12342a49cf2bf2e"
+    },
+    "/openwiki/workflows/moving-repositories.md": {
+      "pageVersion": "sha256:7226746e4f7b8639d2561defed8433c68cf792f1dbde11ffbe8d5062cfa6e23c",
+      "completedBy": "owcli/v0.2.0-1-g3d84f34",
+      "completedRunId": "c04b5c35-ffe8-4bc4-af28-7434d15400ed",
+      "gitHead": "d4686d781a087d7b544cdd502c55ac40e82241fd",
+      "sourceFingerprint": "sha256:dfb117f2de60dd031f3f9795ea6fb8b6856ac14886d6f401c12342a49cf2bf2e"
     }
   }
 }
