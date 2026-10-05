@@ -47,6 +47,18 @@ docker run -d --name kgbo --restart unless-stopped \
   that laptops join as spokes (kgbo-stack issue 0z7g).
 - bossman never syncs in the container: there are no agent logs there, only
   what is shipped into the bundle.
+- kata's daemon starts first; everything else starts once `kata health`
+  answers, and the image sets `KATA_AUTOSTART=0` so no other kata command
+  ever spawns a second daemon (one did, racing the supervisor's, before
+  this).
+- **Server-side clones:** when `/kgbo/server/repos.tsv` exists (`<name> <git
+  url>` per line), `kgbo-repos` clones or fast-forwards each into
+  `/kgbo/repos/<name>`, binds it in owcli, adopts it as the goatlassian
+  project `<name>`, and builds the owcli workspaces in
+  `/kgbo/server/workspaces.tsv` (`<workspace> <name>...`). It runs at start
+  and every `KGBO_REPOS_EVERY` (15m; `0` disables); a failed sync is logged
+  and retried without stopping the services. Public HTTPS URLs only for
+  now.
 - The container runs as uid 1000; the volume must be writable by it. With
   rootless podman add `--userns=keep-id` so your files map to that user.
 - A normal `docker stop` takes under a second; a service that dies takes the

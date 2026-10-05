@@ -115,12 +115,24 @@ HTTPS fails. The first visit signs you in with Google.
 To roll out a new image, `make push` again, set `image_tag`, and `terraform
 apply`; the VM restarts with the new metadata.
 
+## Repositories on the server
+
+The `repos` variable (name => git URL) lists what the server clones, and
+`workspaces` (name => repository names) its owcli workspaces; the defaults
+are the four public stack repositories in a `kgbo-stack` workspace.
+cloud-init copies both into `/kgbo/server/` on every start, and the
+container's `kgbo-repos` clones them into `/kgbo/repos/<name>`, binds them
+in owcli, adopts each as a goatlassian project, and fast-forwards them every
+15 minutes. Change the lists in `terraform.tfvars`, apply, and reset the VM
+(`gcloud compute instances reset kgbo --zone <zone>`) so cloud-init rewrites
+them. Private repositories need credentials, which are not set up yet.
+
 ## Starting state and what is not done here
 
-The bundle starts empty. Filling it is the next issues of the epic: the kata
-hub (0z7g), server-side repository clones (1dhc), shipping bossman data
-(fy8m), and backups to Cloud Storage (d0gc). Until then, copy a snapshot in
-over SSH if you want something to look at:
+Apart from the clones, the bundle starts empty: the kata hub (0z7g),
+shipping bossman data (fy8m), and backups to Cloud Storage (d0gc) are the
+next issues of the epic. Until then, copy a snapshot in over SSH if you want
+something to look at:
 
 ```sh
 bin/kgbo snapshot /tmp/kgbo-seed && tar -C /tmp -czf kgbo-seed.tgz kgbo-seed
