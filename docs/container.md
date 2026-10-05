@@ -37,9 +37,8 @@ docker run -d --name kgbo --restart unless-stopped \
   together. `kgbo-services check` is the health check.
 - The web UIs listen on loopback inside the container: bossman on 7788,
   owcli on 4321, goatlassian on 7799 (override with `BOSSMAN_ADDR`,
-  `OWCLI_PORT`, `GOATLASSIAN_ADDR`). With `--network host` they are on the
-  host's loopback. Serving them to other machines needs the reverse-proxy
-  work in owcli#gtnc, bossman#w9jy, and oatlassian#a2zs.
+  `OWCLI_ADDR`, `GOATLASSIAN_ADDR`). With `--network host` they are on the
+  host's loopback.
 - `KATA_LISTEN=host:port` also serves kata's daemon over TCP, for a hub
   that laptops join as spokes (kgbo-stack issue 0z7g).
 - bossman never syncs in the container: there are no agent logs there, only
@@ -48,6 +47,27 @@ docker run -d --name kgbo --restart unless-stopped \
   rootless podman add `--userns=keep-id` so your files map to that user.
 - A normal `docker stop` takes under a second; a service that dies takes the
   container down with a non-zero exit.
+
+## Behind a load balancer with IAP
+
+Each UI accepts a public name and trusts a proxy header naming the
+signed-in user (bossman v0.2.0, owcli v0.4.0, goatlassian v0.3.0, which the
+image pins). Set:
+
+| variable | example | effect |
+| --- | --- | --- |
+| `BOSSMAN_ADDR`, `OWCLI_ADDR`, `GOATLASSIAN_ADDR` | `0.0.0.0:7788` | listen where the load balancer reaches the UI |
+| `BOSSMAN_HOST`, `OWCLI_HOST`, `GOATLASSIAN_HOST` | `bossman.example.com` | accept that name in the `Host` header |
+| `KGBO_USER_HEADER` | `X-Goog-Authenticated-User-Email` | trust it as the signed-in user; refuse requests without it (401) |
+
+goatlassian records that user as the actor of every change, and bossman
+reports it at `/api/viewer`. Anyone who can reach the container directly
+could send the header, so only set `KGBO_USER_HEADER` when a firewall lets
+nothing but the load balancer in. The UIs answer 401 to requests without
+the header, so the load balancer's health checks should be TCP checks on
+the three ports; the container's own health check probes loopback and sends
+the header itself. Point goatlassian's `[services]` (config.toml in its
+bundle directory) at the public owcli and bossman URLs so its links work.
 
 ## Paths inside the container
 

@@ -6,9 +6,9 @@
 ARG GO_VERSION=1.22
 
 FROM docker.io/library/golang:${GO_VERSION}-bookworm AS build
-ARG OWCLI_VERSION=v0.3.0
-ARG BOSSMAN_VERSION=v0.1.0
-ARG GOATLASSIAN_VERSION=v0.2.0
+ARG OWCLI_VERSION=v0.4.0
+ARG BOSSMAN_VERSION=v0.2.0
+ARG GOATLASSIAN_VERSION=v0.3.0
 ARG KATA_VERSION=0.18.0
 # kata publishes no checksum file; these are of the pinned release.
 ARG KATA_SHA256_amd64=bda4a6a24b74c1ee71be1237ce2e16ff6f627c6e5bee67fcb97525d3b2abe052
