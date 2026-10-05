@@ -16,11 +16,11 @@
       "sourceFingerprint": "sha256:48f03c7d6e69d09eaedfab79f4e5f1bd9406eef423fa7f3756b0d9596031c07a"
     },
     "/openwiki/operations/container.md": {
-      "pageVersion": "sha256:7cb8ef12a3450e0cc888bc1732aadd1bf50c8641ba8aae5372510017972862f6",
-      "completedBy": "owcli/v0.3.0",
-      "completedRunId": "9699091f-2004-40cb-b32a-e5513d76d09c",
-      "gitHead": "fac2a498c5866523c6160ad695c8e573f666a213",
-      "sourceFingerprint": "sha256:d3e3a84df0094214961d45e368f3415f49d6aacf1beeb153baef31caad306138"
+      "pageVersion": "sha256:39de2ef5d0809f0ce56154e681918cf71b15af6ea61b70946898eeffa12a905f",
+      "completedBy": "owcli/v0.4.0",
+      "completedRunId": "47a396e4-d693-43de-a081-09207a97095b",
+      "gitHead": "e7b2c6d30002c4479c00c5f27ed6f45819911c32",
+      "sourceFingerprint": "sha256:0e6dd7057b08bc4a155e7e139ef106d0cae87834fb9b692fb22056ecdb5848a4"
     },
     "/openwiki/quickstart.md": {
       "pageVersion": "sha256:2030a257c04916ca30caf6d79ccc9d83df72313ae8122be1f12d93594b7c66f3",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:7cb8ef12a3450e0cc888bc1732aadd1bf50c8641ba8aae5372510017972862f6",
+  "pageVersion": "sha256:39de2ef5d0809f0ce56154e681918cf71b15af6ea61b70946898eeffa12a905f",
   "claims": [
     {
       "id": "claim_8187eb75e7fd48124b9abaeb4d5acb0b",
@@ -28,7 +28,7 @@
       "evidence": [
         {
           "resource": "repo://deploy/container/Dockerfile#L8-L25",
-          "version": "repo-lines-v1:sha256:240bf2d0e0ef32eee0f343cc3d5c8658dce35df6bc65d7605ac05a5d8edf0460:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3NGM0MmQ0MmZmYzNlNDk0ZDEyMjRlYWE1NDgyOTExNmI4ZWU1M2IzNGNmMDc3YzliNWFmY2IyZWEwODczMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMGY3YzkzYjJjZTA2ZjE5MmRkNmU0Y2U5OGEyYzNiMzVlODcwMDNjNGNjM2JjODA4YjBhMjNmMTViYWE0YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlNWNjZjk5NDAwOTk2ZWNlZDdiZDE4N2E1OWZlYWRmZDZmNGExNTJkYWFmZDVmNGM3N2ZiMzg1OGFkMWM1ZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4MWI4OTBhMTQ5ZGE1ZTM5MGYwMzVlZDZlNWZmYjhiZWU1YzE1YTY3NzI2NzVhMzJkZTMwNWEwZmE4Y2Q5ZGMifQ"
+          "version": "repo-lines-v1:sha256:b483351ba4b95d8d563ebf8e5dcbe871bde9539ed670c19eccc08c998505ce85:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3NGM0MmQ0MmZmYzNlNDk0ZDEyMjRlYWE1NDgyOTExNmI4ZWU1M2IzNGNmMDc3YzliNWFmY2IyZWEwODczMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMGY3YzkzYjJjZTA2ZjE5MmRkNmU0Y2U5OGEyYzNiMzVlODcwMDNjNGNjM2JjODA4YjBhMjNmMTViYWE0YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlNWNjZjk5NDAwOTk2ZWNlZDdiZDE4N2E1OWZlYWRmZDZmNGExNTJkYWFmZDVmNGM3N2ZiMzg1OGFkMWM1ZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4MWI4OTBhMTQ5ZGE1ZTM5MGYwMzVlZDZlNWZmYjhiZWU1YzE1YTY3NzI2NzVhMzJkZTMwNWEwZmE4Y2Q5ZGMifQ"
         }
       ]
     },
@@ -64,11 +64,11 @@
     },
     {
       "id": "claim_a47df05aed0933e2f4c085789a20c8b3",
-      "statement": "kgbo-services check runs kata health and requests each web UI's API.",
+      "statement": "kgbo-services check runs kata health and requests each web UI's API on 127.0.0.1 at its port, sending the configured user header itself.",
       "evidence": [
         {
-          "resource": "repo://deploy/container/kgbo-services#L13-L19",
-          "version": "repo-lines-v1:sha256:062f09ae59d75bd7545cf9fb974039632a4c969feae6d568a71cd46132477eba:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzJiN2Q5ODRlYTU0NGQ0OThhZGNlN2FhYWEyOGE4MjBhMzhkYTlhY2Q3YjcwZDJmNjM5NTlkOTc1MjY4Yzk0MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc2OWQyMzdjZDQyMGI5ZDM4Yjk4MWEwYTRmNjc3MDE5MGE0YTgzZGNhMWZlNTZjNGY1YmExZTJjYmMwZWY3NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjg1ZjllNDUzYTEzZjY0ZTFmYjA5ZjcyZjMxZjlmZjRiZDQ5NjdlZjA0NGEwNzRjZmMzNTZkYTBlNDBmMjYyZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWRiN2E3YjZmMDllOGI4NzZmNzQ2ZTMwODJiZjhmNzM0YjM2NDg1M2FjOWY1MWI2ZDBmOTYwOTllY2RkZTVmYiJ9"
+          "resource": "repo://deploy/container/kgbo-services#L29-L42",
+          "version": "repo-lines-v1:sha256:a501faca9eb6c505388c50d7168359fa7bc7b9ad543968d5cef1bbe03efbdd8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyYjdkOTg0ZWE1NDRkNDk4YWRjZTdhYWFhMjhhODIwYTM4ZGE5YWNkN2I3MGQyZjYzOTU5ZDk3NTI2OGM5NDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NjlkMjM3Y2Q0MjBiOWQzOGI5ODFhMGE0ZjY3NzAxOTBhNGE4M2RjYTFmZTU2YzRmNWJhMWUyY2JjMGVmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJhZjdjMzNmNDY4ZTVkNTY4ODhmYWZhNjg3ODRmNTA2M2NjMTEwOGQ3NGNmMzI3MjNlMjRlYzU2MzgwZTJmYjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFkYjdhN2I2ZjA5ZThiODc2Zjc0NmUzMDgyYmY4ZjczNGIzNjQ4NTNhYzlmNTFiNmQwZjk2MDk5ZWNkZGU1ZmIifQ"
         }
       ]
     },
@@ -77,24 +77,38 @@
       "statement": "kgbo-services starts kata's daemon (with --listen from KATA_LISTEN), bossman serve without syncing, owcli serve, and goatlassian serve, and exits with the status of the first one to stop after stopping the rest.",
       "evidence": [
         {
-          "resource": "repo://deploy/container/kgbo-services#L21-L37",
-          "version": "repo-lines-v1:sha256:22893bcce9ae6accd71865ee73baddf701e3306b77bdb5e029b455b5806fc697:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NzlkYjJlMDFlNjExZWFjMmY3ZTE4NjdkMDA0MTQ0NmM0MGU5ZDM0YTIwODg0MDE4YWEyZWVmYWZiN2ZiOGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZDc4MTllYjQ2MjQ5OWQzZTJlZGQ1OGJlZGQzNjczZDkxNDc2OWIyODAyNTgzYjVlYmY1OTM4MmQ3MTA2MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdjNDA4YzMxMzI3ZDk3MTBhMmQ1OTg3YTQzOTM4ODBlYjgyODQ0YWEwYTk3MTUxMTFlYmE0MTJkNTg5MmRkNDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+          "resource": "repo://deploy/container/kgbo-services#L44-L63",
+          "version": "repo-lines-v1:sha256:d3e8a3e5e6e24ff97b35cb52e2da77a7236c728c1719c69a102964b31fa9e258:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NzlkYjJlMDFlNjExZWFjMmY3ZTE4NjdkMDA0MTQ0NmM0MGU5ZDM0YTIwODg0MDE4YWEyZWVmYWZiN2ZiOGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZDc4MTllYjQ2MjQ5OWQzZTJlZGQ1OGJlZGQzNjczZDkxNDc2OWIyODAyNTgzYjVlYmY1OTM4MmQ3MTA2MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdjNDA4YzMxMzI3ZDk3MTBhMmQ1OTg3YTQzOTM4ODBlYjgyODQ0YWEwYTk3MTUxMTFlYmE0MTJkNTg5MmRkNDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
     },
     {
       "id": "claim_2404d4e827981ba9808e4e75e0dba385",
-      "statement": "The image pins owcli v0.3.0 and goatlassian v0.2.0, the releases with relocate, and verifies kata against a SHA-256 kept in the Dockerfile.",
+      "statement": "The image pins owcli v0.4.0, bossman v0.2.0, and goatlassian v0.3.0, and verifies kata against a SHA-256 kept in the Dockerfile.",
       "evidence": [
         {
           "resource": "repo://deploy/container/Dockerfile#L8-L25",
-          "version": "repo-lines-v1:sha256:240bf2d0e0ef32eee0f343cc3d5c8658dce35df6bc65d7605ac05a5d8edf0460:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3NGM0MmQ0MmZmYzNlNDk0ZDEyMjRlYWE1NDgyOTExNmI4ZWU1M2IzNGNmMDc3YzliNWFmY2IyZWEwODczMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMGY3YzkzYjJjZTA2ZjE5MmRkNmU0Y2U5OGEyYzNiMzVlODcwMDNjNGNjM2JjODA4YjBhMjNmMTViYWE0YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlNWNjZjk5NDAwOTk2ZWNlZDdiZDE4N2E1OWZlYWRmZDZmNGExNTJkYWFmZDVmNGM3N2ZiMzg1OGFkMWM1ZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4MWI4OTBhMTQ5ZGE1ZTM5MGYwMzVlZDZlNWZmYjhiZWU1YzE1YTY3NzI2NzVhMzJkZTMwNWEwZmE4Y2Q5ZGMifQ"
+          "version": "repo-lines-v1:sha256:b483351ba4b95d8d563ebf8e5dcbe871bde9539ed670c19eccc08c998505ce85:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3NGM0MmQ0MmZmYzNlNDk0ZDEyMjRlYWE1NDgyOTExNmI4ZWU1M2IzNGNmMDc3YzliNWFmY2IyZWEwODczMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMGY3YzkzYjJjZTA2ZjE5MmRkNmU0Y2U5OGEyYzNiMzVlODcwMDNjNGNjM2JjODA4YjBhMjNmMTViYWE0YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlNWNjZjk5NDAwOTk2ZWNlZDdiZDE4N2E1OWZlYWRmZDZmNGExNTJkYWFmZDVmNGM3N2ZiMzg1OGFkMWM1ZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4MWI4OTBhMTQ5ZGE1ZTM5MGYwMzVlZDZlNWZmYjhiZWU1YzE1YTY3NzI2NzVhMzJkZTMwNWEwZmE4Y2Q5ZGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c6534ad00260ffafa478aa8fd80580d4",
+      "statement": "kgbo-services turns BOSSMAN_HOST, OWCLI_HOST, GOATLASSIAN_HOST into --allow-host and KGBO_USER_HEADER into --user-header for each UI.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/kgbo-services#L48-L55",
+          "version": "repo-lines-v1:sha256:d1b68d3d786563dbd814095aad763bd9cfab7ca04b8ca13db063938ad6a0af3d:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjRhMjNkN2FhMjVlNDgwNWJjMTc4NmJjZDQ4Yjk5YzA3MTVlMjE2YzY4MWFjMTVhMjA0YzUwM2E0ZGIzYjBhMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGQzY2E4OWEzZWQ5MmMxNjFiNGRmMDI4OTlmMTVlN2JkNTYyNWNjZGRhNzFkYjdlMGM4YTcxZTVkYTg3MzE4YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZWVkNjkwM2RjMWYxMjFkZGVmZTc5YWMzMjBjYjBlY2FkNjUyNWRiZDAyZTEyOTgwZmFiOTJkNTI2MDQ0YTc4YyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzM0MTU2MGExZDkxN2M5ZWI0MGM1ZTU5OWQzM2E0YTVjYjAyMmYxYjk2NjQ2NjUyNjM2ZDJiNmJkODZhYzU3ZCJ9"
+        },
+        {
+          "resource": "repo://deploy/container/kgbo-services#L7-L27",
+          "version": "repo-lines-v1:sha256:665ff92d09801f60abcad713f984b2c3ce48f3a4cc8c57192ab305f3b3e5833e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlOGE3ODU2N2Y2Y2EzYmZlMDdmODc4N2MxZjgzYTY1N2FkMDE2OTc5YzJjYzk3Y2FmMWMwN2NiNzMwZDI3NGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE4NTZiYmMxNDRhMDI1Mzg5MGFiNTk5M2UxNmU5MDRmNjNjYjkyMDI3ZjNhMThlNWNkYWZiYjMwZmMzNTFlM2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1NDg1MmY1MDJhNDAxNzhhODNhMzRkYjM3MDcyZDEzZTUzNDc3OTk1ZmI0N2Y1ZjA2YzE1YTBmNTFkYjZlZTIifQ"
         }
       ]
     }
   ],
   "verification": {
-    "by": "owcli/v0.3.0",
-    "at": "2026-10-05T09:04:55.133Z"
+    "by": "owcli/v0.4.0",
+    "at": "2026-10-05T09:27:12.249Z"
   }
 }

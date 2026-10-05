@@ -4,8 +4,8 @@ title: Container Image
 description: How the stack's services run in one container image, what it contains and pins, how kgbo-services supervises and health-checks them, why the bundle variables are image ENV, and how stored paths are handled inside the container.
 tags: [container, docker, deployment, bundle, operations]
 verified:
-  - by: owcli/v0.3.0
-    at: "2026-10-05T09:04:55.133Z"
+  - by: owcli/v0.4.0
+    at: "2026-10-05T09:27:12.249Z"
 sources:
   - id: openwiki-source-715dace563ef484b6e8bd1e2
     resource: repo://.dockerignore
@@ -15,7 +15,7 @@ sources:
     resource: repo://deploy/container/kgbo-services
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/v0.3.0", at: "2026-10-05T09:05:23.722Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-05T09:27:12.379Z" }
 ---
 
 # Container Image
@@ -67,12 +67,26 @@ any `ENV` value differs, so `stack.toml` stays the source of truth.
   the set back together. SIGTERM stops all of them; a stop takes under a
   second.
 - `check` is the image's `HEALTHCHECK`: `kata health` plus an HTTP request to
-  each web UI's API.
+  each web UI's API, always on `127.0.0.1` at the UI's port (loopback names
+  are accepted whatever address the UI listens on), sending the user header
+  itself when one is configured. Probing the listen address failed in
+  testing: `0.0.0.0:<port>` is not a name the UIs accept.
 
 The web UIs listen on loopback (bossman 7788, owcli 4321, goatlassian 7799,
-adjustable with `BOSSMAN_ADDR`, `OWCLI_PORT`, `GOATLASSIAN_ADDR`). Their Host
-guards reject other host names with 403; serving them through a load
-balancer is the reverse-proxy work tracked per tool.
+adjustable with `BOSSMAN_ADDR`, `OWCLI_ADDR`, `GOATLASSIAN_ADDR`).
+
+## Proxy mode
+
+Behind a load balancer with Google IAP, `kgbo-services` turns environment
+variables into each UI's reverse-proxy flags (`proxy_flags`):
+`BOSSMAN_HOST`, `OWCLI_HOST`, and `GOATLASSIAN_HOST` become `--allow-host`,
+and `KGBO_USER_HEADER` (such as `X-Goog-Authenticated-User-Email`) becomes
+`--user-header` for all three. The UIs then answer 401 to requests without
+the header, so load balancer health checks should be TCP checks on the
+ports. Tested with the ports published and requests sent as a load balancer
+would: signed in 200, no header 401, unknown host 403, and goatlassian
+reporting the signed-in user as the actor. Trusting the header assumes a
+firewall that admits only the load balancer.
 
 ## Stored paths
 
@@ -81,7 +95,8 @@ machine's absolute repository paths. Either mount the repositories at the
 same paths, read-only, or clone them anywhere and run `kgbo remap` in the
 container (see [Moving Repositories or Machines](../workflows/moving-repositories.md)).
 `remap` needs owcli v0.3.0 and goatlassian v0.2.0 or later (their
-`relocate` commands), which the image pins.
+`relocate` commands); the image pins owcli v0.4.0, bossman v0.2.0, and
+goatlassian v0.3.0.
 
 ## Verified behaviour
 
