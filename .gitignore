@@ -1,1 +1,6 @@
 .kata.local.toml
+# Terraform working files, state, and the filled-in variables
+deploy/gcp/.terraform/
+deploy/gcp/*.tfstate
+deploy/gcp/*.tfstate.*
+deploy/gcp/terraform.tfvars

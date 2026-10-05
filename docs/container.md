@@ -11,6 +11,10 @@ on their own machines.
 make image                              # docker build; CONTAINER=podman also works
 ```
 
+The image is tagged with `git describe` (`kgbo-stack:<tag>`); `make push
+PROJECT=<gcp project>` sends it to that project's Artifact Registry (see
+[gcp.md](gcp.md)).
+
 The image pins tool versions as build arguments (`OWCLI_VERSION`,
 `BOSSMAN_VERSION`, `GOATLASSIAN_VERSION`, `KATA_VERSION` with its SHA-256,
 since kata publishes no checksum file). It also carries `bin/kgbo` and

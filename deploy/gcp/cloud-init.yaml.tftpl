@@ -1,0 +1,44 @@
+#cloud-config
+# Container-Optimized OS processes this on every boot: it writes the units
+# and starts them. kgbo-disk mounts the data disk (formatting it only when it
+# has no filesystem); kgbo runs the stack's image with the disk as /kgbo.
+
+write_files:
+  - path: /etc/systemd/system/kgbo-disk.service
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Mount the kgbo data disk at /mnt/disks/kgbo
+      [Service]
+      Type=oneshot
+      RemainAfterExit=yes
+      # $$ reaches bash as $: systemd expands $VAR in Exec lines itself.
+      ExecStart=/bin/bash -c 'dev=/dev/disk/by-id/google-kgbo-data; blkid "$$dev" >/dev/null || mkfs.ext4 -m 0 -F "$$dev"; mkdir -p /mnt/disks/kgbo; mountpoint -q /mnt/disks/kgbo || mount -o discard,defaults "$$dev" /mnt/disks/kgbo; chown 1000:1000 /mnt/disks/kgbo'
+
+  - path: /etc/systemd/system/kgbo.service
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=kgbo stack services
+      Requires=docker.service kgbo-disk.service
+      After=docker.service kgbo-disk.service
+      [Service]
+      Environment=HOME=/home/kgbo-runner
+      ExecStartPre=/bin/mkdir -p /home/kgbo-runner
+      ExecStartPre=/usr/bin/docker-credential-gcr configure-docker --registries=${registry_host}
+      ExecStartPre=-/usr/bin/docker rm -f kgbo
+      ExecStartPre=/bin/bash -c 'mkdir -p /mnt/disks/kgbo/goatlassian && test -e /mnt/disks/kgbo/goatlassian/config.toml || printf "[services]\nowcli_url = \"https://${owcli_host}\"\nbossman_url = \"https://${bossman_host}\"\n" > /mnt/disks/kgbo/goatlassian/config.toml; chown -R 1000:1000 /mnt/disks/kgbo/goatlassian'
+      ExecStart=/usr/bin/docker run --rm --name kgbo --network host \
+        -v /mnt/disks/kgbo:/kgbo \
+        -e BOSSMAN_ADDR=0.0.0.0:7788 -e OWCLI_ADDR=0.0.0.0:4321 -e GOATLASSIAN_ADDR=0.0.0.0:7799 \
+        -e BOSSMAN_HOST=${bossman_host} -e OWCLI_HOST=${owcli_host} -e GOATLASSIAN_HOST=${goatlassian_host} \
+        -e KGBO_USER_HEADER=X-Goog-Authenticated-User-Email \
+        ${image}
+      ExecStop=/usr/bin/docker stop kgbo
+      Restart=always
+      RestartSec=10
+
+runcmd:
+  - systemctl daemon-reload
+  - systemctl start kgbo-disk.service
+  - systemctl start kgbo.service

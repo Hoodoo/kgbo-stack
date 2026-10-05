@@ -34,6 +34,8 @@ go install github.com/Hoodoo/goatlassian/cmd/goatlassian@latest
   machine, rewrite the paths every tool stored (`bin/kgbo remap`).
 - [`docs/container.md`](docs/container.md): the stack's services in one
   image (`make image`), with the bundle as a volume.
+- [`docs/gcp.md`](docs/gcp.md): the container on a GCP VM behind a load
+  balancer with Identity-Aware Proxy (Terraform in `deploy/gcp`).
 - [`docs/publishing.md`](docs/publishing.md): runbook for publishing the
   in-house tools to GitHub.
 

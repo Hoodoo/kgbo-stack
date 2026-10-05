@@ -1,0 +1,6 @@
+# Copy to terraform.tfvars (git-ignored) and fill in.
+project     = "my-gcp-project"
+iap_members = ["user:me@example.com"]
+image_tag   = "abc1234"   # printed by: make push PROJECT=my-gcp-project
+# region = "europe-west2"
+# zone   = "europe-west2-b"
