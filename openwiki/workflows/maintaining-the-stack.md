@@ -4,8 +4,8 @@ title: Maintaining the Stack
 description: How to onboard a repository onto the stack, add a tool or provider, publish and release one of our tools, and keep stack.toml, the docs, and the kata issues in this repository consistent.
 tags: [workflow, onboarding, publishing, release, kata]
 verified:
-  - by: owcli/v0.2.0-1-g3d84f34
-    at: "2026-10-05T08:37:21.482Z"
+  - by: owcli/v0.3.0
+    at: "2026-10-05T09:05:06.556Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
@@ -19,7 +19,7 @@ sources:
     resource: repo://LICENSE
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:38:10.671Z" }
+generated: { by: "owcli/v0.3.0", at: "2026-10-05T09:05:23.722Z" }
 ---
 
 # Maintaining the Stack
@@ -94,9 +94,10 @@ README, ship agent-facing assets (such as skills) in the repository, scan
 history for secrets, refresh the tool's wiki after the change, and tag.
 
 All four repositories are public and MIT-licensed; owcli, bossman, and
-goatlassian were first released as `v0.1.0`; owcli is at `v0.2.0`, which
-adds `OWCLI_HOME`, and goatlassian at `v0.1.1`, which pins owcli-wiki
-components by repository root.
+goatlassian were first released as `v0.1.0`; owcli is at `v0.3.0`
+(`OWCLI_HOME` in v0.2.0, `relocate` in v0.3.0) and goatlassian at `v0.2.0`
+(wiki components pinned by repository root in v0.1.1, `relocate` in
+v0.2.0).
 
 ## Releasing
 

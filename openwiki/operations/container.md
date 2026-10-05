@@ -4,8 +4,8 @@ title: Container Image
 description: How the stack's services run in one container image, what it contains and pins, how kgbo-services supervises and health-checks them, why the bundle variables are image ENV, and how stored paths are handled inside the container.
 tags: [container, docker, deployment, bundle, operations]
 verified:
-  - by: owcli/v0.2.0-1-g3d84f34
-    at: "2026-10-05T08:57:43.775Z"
+  - by: owcli/v0.3.0
+    at: "2026-10-05T09:04:55.133Z"
 sources:
   - id: openwiki-source-715dace563ef484b6e8bd1e2
     resource: repo://.dockerignore
@@ -15,7 +15,7 @@ sources:
     resource: repo://deploy/container/kgbo-services
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:58:07.074Z" }
+generated: { by: "owcli/v0.3.0", at: "2026-10-05T09:05:23.722Z" }
 ---
 
 # Container Image
@@ -80,8 +80,8 @@ A bundle seeded from a workstation (`bin/kgbo snapshot`) keeps that
 machine's absolute repository paths. Either mount the repositories at the
 same paths, read-only, or clone them anywhere and run `kgbo remap` in the
 container (see [Moving Repositories or Machines](../workflows/moving-repositories.md)).
-`remap` needs owcli and goatlassian releases that have `relocate`; with the
-pinned v0.2.0 and v0.1.1 it skips both tools.
+`remap` needs owcli v0.3.0 and goatlassian v0.2.0 or later (their
+`relocate` commands), which the image pins.
 
 ## Verified behaviour
 
@@ -89,4 +89,7 @@ Run against a snapshot of a workstation bundle with its repositories mounted
 read-only, the container's tools reported the same issues, wikis, and
 sessions as the host, `kgbo homes` placed every provider in `/kgbo`, and
 goatlassian showed the same portfolio. Killing one service stopped the
-container with a non-zero exit.
+container with a non-zero exit. With the repositories mounted at `/repos`
+instead, `kgbo remap /home/<user>/<dir> /repos` inside the container took
+goatlassian from six projects with problems to none and owcli from no
+readable wikis to all seven, with workspace search working.

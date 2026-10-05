@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:a62b57a65d229c080af6dbf56fd42134b243da5c9214c45c8f4c0705f6d30bd9",
+  "pageVersion": "sha256:c9fb7656eb978d533ec9f2b08ee0eb29da9b0fedca337943ea76c01f56da49b4",
   "claims": [
     {
       "id": "claim_d595e017c640e817a6e1f819ff280ed7",
@@ -47,26 +47,26 @@
       "statement": "The publishing preflight is kept as the checklist for the next tool added to the stack and covers module rename, version fallback, license, shipped assets, secret scan, wiki refresh, and tagging.",
       "evidence": [
         {
-          "resource": "repo://docs/publishing.md#L28-L29",
+          "resource": "repo://docs/publishing.md#L29-L30",
           "version": "repo-lines-v1:sha256:d22cec933059c4e073e686bbd9fec42059404eca72d7cf44196a393bd6f10927:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTc5MjJmY2U1ZDBiZjgzNGNjY2U4MmJhZjIwOTc0MzE1ZjhjMmUxMDE4OGRlOGM1ZWMwYzQ4MjVhNjE4ZjBhYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmNiZGIxYTk3MTU5YzI0N2U5MjAzMzMwYTQ3ZWY3Y2RhMTA1YWMyMjA5M2YwMWVkYzQ4OWJjZGExZGQ0MWFhZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTVjZjU1YjYxY2Q1ZDBiNmJhNmI3MzdlY2JlMTM5YTdhZWRjZDBjODgzYzc5NWI4NmFjMjRkOGU2Y2YzOTY2NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGM2MWNiMmNkNmMwZDIzNWMwZTQwODhjNjM2YzVmMTVlZjg0ZjkzMjhlMDhmODk3YTE2OWNjNzViMjIyNjNiNyJ9"
         },
         {
-          "resource": "repo://docs/publishing.md#L44-L70",
+          "resource": "repo://docs/publishing.md#L45-L71",
           "version": "repo-lines-v1:sha256:96db676cd85f41352cfa0761c6fcee4a0ee50d62cef5005fdfe0e12d4619bfd4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlYjlkN2UzNWM4MTFmYjhkYzE3YTg0MzM5NTUyNTU2ZDE3OGY2OGVmNjhkNmQ2NjY5ZTE1MThiMTgwMWRkM2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgwNDFhMDdkNDkxYTEzMTQ0NTYxYjcxMDU1YzQzYTY5N2JjNGY1NDUyY2ZkMWI5ZWVkYzQ3YWNhYWMyNDA2YjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0NjY0OGYyMTJmYTFhOGMxMzlmNjZkZDUyMWM5NzQ1ZGM4YzJmMGM2ZWQ3Nzg4MjQwOGRjNDlmYWUyZDUzMjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzMDkzMzg2MmNkOTVhMjc5ZTZiZTM5ODMxMmZjMDBiNTI3Y2I5YjA1ZDhhMDdiMTEzOTg1MTBmYzRhYTMwYzgifQ"
         }
       ]
     },
     {
       "id": "claim_0eac0c16a772cff808d609cc626ae825",
-      "statement": "All four repositories are public and MIT-licensed; owcli, bossman, and goatlassian install via go install, first released as v0.1.0, with owcli at v0.2.0 and goatlassian at v0.1.1.",
+      "statement": "All four repositories are public and MIT-licensed; owcli, bossman, and goatlassian install via go install, first released as v0.1.0, with owcli at v0.3.0 and goatlassian at v0.2.0.",
       "evidence": [
         {
           "resource": "repo://LICENSE#L1-L3",
           "version": "repo-lines-v1:sha256:d4d12a0c1469e104dad72f3ebf2f506429e396827aaa10d15174a22a599d15fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjY3ZjdhMmUxOWRmYTlkZjk5YWY3NzQ1MjA5ODVhMGU1MjE5MjUyOTNlYTViN2U3NjdhYjA2OTY5ZDA2YmY5MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2ZhM2JiMjdmODNkODkxZDBhNTc5YTEwYzQzN2E2Njk4YzM0ODNmNTZiMzExZjMwMWIzNDQ0MmIzMTk1MTk1ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjgyZjllOWZjNDZkNGU0OWU5NTc0YmVkNTgzOWJiMThiY2FkMDRiMDI3YWMyNTZkZWE4ZDllMzdjZGFmNDhjZCJ9"
         },
         {
-          "resource": "repo://docs/publishing.md#L11-L21",
-          "version": "repo-lines-v1:sha256:0bb94f0308a46172ec9c1bcb32dbeb4a90c67bbedb3102a997f741f6f238a78b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NTUwY2ZiMjgyMTk5MjJkOTMyZGFjYTEwNzNhNTk5MTA3NTJhNzU0YmVjYzNlMGU5OGYwZTA4MjhlMWE5NTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhMDU5OTYwYzI5YzAzNDE4ZmQwOTU5N2NjOWRmMTE0ZGQzZGRjZTQyNGMyYWJmNTg2YzNjM2M5MTUxNTNiNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzOTQzMGQ0NDI0OWNlOWZhNDA5NjNkY2Y3NmVmNzQyNTZjMDRiYTZlNDZiOTc4Y2ZlOWJiMjM3YzkwODUxZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI0ZThhMjk5YWU0NmQ0NTYxM2Q5MzI1ODQxZWU2NzVkOTVhMmQ3OWJjODA2YzkyOTE3MGE1N2NlMTNiNzA3YjAifQ"
+          "resource": "repo://docs/publishing.md#L11-L22",
+          "version": "repo-lines-v1:sha256:e7181bc4195823e9875a8cd1fbcec025912babfe1a28e4dbeed9b4eb72750ea0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5NTUwY2ZiMjgyMTk5MjJkOTMyZGFjYTEwNzNhNTk5MTA3NTJhNzU0YmVjYzNlMGU5OGYwZTA4MjhlMWE5NTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhMDU5OTYwYzI5YzAzNDE4ZmQwOTU5N2NjOWRmMTE0ZGQzZGRjZTQyNGMyYWJmNTg2YzNjM2M5MTUxNTNiNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzOTQzMGQ0NDI0OWNlOWZhNDA5NjNkY2Y3NmVmNzQyNTZjMDRiYTZlNDZiOTc4Y2ZlOWJiMjM3YzkwODUxZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI0ZThhMjk5YWU0NmQ0NTYxM2Q5MzI1ODQxZWU2NzVkOTVhMmQ3OWJjODA2YzkyOTE3MGE1N2NlMTNiNzA3YjAifQ"
         }
       ]
     },
@@ -75,7 +75,7 @@
       "statement": "A release is a semver tag pushed in the tool's repository, which go install @latest resolves; prebuilt binaries are not produced yet.",
       "evidence": [
         {
-          "resource": "repo://docs/publishing.md#L23-L26",
+          "resource": "repo://docs/publishing.md#L24-L27",
           "version": "repo-lines-v1:sha256:82e4c008b8fc03e19946e55c0702c841c6b2d5291b68971ac4f02ed4803c211a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk4YWFlODllYTc5MDFkY2I0Y2Y1MmRmZDA3NjQzZDc5YWE0MTNjYWNmM2NhY2VjMTRlYzg2MDYyOTFiZjM0YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzRiZDMyMTRkMDM5MjQxMDlhMmRiODFmYTZkZmIyNjNjMTEzNzFiMjAxYzI3NzlkNTdkNmYyZjJiOGM1MDhmZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2YwODUwYmZmNDQwYmUwYzEzYzMyZjYwYWNmOGUwYzIzZGQwMjIyYTExNWFkZjAzMTQzZDRkZmJiYzEyMjk5OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGE1NjBjNjk3YmM2NzQ0ZGM2MWM0OWE3MjhlOGVhODEyOTdjYTE5YTIxMzMwNTBhYWNmYmRmMzZjMmZiZDcxMSJ9"
         }
       ]
@@ -147,12 +147,12 @@
       "statement": "A provider that stores absolute paths declares a relocate command with {old} and {new} placeholders, and bin/kgbo remap runs those in [bundle] relocate_order.",
       "evidence": [
         {
-          "resource": "repo://bin/kgbo#L253-L268",
-          "version": "repo-lines-v1:sha256:bf2032ce70b22991d5c185e798a9736d1e734ee37adf72aaaa9955ce4bb41593:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlNDRiYWVmZmYwZWRjOTQ1ZDhkNTYyODgwY2JhMjc4YWNmNDI0YmM2YzgzZmY0NTJjMDM3MjY1OGVlZmUzZDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxYzRhZjc3NDEzNTgzN2M0MzAyYjdhZTRjMDMxNTAxYzJiYTFmODVjOTU2OGQ1NjAxNTVhZjZiNWMwNjE3NzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc4NTkyM2JjMmMyYjYzMmVhNmJjMjRiZjZiZDIyNWMwM2YwZjk1OWM5NDZkMTk5YTFjMjBhOTE4YzMxZWEwNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ0ODE1NWZmMTUyZTYzYjI0MGM0YTAzZDliNzQzYTU2M2Q3ZTY1ZTYzNzJhYWQzYzMxYzI3Yzk4NDMxYTkwMjcifQ"
+          "resource": "repo://bin/kgbo#L264-L280",
+          "version": "repo-lines-v1:sha256:8a9bdac1e09f1eb39d763b08f9e67c559e17b7e8ef855b66c6747797af42a9cd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlNDRiYWVmZmYwZWRjOTQ1ZDhkNTYyODgwY2JhMjc4YWNmNDI0YmM2YzgzZmY0NTJjMDM3MjY1OGVlZmUzZDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0ZTgxZDI2YTExYmZkZmE1YmQ2ZGNmYWJhMWQwNGQzYjFmNzJiMzFkZDk2MjU2ZjIwODZhOTdkYTU1ZDhhMWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc4NTkyM2JjMmMyYjYzMmVhNmJjMjRiZjZiZDIyNWMwM2YwZjk1OWM5NDZkMTk5YTFjMjBhOTE4YzMxZWEwNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUyYjI5NTZkZTAxMzc4MWQxMjA3NmYyZjI0YTk4YzU1OTk2YjU1YTRiZGY2Zjk4YmVmMGZlYWE4YjAxZTM3YzMifQ"
         },
         {
           "resource": "repo://stack.toml#L104-L104",
-          "version": "repo-lines-v1:sha256:f6a60bb06dadce683eee66a35dcccbf58c5c667a3cc31c3321a1a6163a15f4e6:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjZhNjBiYjA2ZGFkY2U2ODNlZWU2NmEzNWRjY2NiZjU4YzVjNjY3YTNjYzMxYzMzMjFhMWE2MTYzYTE1ZjRlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjZhNjBiYjA2ZGFkY2U2ODNlZWU2NmEzNWRjY2NiZjU4YzVjNjY3YTNjYzMxYzMzMjFhMWE2MTYzYTE1ZjRlNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzg4MmM4NjZkNzcwYmM5NTg0MDc4NWFkMDhlODA2MGU1YWMyZjBiNTc3NjY0ZTZlNmI4YjgwMDZmNjUxNDQwYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjkyZDViM2NhNjk5ZGZlMmQwYWFkZGZhYTM2MjAwM2ExY2NjMjUwNzhjY2M5MDc1MWE4NjAyZTY4ZjNhYzNmMSJ9"
+          "version": "repo-lines-v1:sha256:d1ddfe53f314ff34cf30a31c3ef58518a0028910389c534330a4a685e016cb0e:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDFkZGZlNTNmMzE0ZmYzNGNmMzBhMzFjM2VmNTg1MThhMDAyODkxMDM4OWM1MzQzMzBhNGE2ODVlMDE2Y2IwZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDFkZGZlNTNmMzE0ZmYzNGNmMzBhMzFjM2VmNTg1MThhMDAyODkxMDM4OWM1MzQzMzBhNGE2ODVlMDE2Y2IwZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzg4MmM4NjZkNzcwYmM5NTg0MDc4NWFkMDhlODA2MGU1YWMyZjBiNTc3NjY0ZTZlNmI4YjgwMDZmNjUxNDQwYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjkyZDViM2NhNjk5ZGZlMmQwYWFkZGZhYTM2MjAwM2ExY2NjMjUwNzhjY2M5MDc1MWE4NjAyZTY4ZjNhYzNmMSJ9"
         },
         {
           "resource": "repo://stack.toml#L29-L31",
@@ -162,7 +162,7 @@
     }
   ],
   "verification": {
-    "by": "owcli/v0.2.0-1-g3d84f34",
-    "at": "2026-10-05T08:37:21.482Z"
+    "by": "owcli/v0.3.0",
+    "at": "2026-10-05T09:05:06.556Z"
   }
 }

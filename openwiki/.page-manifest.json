@@ -16,11 +16,11 @@
       "sourceFingerprint": "sha256:48f03c7d6e69d09eaedfab79f4e5f1bd9406eef423fa7f3756b0d9596031c07a"
     },
     "/openwiki/operations/container.md": {
-      "pageVersion": "sha256:948f59a3faa11c57181c7afa118f9140438fc2c5da4bdfe2666c5a553a4359ed",
-      "completedBy": "owcli/v0.2.0-1-g3d84f34",
-      "completedRunId": "1ca20852-656e-461b-9d13-81f10cad62d6",
-      "gitHead": "d19486e25cf16d1492a0ef90b2aba6354ae6ee8d",
-      "sourceFingerprint": "sha256:691cd90e9331ff0875272c07c43af8c8839372e8a5cb1b4771891fcb6e24c536"
+      "pageVersion": "sha256:7cb8ef12a3450e0cc888bc1732aadd1bf50c8641ba8aae5372510017972862f6",
+      "completedBy": "owcli/v0.3.0",
+      "completedRunId": "9699091f-2004-40cb-b32a-e5513d76d09c",
+      "gitHead": "fac2a498c5866523c6160ad695c8e573f666a213",
+      "sourceFingerprint": "sha256:d3e3a84df0094214961d45e368f3415f49d6aacf1beeb153baef31caad306138"
     },
     "/openwiki/quickstart.md": {
       "pageVersion": "sha256:2030a257c04916ca30caf6d79ccc9d83df72313ae8122be1f12d93594b7c66f3",
@@ -30,18 +30,18 @@
       "sourceFingerprint": "sha256:323cabc86c6a70420bbf02f2b177623cfaa40cde862897d3955a416676d4a316"
     },
     "/openwiki/workflows/maintaining-the-stack.md": {
-      "pageVersion": "sha256:a62b57a65d229c080af6dbf56fd42134b243da5c9214c45c8f4c0705f6d30bd9",
-      "completedBy": "owcli/v0.2.0-1-g3d84f34",
-      "completedRunId": "c04b5c35-ffe8-4bc4-af28-7434d15400ed",
-      "gitHead": "d4686d781a087d7b544cdd502c55ac40e82241fd",
-      "sourceFingerprint": "sha256:dfb117f2de60dd031f3f9795ea6fb8b6856ac14886d6f401c12342a49cf2bf2e"
+      "pageVersion": "sha256:c9fb7656eb978d533ec9f2b08ee0eb29da9b0fedca337943ea76c01f56da49b4",
+      "completedBy": "owcli/v0.3.0",
+      "completedRunId": "9699091f-2004-40cb-b32a-e5513d76d09c",
+      "gitHead": "fac2a498c5866523c6160ad695c8e573f666a213",
+      "sourceFingerprint": "sha256:d3e3a84df0094214961d45e368f3415f49d6aacf1beeb153baef31caad306138"
     },
     "/openwiki/workflows/moving-repositories.md": {
-      "pageVersion": "sha256:7226746e4f7b8639d2561defed8433c68cf792f1dbde11ffbe8d5062cfa6e23c",
-      "completedBy": "owcli/v0.2.0-1-g3d84f34",
-      "completedRunId": "c04b5c35-ffe8-4bc4-af28-7434d15400ed",
-      "gitHead": "d4686d781a087d7b544cdd502c55ac40e82241fd",
-      "sourceFingerprint": "sha256:dfb117f2de60dd031f3f9795ea6fb8b6856ac14886d6f401c12342a49cf2bf2e"
+      "pageVersion": "sha256:97db9a3d89e4abdf902147fe3a31503c723cf6976746e13429eb99a7bb2a565a",
+      "completedBy": "owcli/v0.3.0",
+      "completedRunId": "9699091f-2004-40cb-b32a-e5513d76d09c",
+      "gitHead": "fac2a498c5866523c6160ad695c8e573f666a213",
+      "sourceFingerprint": "sha256:d3e3a84df0094214961d45e368f3415f49d6aacf1beeb153baef31caad306138"
     }
   }
 }

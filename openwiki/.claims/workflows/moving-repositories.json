@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:7226746e4f7b8639d2561defed8433c68cf792f1dbde11ffbe8d5062cfa6e23c",
+  "pageVersion": "sha256:97db9a3d89e4abdf902147fe3a31503c723cf6976746e13429eb99a7bb2a565a",
   "claims": [
     {
       "id": "claim_e085b15711f78a818e268089be6ebac7",
@@ -17,7 +17,7 @@
       "statement": "remap runs each provider's relocate command from stack.toml in relocate_order, skipping tools without a relocate subcommand and inserting --dry-run when asked.",
       "evidence": [
         {
-          "resource": "repo://bin/kgbo#L253-L268",
+          "resource": "repo://bin/kgbo#L264-L279",
           "version": "repo-lines-v1:sha256:bf2032ce70b22991d5c185e798a9736d1e734ee37adf72aaaa9955ce4bb41593:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlNDRiYWVmZmYwZWRjOTQ1ZDhkNTYyODgwY2JhMjc4YWNmNDI0YmM2YzgzZmY0NTJjMDM3MjY1OGVlZmUzZDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxYzRhZjc3NDEzNTgzN2M0MzAyYjdhZTRjMDMxNTAxYzJiYTFmODVjOTU2OGQ1NjAxNTVhZjZiNWMwNjE3NzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc4NTkyM2JjMmMyYjYzMmVhNmJjMjRiZjZiZDIyNWMwM2YwZjk1OWM5NDZkMTk5YTFjMjBhOTE4YzMxZWEwNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ0ODE1NWZmMTUyZTYzYjI0MGM0YTAzZDliNzQzYTU2M2Q3ZTY1ZTYzNzJhYWQzYzMxYzI3Yzk4NDMxYTkwMjcifQ"
         },
         {
@@ -31,8 +31,8 @@
       "statement": "remap moves a kata project's local:// alias under OLD only when the new path has a .kata.toml, keeping and reporting it otherwise.",
       "evidence": [
         {
-          "resource": "repo://bin/kgbo#L209-L235",
-          "version": "repo-lines-v1:sha256:187f28f8040f419c5e7bc253a1c606bb451216b02cb15369dae18f042e1bb52c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3MzhlN2E1NWNjNjY2NmRlZWFkNjQwZmQ4MzQyZDE1ZGEwZTY3NmQ0NzkxY2RmNDQ3Yzc4MDhmNzg2NjIxY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxN2YyMWUwNTI2MDRiMTE2NmU2ZDQ3NmEwNDY2MjJmZDI5YjhlYzBlZjEyMGNkZmE1ZjQzZTlhMTMyMmRkYTQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MDE0OWUwNjlhZDY3ZWNjZjQ3MzY0NmZmMWM3NTAwNTBkMzI5ZDExMDAxOGRjNTc2Njg3OGVhZmExZDYwN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5MjJjYTZhMWUyMDEyYTQzMWViYTBjYjFlYTkyYTc1YjczZjM4YTgxNzU5NGUxYTM0NTk5NzJhMDRjMzZmZGQifQ"
+          "resource": "repo://bin/kgbo#L209-L246",
+          "version": "repo-lines-v1:sha256:11683daabe83d391da51d7f2df6b852eb3ffd08343687bb163e32a573a56e0ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3MzhlN2E1NWNjNjY2NmRlZWFkNjQwZmQ4MzQyZDE1ZGEwZTY3NmQ0NzkxY2RmNDQ3Yzc4MDhmNzg2NjIxY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1YzdjYTMxMWYzZWJhNWJhODU5MjU5OTI1N2M2Nzg4MzdhMGJjM2EzMWVjMTE1ODY5ZDJmODE4ODNhMGYwMzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MDE0OWUwNjlhZDY3ZWNjZjQ3MzY0NmZmMWM3NTAwNTBkMzI5ZDExMDAxOGRjNTc2Njg3OGVhZmExZDYwN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5MjJjYTZhMWUyMDEyYTQzMWViYTBjYjFlYTkyYTc1YjczZjM4YTgxNzU5NGUxYTM0NTk5NzJhMDRjMzZmZGQifQ"
         }
       ]
     },
@@ -41,12 +41,12 @@
       "statement": "remap re-points bundle symlinks whose target moved and reports that bossman needs nothing.",
       "evidence": [
         {
-          "resource": "repo://bin/kgbo#L238-L250",
-          "version": "repo-lines-v1:sha256:1bfc953a2c1c6450424fa87279e56a8663bd82379262476147dd4c2423c80a5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc0OWI4NzIyNGNlYWQ4NGRkMDE5Zjc0ZWRhNDdlMWE3MmFiZmMyZTAzNTYwYTYyZWRiOGIwMDc1MzBhNTQ3MjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0OGYyZDlkNDRkYzc5OGE4Yjc2ZWUxNmExNWE3NTVmZTcxNzVkNjVmYWNiNjQ1NDY0MTAwMTA2NWI5NTA5YWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3NTRjYjE2YzQyNzNkNmFmMjhlOTU5ZTFkNDA1Njk1ODI5OWZkOGJlYjdlZjA3MDJjZjg3MThlYTA5ZGI0OTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE2NjY4MTUwOTk0OWJiYjEzMzM4ODczZmU2ZWVmY2VjOWRkOWY3MTZjM2U3NGY2MjZkMGZmYTIzZWYyN2JjYzQifQ"
+          "resource": "repo://bin/kgbo#L249-L261",
+          "version": "repo-lines-v1:sha256:1bfc953a2c1c6450424fa87279e56a8663bd82379262476147dd4c2423c80a5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc0OWI4NzIyNGNlYWQ4NGRkMDE5Zjc0ZWRhNDdlMWE3MmFiZmMyZTAzNTYwYTYyZWRiOGIwMDc1MzBhNTQ3MjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0OGYyZDlkNDRkYzc5OGE4Yjc2ZWUxNmExNWE3NTVmZTcxNzVkNjVmYWNiNjQ1NDY0MTAwMTA2NWI5NTA5YWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMwNzM0MTZmZjY1MmNjOWFmMmVjN2JhZDI0ZjJkNzBkNjZkMmY0YzQ5ZjMxMWVlYjg3MTNmZWIyYjc1M2IwNjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE2NjY4MTUwOTk0OWJiYjEzMzM4ODczZmU2ZWVmY2VjOWRkOWY3MTZjM2U3NGY2MjZkMGZmYTIzZWYyN2JjYzQifQ"
         },
         {
-          "resource": "repo://bin/kgbo#L269-L272",
-          "version": "repo-lines-v1:sha256:b792d27595e72c230ae23cc8b0b5f2600f978c8a4db9e86ae70f36555c766a39:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzRlNGI1MzdmNGJhODM5MDdmZmVhYzg0MGZlZGJkZjg2MGM2N2QxZWFmMGQyZjU2ZGUxMzc2MWE4NDk2ZWQxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWJmMDEwMzNhNWExNTBhMDY1NDFmZTE5MDQzZjA3ZWEyMmFhOGQ1NGQ2ZDI4ZTczZTdjY2YwZjQyODlkOWJlZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTgwZGU0NDJjOGVkODVjZTgyY2U1NDE4MThlNzg3NjEwNWI3NDg0NGU1NzY0ZjJmZmU5NjBiZWRhMDc0MGI4ZCJ9"
+          "resource": "repo://bin/kgbo#L280-L282",
+          "version": "repo-lines-v1:sha256:e17c30d0547b6ecdbafc0a4d9cf83f374946ddafd8270b6a9673b9631ad43c56:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTRlODFkMjZhMTFiZmRmYTViZDZkY2ZhYmExZDA0ZDNiMWY3MmIzMWRkOTYyNTZmMjA4NmE5N2RhNTVkOGExYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODljYmQyNjk3MTJkMDNkMzFmNmRmMzZlM2E5ZjE5ZTI0ZDMzNjU5NTlmMjUzZDZlMTY4NmRlZTU3NDVkZmQ4ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWJmMDEwMzNhNWExNTBhMDY1NDFmZTE5MDQzZjA3ZWEyMmFhOGQ1NGQ2ZDI4ZTczZTdjY2YwZjQyODlkOWJlZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTk5OTdkNzg2ZGQwNThjMjgxMzMyYmI3MzQ0MjBlOWUzOWEyMjA2NDkwN2EzOTIwZTk5OTg0MWZiNmE3YzllNSJ9"
         }
       ]
     },
@@ -55,7 +55,7 @@
       "statement": "goatlassian runs before owcli because old wiki components are matched by owcli IDs that owcli relocate changes.",
       "evidence": [
         {
-          "resource": "repo://docs/moving.md#L56-L67",
+          "resource": "repo://docs/moving.md#L62-L73",
           "version": "repo-lines-v1:sha256:46efd457a125eb224827940e04ee123db30484e5c264b77c94c8e71698aae73b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwMWNjMWNmNzc2YTU3ZTQ4ZWM2NjMyOWRkYThmNDM5MjU0OGFlNGRkODBjNWJiYzY0Nzk5MjY3OGJjNzA2NDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhNGI2YTFhMmQyZjY0ZWI5NTE0NmVkNDJjZGUzZmJkNDc0ZjA4ZTFlMTk4NDBlMjIwYTFmYWVmMjEyZDExNmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         },
         {
@@ -69,14 +69,28 @@
       "statement": "The new-machine procedure is snapshot, install, copy to ~/kgbo, kgbo adopt, clone, then kgbo remap of the old home prefix, repeated after more clones.",
       "evidence": [
         {
-          "resource": "repo://docs/moving.md#L32-L54",
+          "resource": "repo://docs/moving.md#L38-L60",
           "version": "repo-lines-v1:sha256:d413f0f811349f2adba6221bdb9c4d5aa5a66d98b4b6bf516bbd040dfa163113:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2NDNmZDNmODBhY2RjMTk1ODJiMzM4MTI5ZjRlMmQ1NGUyOTdmMTJkNjY0OWM0MjBjMTg1YjM2NzYwNTUwMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxNzZjNWIxOGNmMzA0YmQ2MGM3NjIwZDc3MTFmNWMwMWFkOTZlNGQxNzc3ZTgxNTJiMDNmNTQ0YjkzMjAyMjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyMjUyZTc2MzE2Zjg3MmMzMzZjMTdmMmE5NDM3NWJkNzdlNGJkMDU1ODIwNzdiMWNlZDY5MTY3YTQyZWU2YWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyYTI0YjJkYzU5MzExYWRhMTI2NWE1OGQyMTEyYzY0MTc2ODBkMDUzYzdlZmNlMDIyOWVjODNhNTcyNThlMjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1fa563f9afd8af87fb0c65727b9ff63e",
+      "statement": "When kata init fails for a project, remap keeps that project's old alias, continues with the others, and exits non-zero at the end.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L234-L246",
+          "version": "repo-lines-v1:sha256:f31a555b08accea9470d3ffcc76422eec327e92055133c03fffb5afba62a3ee2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkOGE5ZTljMzI1MjgyMGM2NWE4MTY1MjBiOGRiNDkzMjI4MDg0OWVjOGM3ZDJlYjYyNzJhZmRmZWJlMDU5YzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1YzdjYTMxMWYzZWJhNWJhODU5MjU5OTI1N2M2Nzg4MzdhMGJjM2EzMWVjMTE1ODY5ZDJmODE4ODNhMGYwMzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEzNTk5NzE2MjUxMzI5MTE2OWJlYWVmNmJlZWI1NmMxMjA1MTMyY2E5ZDY5NzlhZTAyZjcyOThkNTkxMzBkZTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM5MjJjYTZhMWUyMDEyYTQzMWViYTBjYjFlYTkyYTc1YjczZjM4YTgxNzU5NGUxYTM0NTk5NzJhMDRjMzZmZGQifQ"
+        },
+        {
+          "resource": "repo://bin/kgbo#L283-L284",
+          "version": "repo-lines-v1:sha256:c90e2c2edadc5dbbc800dd1fed37dd2a2b8757d1f0ba10803eabe77e92284ebc:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjdiZmM5NmI0N2IyYTlhY2YxMjg3NDAyMzM3MGIwN2NiYWQ5MTY1ZjRmOTljZmYyMzI5MTdhNGY4YjI4ZGM3ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODAwOWYxYWFlZTI2NTViMzc5ZTc1YTM3YmJjZmJiM2RmZDk3M2NjYjAyZWVkMzQ2ODk1NGRkNjcwZjk5OTY0NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTE3YzMwZDA1NDdiNmVjZGJhZmMwYTRkOWNmODNmMzc0OTQ2ZGRhZmQ4MjcwYjZhOTY3M2I5NjMxYWQ0M2M1NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTI0MjIxMWQ0YTRiOGI3MjMwOWI4YzNiZTc4M2QzNGFmYTFjNDA5YThkZDc2OTRlMDExMjczODRiNzhlOGQ4YyJ9"
         }
       ]
     }
   ],
   "verification": {
-    "by": "owcli/v0.2.0-1-g3d84f34",
-    "at": "2026-10-05T08:37:52.146Z"
+    "by": "owcli/v0.3.0",
+    "at": "2026-10-05T09:05:23.571Z"
   }
 }

@@ -4,8 +4,8 @@ title: Moving Repositories or Machines
 description: Which absolute paths each tool stores, how bin/kgbo remap rewrites them after repositories move or the stack lands on a new machine, and why goatlassian must relocate before owcli.
 tags: [workflow, relocate, remap, paths, migration]
 verified:
-  - by: owcli/v0.2.0-1-g3d84f34
-    at: "2026-10-05T08:37:52.146Z"
+  - by: owcli/v0.3.0
+    at: "2026-10-05T09:05:23.571Z"
 sources:
   - id: openwiki-source-4295305d9bd805a055f92696
     resource: repo://bin/kgbo
@@ -13,7 +13,7 @@ sources:
     resource: repo://docs/moving.md
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:38:10.671Z" }
+generated: { by: "owcli/v0.3.0", at: "2026-10-05T09:05:23.722Z" }
 ---
 
 # Moving Repositories or Machines
@@ -50,7 +50,11 @@ For kata, `remap` reads every project's aliases and handles the `local://`
 ones under `OLD`. It only rebinds when the new path has a `.kata.toml`, so
 an alias whose repository has not been cloned yet is kept and reported;
 running `remap` again after cloning picks it up. `kata init` at an existing
-binding changes no files in the repository.
+binding changes no files in the repository. A project whose repository has a
+hosted remote is bound by that remote, so it ends with no `local://` alias.
+`kata init` rejects a remote that is a local path; `remap` then keeps that
+project's old alias, carries on with the other projects, and exits non-zero
+naming it.
 
 ## Why goatlassian runs before owcli
 
