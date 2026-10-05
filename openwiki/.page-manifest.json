@@ -23,11 +23,11 @@
       "sourceFingerprint": "sha256:48f03c7d6e69d09eaedfab79f4e5f1bd9406eef423fa7f3756b0d9596031c07a"
     },
     "/openwiki/workflows/maintaining-the-stack.md": {
-      "pageVersion": "sha256:dbebf6e4e74753311bae6df321c5daaf9ca0a2e2f41df573b79a7692ee39adca",
+      "pageVersion": "sha256:ee0b9c26004088d069c4b6a6e9dd7b8ae7fa979c748a15c48e55655e7cddb414",
       "completedBy": "owcli/v0.2.0",
-      "completedRunId": "c4d9d56f-edc2-4d2a-828d-73161464ef11",
-      "gitHead": "ed3f53a9544e0eab110969eb0a1c08f512677369",
-      "sourceFingerprint": "sha256:8efc05ff80408b411bacfbd0c95d9c45b28721099ff3f2ef8059253caa0f2b78"
+      "completedRunId": "bef53291-d6a2-4cbb-a95b-09156fcae790",
+      "gitHead": "09fa7082ba1fc58215493c2324d5fd72d6911ebb",
+      "sourceFingerprint": "sha256:3e60a9a8ede0f14f57340dfc8edd421f0dcf89b0861428b697f1b0da2653a0fc"
     }
   }
 }

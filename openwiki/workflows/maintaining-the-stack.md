@@ -5,7 +5,7 @@ description: How to onboard a repository onto the stack, add a tool or provider,
 tags: [workflow, onboarding, publishing, release, kata]
 verified:
   - by: owcli/v0.2.0
-    at: "2026-10-05T08:11:58.834Z"
+    at: "2026-10-05T08:25:42.215Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
@@ -19,7 +19,7 @@ sources:
     resource: repo://LICENSE
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:11:58.993Z" }
+generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:25:42.315Z" }
 ---
 
 # Maintaining the Stack
@@ -88,7 +88,8 @@ history for secrets, refresh the tool's wiki after the change, and tag.
 
 All four repositories are public and MIT-licensed; owcli, bossman, and
 goatlassian were first released as `v0.1.0`; owcli is at `v0.2.0`, which
-adds `OWCLI_HOME`.
+adds `OWCLI_HOME`, and goatlassian at `v0.1.1`, which pins owcli-wiki
+components by repository root.
 
 ## Releasing
 
