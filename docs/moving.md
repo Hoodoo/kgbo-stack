@@ -13,8 +13,8 @@ one step.
 | kata | the project's `local://` alias (via `kata init` at the new path, then `kata projects detach` of the old one) | issues, and the `.kata.toml` binding in the repository |
 | bossman | nothing | each session's directory, which records where it ran |
 
-Requires owcli and goatlassian with a `relocate` command (owcli after
-v0.2.0, goatlassian after v0.1.1); `kgbo remap` skips a tool without it and
+Requires owcli v0.3.0 and goatlassian v0.2.0 or later, which have the
+`relocate` command; `kgbo remap` skips a tool without it and
 says so.
 
 ## Repositories moved on this machine
@@ -28,6 +28,12 @@ bin/kgbo remap ~/AISlop ~/src
 Pass the common prefix that changed: one repository (`~/src/shop
 ~/work/shop`) or a directory of them. Running it twice is harmless; the
 second run finds nothing to change.
+
+A kata project whose repository has a hosted remote is bound by that remote
+(`github.com/...`), so after `remap` it simply has no `local://` alias. `kata
+init` rejects a remote that is a local path (such as
+`/srv/git/shop.git`); `remap` then keeps that project's old alias, carries on
+with the rest, and exits non-zero naming it.
 
 ## New machine
 

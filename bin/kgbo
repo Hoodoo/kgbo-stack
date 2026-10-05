@@ -207,10 +207,12 @@ def moved_path(path, old, new):
 
 
 def remap_kata(old, new, dry_run):
-    """Bind each kata project at its new path and drop its old local:// alias."""
+    """Bind each kata project at its new path and drop its old local:// alias.
+    Returns False if any project could not be rebound; the others still are."""
     if not shutil.which("kata"):
         print("kata: not installed, skipped")
-        return
+        return True
+    ok = True
     projects = json.loads(run(["kata", "projects", "list", "--json"]).stdout)["projects"]
     found = False
     for p in projects:
@@ -228,11 +230,20 @@ def remap_kata(old, new, dry_run):
                 print(f"kata: {p['name']}: {target} has no .kata.toml; kept {ident}")
                 continue
             print(f"kata: {p['name']}: local://{path} -> local://{target}")
-            if not dry_run:
-                run(["kata", "init", "--workspace", target])
-                run(["kata", "projects", "detach", ident, "--force"])
+            if dry_run:
+                continue
+            # A failure here (kata rejects some remotes, such as local paths)
+            # keeps this project's old alias and moves on to the others.
+            bound = run(["kata", "init", "--workspace", target], check=False)
+            if bound.returncode != 0:
+                ok = False
+                why = (bound.stderr or bound.stdout).strip().splitlines()[-1:] or ["failed"]
+                print(f"kata: {p['name']}: kata init failed, kept {ident}: {why[0]}")
+                continue
+            run(["kata", "projects", "detach", ident, "--force"])
     if not found:
         print(f"kata: no local alias under {old}")
+    return ok
 
 
 def remap_symlinks(manifest, old, new, dry_run):
@@ -266,9 +277,11 @@ def cmd_remap(manifest, args):
             cmd.insert(2, "--dry-run")
         out = run(cmd).stdout
         print("".join(f"{name}: {line}\n" for line in out.splitlines()), end="")
-    remap_kata(old, new, args.dry_run)
+    kata_ok = remap_kata(old, new, args.dry_run)
     remap_symlinks(manifest, old, new, args.dry_run)
     print("bossman: nothing to rewrite; sessions keep the directory they ran in")
+    if not kata_ok:
+        sys.exit("kgbo: some kata projects kept their old alias; see above")
 
 
 def cmd_env(manifest, args):

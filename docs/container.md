@@ -61,8 +61,7 @@ docker exec kgbo kgbo remap --dry-run /home/me/src /repos
 docker exec kgbo kgbo remap /home/me/src /repos
 ```
 
-`remap` needs owcli and goatlassian releases with `relocate` (after owcli
-v0.2.0 and goatlassian v0.1.1); raise `OWCLI_VERSION` and
-`GOATLASSIAN_VERSION` once those are tagged, or it skips both tools. See
+`remap` needs owcli v0.3.0 and goatlassian v0.2.0 or later (the `relocate`
+command), which the image pins. See
 [moving.md](moving.md). Keeping server-side clones current is kata issue
 1dhc.

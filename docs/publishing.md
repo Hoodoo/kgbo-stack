@@ -15,8 +15,9 @@ All four repositories are public under `Hoodoo/`, MIT-licensed, with
 github.com/Hoodoo/<tool>/cmd/<tool>@latest`, verified in an empty GOPATH
 with `GOPROXY=direct`; `@latest` resolves to the highest tag and the
 binaries report it from their build info. First released as `v0.1.0`;
-owcli is at `v0.2.0` (adds `OWCLI_HOME`) and goatlassian at `v0.1.1`
-(owcli-wiki components pinned by repo root), both 2026-10-05. Each tool's wiki was updated
+owcli is at `v0.3.0` (`OWCLI_HOME` in v0.2.0, `relocate` in v0.3.0) and
+goatlassian at `v0.2.0` (owcli-wiki components pinned by repo root in
+v0.1.1, `relocate` in v0.2.0), all 2026-10-05. Each tool's wiki was updated
 after the rename and `owcli check` passes. A pattern scan of every
 repository's full history found no credentials or `/home/...` paths.
 
