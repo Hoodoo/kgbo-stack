@@ -41,6 +41,8 @@ ENV KGBO_HOME=/kgbo \
     OWCLI_HOME=/kgbo/owcli \
     BOSSMAN_HOME=/kgbo/bossman \
     GOATLASSIAN_HOME=/kgbo/goatlassian
+# Only kgbo-services starts kata's daemon; other kata commands never spawn one.
+ENV KATA_AUTOSTART=0
 RUN ln -s /opt/kgbo-stack/bin/kgbo /usr/local/bin/kgbo \
  && kgbo env --plain --root /kgbo | while IFS== read -r key value; do \
       [ "$(printenv "$key")" = "$value" ] || { echo "ENV $key drifted from stack.toml: want $value" >&2; exit 1; }; \

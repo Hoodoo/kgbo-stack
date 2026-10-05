@@ -47,6 +47,12 @@ mkdir -p "$KATA_HOME" "$OWCLI_HOME" "$BOSSMAN_HOME" "$GOATLASSIAN_HOME"
 
 # KATA_LISTEN (host:port) also serves the daemon over TCP, for spokes.
 kata daemon start --foreground ${KATA_LISTEN:+--listen "$KATA_LISTEN"} &
+# Everything else may run kata (goatlassian, kgbo-repos), so it starts once
+# the daemon answers. The image sets KATA_AUTOSTART=0: a kata command that
+# found no daemon would otherwise start its own and make this one fail with
+# "already listening".
+for _ in $(seq 1 60); do kata health >/dev/null 2>&1 && break; sleep 1; done
+kata health >/dev/null || { echo "kgbo-services: kata daemon did not come up" >&2; exit 1; }
 # The server's bossman has no agent logs of its own: it shows what is
 # shipped into the bundle, so it never syncs.
 mapfile -t flags < <(proxy_flags "${BOSSMAN_HOST:-}")
