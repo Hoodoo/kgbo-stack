@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:948f59a3faa11c57181c7afa118f9140438fc2c5da4bdfe2666c5a553a4359ed",
+  "claims": [
+    {
+      "id": "claim_8187eb75e7fd48124b9abaeb4d5acb0b",
+      "statement": "make image builds deploy/container/Dockerfile from the repository root with $(CONTAINER), docker by default.",
+      "evidence": [
+        {
+          "resource": "repo://Makefile#L1-L9",
+          "version": "repo-lines-v1:sha256:f234508249d3740eb02e49f207e8c2d8ca54dceb90dac20f5f67324771e87f81:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjAzNGY0ZWNlMDcyZmY5NDhiMmI1NWU1OGVhMjA3Y2UwYzEyZmY5MTYxMGM2YTY3YjcyMTRkYTY4MDAxNWU0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzUyNTMyYmY0YzQwZjlkMDZhODllZmU5Y2ZlYzE5YmM5M2Y1M2RhMjVlMmI1MWJmMjliMzFmOTVjMTZkNzRjZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a08ad77efa806f8163a01376d1433ba3",
+      "statement": ".dockerignore limits the build context to stack.toml, bin/kgbo, and deploy/container/.",
+      "evidence": [
+        {
+          "resource": "repo://.dockerignore#L1-L5",
+          "version": "repo-lines-v1:sha256:976ea6501a42ac8bfd5493969b806344c23e8faa501b6946b6b9110596a57557:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2EzYWYzZmU5MDAxN2NkYjYwYWJkMzRhY2Q3MjZjOWRiZWUyZWQ2NTE3ZjI1N2RjNzk5NjkyZTgyODFhMTQxOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWVlOWRjYWZkZjAwMDIwNDc0ZDgxZWE2ZjY5ZTFkNTM4MzNkYTFhNGE1NGVkMDlkMDJhOTg4NTllZDM3OWE1MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b2289a33c1e99a09f927afd6fc156454",
+      "statement": "The build stage installs owcli, bossman, and goatlassian at pinned tags and verifies kata's release tarball against a SHA-256 kept in the Dockerfile.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/Dockerfile#L8-L25",
+          "version": "repo-lines-v1:sha256:5402a86f981046f1cd725ae85d6746969958d760d88b5288e4f84bfcc2860733:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3NGM0MmQ0MmZmYzNlNDk0ZDEyMjRlYWE1NDgyOTExNmI4ZWU1M2IzNGNmMDc3YzliNWFmY2IyZWEwODczMjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwMGY3YzkzYjJjZTA2ZjE5MmRkNmU0Y2U5OGEyYzNiMzVlODcwMDNjNGNjM2JjODA4YjBhMjNmMTViYWE0YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlNWNjZjk5NDAwOTk2ZWNlZDdiZDE4N2E1OWZlYWRmZDZmNGExNTJkYWFmZDVmNGM3N2ZiMzg1OGFkMWM1ZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4MWI4OTBhMTQ5ZGE1ZTM5MGYwMzVlZDZlNWZmYjhiZWU1YzE1YTY3NzI2NzVhMzJkZTMwNWEwZmE4Y2Q5ZGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1db995451b49e84e604fb5e0949a4192",
+      "statement": "The runtime stage is debian:bookworm-slim with bash, curl, git, python3, and tini, a uid 1000 kgbo user, and bin/kgbo with stack.toml under /opt/kgbo-stack.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/Dockerfile#L27-L35",
+          "version": "repo-lines-v1:sha256:e7cd93d87088926736335c8e0b5d4cc897b52d6ff74fcc111c5ea9a53898b2b7:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2M4ZWQyZTdjYTY3ZWM3ZDc0NjY3YmIxYTIwYTlkOGE0ODQ3NTMxYjVlNDMwYjU3NzNlODA0ZjA2NDJjZGRmNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDc1ZmVkNjU2OGQ5ZWRiMDQ1YTE5MjhjODA4OTI3OWJlNjI3ODVkYTAyMjBjYzg1NzFjNGM3NjVkMjA1YWUxMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWI1YzAzOTRmYzE0NzNjYTFlNDQ3OTRlYzBiNWU4MzgxMDMyYWFmM2RkOTk5NWUzNjg1YWVhZjJlMzkyMmRlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGVhMWE0MDBiOWEzNzM5ZmY2NDU1Mzk5ODk0YTU3MWY3NDQxNjM0NjllYjVjZDQ5ZDA2NTc3ZTY5NDM4OWE3YSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6597cdb562bb33233c2204487ab1fb5e",
+      "statement": "The bundle home variables are image ENV, and a build step fails if they differ from kgbo env output.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/Dockerfile#L36-L47",
+          "version": "repo-lines-v1:sha256:55c941dde5283b9334fa60deb076813e1ddbc2d294f3d259613d1c0be16ae434:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiMWM1OGIyMzdlOWI4MWZkZjdmZWYwNzE2YTRhNzBjNzMwNjVhODAzNTkxZTk4ZDE4NDExNGVmY2Y0ZmM2MGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3YzA3ZDViNjk2NWFiNWNlOTMxMjI5ZGVjNDA0ZmExMmMwZDljMDQxN2Y3NmNmZmEzZmIxOTc0MDVlOTc5MjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2YTY2MmI1N2E2YzRkZWQ1NGJkMTMzMWY2ZDI0NGY2NjljOTU3YjYyYzkzNDNlNDliY2ZmYjk3MTJlYjRlMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjODRhMGNmMjZiM2JmNDNjZTFlNmIzNGYzMzRiM2I1YTAyYWY1MzRhNDNkODYzOTI2ZjFlNmEyMTVkYjczZWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1c95730f41e0ad266772f9543a86d0eb",
+      "statement": "The image runs kgbo-services under tini, uses its check mode as the health check, and declares /kgbo as a volume.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/Dockerfile#L48-L53",
+          "version": "repo-lines-v1:sha256:f4af735a5a3b54af355874b93bf2e86e2cb1f200f57ddc5f32e7b1a42004685b:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWZiZjg1MjE4N2Y3ODI5NmE3NGY0NjBhYmFjYWVlYjA2NTZmMjMwNGJiMmNkNWJlNTZlZjMzZGUyOTc1OTg4YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzk1NDNlYTExMWI2YWQ0NGNmODE1ZjM4NjMzODhkNzgxOTQ2ZjVhZDNkYTZjZmU3MjdjYTA0ZTc2ZjMwZTY5YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjAxZDk2OTU1MjcyZjA5MmRjNTM1ODIyOWM1OGViMjFhN2UzOWI2OWI1ZGU0MDg1YmQ0ZWIxMGQxZmU3MTU4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a47df05aed0933e2f4c085789a20c8b3",
+      "statement": "kgbo-services check runs kata health and requests each web UI's API.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/kgbo-services#L13-L19",
+          "version": "repo-lines-v1:sha256:062f09ae59d75bd7545cf9fb974039632a4c969feae6d568a71cd46132477eba:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzJiN2Q5ODRlYTU0NGQ0OThhZGNlN2FhYWEyOGE4MjBhMzhkYTlhY2Q3YjcwZDJmNjM5NTlkOTc1MjY4Yzk0MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc2OWQyMzdjZDQyMGI5ZDM4Yjk4MWEwYTRmNjc3MDE5MGE0YTgzZGNhMWZlNTZjNGY1YmExZTJjYmMwZWY3NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjg1ZjllNDUzYTEzZjY0ZTFmYjA5ZjcyZjMxZjlmZjRiZDQ5NjdlZjA0NGEwNzRjZmMzNTZkYTBlNDBmMjYyZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWRiN2E3YjZmMDllOGI4NzZmNzQ2ZTMwODJiZjhmNzM0YjM2NDg1M2FjOWY1MWI2ZDBmOTYwOTllY2RkZTVmYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_edcc98eb2e1c9b0e73a98a28931373ac",
+      "statement": "kgbo-services starts kata's daemon (with --listen from KATA_LISTEN), bossman serve without syncing, owcli serve, and goatlassian serve, and exits with the status of the first one to stop after stopping the rest.",
+      "evidence": [
+        {
+          "resource": "repo://deploy/container/kgbo-services#L21-L37",
+          "version": "repo-lines-v1:sha256:22893bcce9ae6accd71865ee73baddf701e3306b77bdb5e029b455b5806fc697:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NzlkYjJlMDFlNjExZWFjMmY3ZTE4NjdkMDA0MTQ0NmM0MGU5ZDM0YTIwODg0MDE4YWEyZWVmYWZiN2ZiOGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkZDc4MTllYjQ2MjQ5OWQzZTJlZGQ1OGJlZGQzNjczZDkxNDc2OWIyODAyNTgzYjVlYmY1OTM4MmQ3MTA2MDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdjNDA4YzMxMzI3ZDk3MTBhMmQ1OTg3YTQzOTM4ODBlYjgyODQ0YWEwYTk3MTUxMTFlYmE0MTJkNTg5MmRkNDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/v0.2.0-1-g3d84f34",
+    "at": "2026-10-05T08:57:43.775Z"
+  }
+}

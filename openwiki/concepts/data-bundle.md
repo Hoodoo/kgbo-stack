@@ -4,16 +4,18 @@ title: Data Bundle
 description: How the stack's machine-local state is gathered into one directory, the two ways tools are pointed at it and why they must not be mixed, and how bin/kgbo snapshots state consistently.
 tags: [bundle, backup, state, kgbo, sqlite]
 verified:
-  - by: owcli/v0.2.0
-    at: "2026-10-05T08:11:07.957Z"
+  - by: owcli/v0.2.0-1-g3d84f34
+    at: "2026-10-05T08:57:12.701Z"
 sources:
   - id: openwiki-source-4295305d9bd805a055f92696
     resource: repo://bin/kgbo
+  - id: openwiki-source-cea96ae8f357252ff94e036c
+    resource: repo://deploy/container/Dockerfile
   - id: openwiki-source-6215ef1e20210625bdbea089
     resource: repo://docs/data-bundle.md
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:11:36.857Z" }
+generated: { by: "owcli/v0.2.0-1-g3d84f34", at: "2026-10-05T08:58:07.074Z" }
 ---
 
 # Data Bundle
@@ -77,7 +79,9 @@ back to the defaults.
 
 Symlinks are the workstation default: nothing needs configuring per process,
 and kata keeps the same socket and hook history because its path string does
-not change. Variables suit containers and non-default locations.
+not change. Variables suit containers and non-default locations: the
+stack's container image sets them with `ENV` so that every process, including
+`docker exec`, sees them (see [Container Image](../operations/container.md)).
 
 ## How adopt works
 
