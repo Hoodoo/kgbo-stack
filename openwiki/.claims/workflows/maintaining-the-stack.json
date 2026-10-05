@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:7ee6fe3ce36b7e18c867650a2678f244af9e1d31d2c7de46dc3de57934712d9c",
+  "pageVersion": "sha256:dbebf6e4e74753311bae6df321c5daaf9ca0a2e2f41df573b79a7692ee39adca",
   "claims": [
     {
       "id": "claim_d595e017c640e817a6e1f819ff280ed7",
       "statement": "Onboarding a repository runs kata init --with-agents and --with-hooks (and --with-codex-hooks) and owcli agents-md, which write committed files.",
       "evidence": [
         {
-          "resource": "repo://docs/install.md#L88-L112",
+          "resource": "repo://docs/install.md#L94-L118",
           "version": "repo-lines-v1:sha256:720569da208bce623baeeccd52bb564f82db4ccd2487bd59edd7d624bcafc408:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlNTU4ZGUyZTcxMTk2N2M4NzA3MTU0OGEyZDJhYzk1OWE3NzE3ZGY0OTE4ZjU2YTNlOTc4OWE0MTBhZDAyNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5YWFmNGNlOGMyZWIxZThlNDlkN2QxYzZmYWU1YjQxZmU4Mjc5MGRiYTlmODM1YjAzMDUwMWQyODY3Njg5NzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJkZmE0YmYyNTNhMWEzYzA0OTQ1N2Q2ZDllNWFiNWVmMTFkYjdlOWM1YmY4ZDBjOTVjMDQyMjM1MjE3MzcxNjgifQ"
         }
       ]
@@ -27,7 +27,7 @@
       "statement": "Related repositories are grouped with an owcli workspace and a goatlassian tag across per-repository projects.",
       "evidence": [
         {
-          "resource": "repo://docs/install.md#L114-L130",
+          "resource": "repo://docs/install.md#L120-L136",
           "version": "repo-lines-v1:sha256:359249fb872764155e7605a0a3f3c279af14763a3cd962e8494d0d8a277ebb6d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNmMGMyNjNjY2RmNjhhYzJkZTgyM2YwYmM5ZGFmN2ZiMjY0ZjMxOTlkYTMyMzI3ZWVkNTYwNzZlODIyZjMyMDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA3ZGFkMTNmZTkzODNiN2E2YzExZjNiMDdmMDQ4NDliNmFmYzcxODMwYTlmYzA3ZTg2ZDkxZTkwYTliOTFmM2UiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxZDc2YjVmOTgzOGEwMDAwMjJmNWE3NGY5YmRhMThlYzlhOGFiMjVhOWU4Y2RjZDY0MTJkZDhhZTBlOGFhZmEifQ"
         }
       ]
@@ -37,7 +37,7 @@
       "statement": "The environment is verified with goatlassian services start, goatlassian status, and owcli check per repository.",
       "evidence": [
         {
-          "resource": "repo://docs/install.md#L132-L139",
+          "resource": "repo://docs/install.md#L138-L145",
           "version": "repo-lines-v1:sha256:f890f9882be85a406f166498763eee7e42a2e086fcb6e34f088584c84c69f0c8:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGZmOTdmOTJkNjgyNTZlMmQ3ZGIyODU4N2U3MjgyNjU5MmY0YjA1NmMzZjdiNmNiNzk4YWY0YzhmMzQwMjhmOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDdjMDZjNTYxZDVjMzI3MzQzNjg1MjY4YTQ2YjMzOTFmMzk5OGVlZTg5MGQyYmU1MWYwZDIxY2M0YTUzYWU2ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTQ3YTcxZDcyMzFhMDI1ZTE5ZTdmYWZhYTk1MjVmZTgzNGExZWIzZDAwNDQ5NzYxNjc4ZjUzZDM2NzM5YjQzYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODQ3NzI2ZTE0NzhkYzdhOGVmN2I4YWFkZjFjOWY5M2RmMjE1NzBhNDQ1MjNlM2FkNmVhYmYyZDQwOTk5MWFhNyJ9"
         }
       ]
@@ -95,18 +95,56 @@
       "statement": "Providers goatlassian cannot read leave goatlassian_kind empty, with the gap tracked in this project.",
       "evidence": [
         {
-          "resource": "repo://stack.toml#L68-L68",
+          "resource": "repo://stack.toml#L87-L87",
           "version": "repo-lines-v1:sha256:2c2a06e8cd19c52a75696d3bb5297301c5fc447ee04b60c5ba9e3e62e68cb83a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmMyYTA2ZThjZDE5YzUyYTc1Njk2ZDNiYjUyOTczMDFjNWZjNDQ3ZWUwNGI2MGM1YmE5ZTNlNjJlNjhjYjgzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmMyYTA2ZThjZDE5YzUyYTc1Njk2ZDNiYjUyOTczMDFjNWZjNDQ3ZWUwNGI2MGM1YmE5ZTNlNjJlNjhjYjgzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGFmZTdjM2EwYWEyYzYzYzRlY2JiODA3N2M1MjhiYjJlYTBlYjU1NjEyZWI4NjVkMDkzNjZlYzJhMTg5Y2QxMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2Q4ZWQyYTA4MTFhZDgxOWVmNjE3MWYzMDk4NDJkOGQ2YmNhMTYzNTMyNjhjMjhlOGQ4MmIwZTFlOThmYzU1MiJ9"
         },
         {
-          "resource": "repo://stack.toml#L96-L96",
+          "resource": "repo://stack.toml#L118-L118",
           "version": "repo-lines-v1:sha256:2c2a06e8cd19c52a75696d3bb5297301c5fc447ee04b60c5ba9e3e62e68cb83a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmMyYTA2ZThjZDE5YzUyYTc1Njk2ZDNiYjUyOTczMDFjNWZjNDQ3ZWUwNGI2MGM1YmE5ZTNlNjJlNjhjYjgzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmMyYTA2ZThjZDE5YzUyYTc1Njk2ZDNiYjUyOTczMDFjNWZjNDQ3ZWUwNGI2MGM1YmE5ZTNlNjJlNjhjYjgzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTMyYzY1ZWMxYmFlM2UwYjcxMWM0YmNmMjU0OGFkODM3N2MzOWI4MjM5MzYyZWFkNmZjMmJkMzI3Y2MxMmFlNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWE0MGYyMTg0NzM0ZDg5NDAzN2M2MmJhOWRjZWU0NmRjY2E0ZWYxZThlZjc4NmExMjEwZWVmMjVjNmZhYTczYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_eb1c53dad694fc164bff8ed1279f0eb8",
+      "statement": "bin/kgbo reads stack.toml at run time, so the manifest drives the data-bundle tooling as well as the docs.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L36-L42",
+          "version": "repo-lines-v1:sha256:765aa4656659b03d1bcfe333dc7afd5daaefe6c2524feaec0e9dc37a27704515:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjUyNjBmYzNmMGVmZGJkYjM1Njg1ZWE5ODZkZmFlNzVhZThhYjg5NzA4YjM0ZDE0NjcyMmMxMzlhYjRmYTIxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2MyYTllZGEwNmNiYzYxYzM2NDY3Yzg5NTZkOGNjMzZiMGI3MDM0ZGQ0NjE3NDg5YjQ2YjE1YWUyNmQ2OTFkZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ2Njg3ZjRkNjM1ZGUwZWMxZTZkN2I5MjJjNzQ4YjMwMGI0ZWY1NDQ2Mjg1NjJkMTc0NmIyYjhlODU3OGI4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZmQ0MDMyNDZhNGQzNTcxMTNmNDNmNGM4NjJjOTc4YjQzMjA5YTUwMjI1NWI4NjI4ODExMjdhZWFkNGY1Mzc4NyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4df371682f931e4058e95e0521dac9e0",
+      "statement": "bin/kgbo snapshot copies every provider's state with SQLite databases taken through the online backup API, and adopt moves state into one directory.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L1-L22",
+          "version": "repo-lines-v1:sha256:2dd3ee6fbdd5a21d7cec8561f43c9d519af7b2ee2db7b82c413600a6d562d788:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2ODJjYmRiNGM4YjA3NTE4YmY0ODZjNTg5OTBmYzM5MTc4M2FhMjBhOTE2YmZiMjdhZDIxMWViMWQ1YzM2NDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzZTU2MTYwNTZmYmZjNTQzY2FhMzNiZDRmNDE3NjNmYTkwMjRlNzhlMzU2YTA2ZTM0MzYwODcyZmRhNDdkZWEifQ"
+        },
+        {
+          "resource": "repo://bin/kgbo#L81-L88",
+          "version": "repo-lines-v1:sha256:b35fc2a185f6d1b539124658ececeac8a123f800eac052c584117165a6e2f92c:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjc2OGM5MDdlOTJlNTdlNTFhNjM0ZTE1MTU4ZjViMTVjNjRmMjJhNzgyZjI3MjdkMjA3MWIwOTA0NzY1MzA4ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTQ5ZjA2ZmNmZjdmZjdjZjVkM2I2ZTJkYTQ3NzMxNWQwYWRiN2Q0NmIwMmVlZjMwZTQ0OGY4Yzk2OWE1NDg5ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODA4ODRkNzQ5NDE3NjZkNjYxNjdkYzMwNTMwMGM1YzA1M2VjYTM0MmI4Y2RkNjM0ZDYwYmM0ZTE2MWUxYzNmMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTYyMTYyMTc0OTM4ODI5MjkwNDNkZTVlZTk5MjAzY2NhNWM0Yzk5NDhiMWY4MDEyOTNkMmE0NWEyNDUzMGVlNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_50eae7633d1c22b874ecf0cbdb293c5c",
+      "statement": "A provider that keeps state outside repositories declares home_env, home_default, and bundle_dir in stack.toml.",
+      "evidence": [
+        {
+          "resource": "repo://stack.toml#L130-L132",
+          "version": "repo-lines-v1:sha256:868e9ead1d3bae4e52b43577322ae2363d66281d7a7ec00da388db1878383326:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTFjOWIzYzMzMjY3MTJhNGU5NzJlOTAxZGFlMzk2ZGVkMzllOGE5ZDU4YzM2MDljMjY2NmM4NjkzZTgwZDgzOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNmFlN2IzZWMzOWNlNzliMzdmZGNhMGRhZTY4MWI0OThmZWRmNWQwMjFhMzc2NWM5OWMxZDRjZjAyNDdmYjMzZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDZlNjgzMWRkNzdmZDEzNjM3YmU3ZDEwNjA3YWQ0NzRjZTVjMWFmNTJkZWYyNDVjNTkzNmIyZThmMGE2NWQyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTk1ZmUzMDQ1ZWQ4NWVjNTY3ZThlYmRlZWVhZmVkYTViNTBhMmJkY2MxMDRiYzRjMWY0MTI4NWM1YTk4OGE2OCJ9"
+        },
+        {
+          "resource": "repo://stack.toml#L15-L19",
+          "version": "repo-lines-v1:sha256:e746f778f78136608d9dc121c4a3dc4275a1903b2e09de937d58663fb8a0cfe4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGQ2NDRhODdhZjgyYjBmODI0ODQyZjFmODVhN2ExY2Q3ZTRiMGMxYTRhMDIyMmQ0MjgzMjk2Mzc2N2M5N2EzMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhlYjgyMWI0ODNlYjgxNDFkNDkwNzFjYjBhZWJlMmNiMWUzODk1NTMzYmY4NDRjMWZmOTcwODY4N2JkNmVmNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDFjMDcyM2M1MDliMGMyMjQwNTUzOGYwMTJlYTM0MjIwOGQwYzFkMzhjMDA3MmJiNGU3YjhmMGQ0OTcyMzY0YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDNhMTM5OTM5ZGIzMzRhMWY4MzE3NTljMTg0ZWY0Y2QyNzRlNmNiZTA4ZmRkNDIzNWIzMDgxNTJkMzgyOWUzMSJ9"
         }
       ]
     }
   ],
   "verification": {
     "by": "owcli/v0.2.0",
-    "at": "2026-10-05T08:04:56.078Z"
+    "at": "2026-10-05T08:11:58.834Z"
   }
 }

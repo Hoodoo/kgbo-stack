@@ -5,10 +5,12 @@ description: How to onboard a repository onto the stack, add a tool or provider,
 tags: [workflow, onboarding, publishing, release, kata]
 verified:
   - by: owcli/v0.2.0
-    at: "2026-10-05T08:04:56.078Z"
+    at: "2026-10-05T08:11:58.834Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
+  - id: openwiki-source-4295305d9bd805a055f92696
+    resource: repo://bin/kgbo
   - id: openwiki-source-07dce1e07e2253eab6205a2e
     resource: repo://docs/install.md
   - id: openwiki-source-b4b124a71e74ba72bfbe44ae
@@ -17,14 +19,16 @@ sources:
     resource: repo://LICENSE
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:04:56.171Z" }
+generated: { by: "owcli/v0.2.0", at: "2026-10-05T08:11:58.993Z" }
 ---
 
 # Maintaining the Stack
 
-kgbo-stack contains no code. Maintaining it means keeping three things in
-step: the manifest (`stack.toml`), the human guides derived from it
-(`docs/install.md`, `docs/publishing.md`), and the kata issues in this
+kgbo-stack's only code is `bin/kgbo`, the data-bundle script. Maintaining
+the repository means keeping three things in step: the manifest
+(`stack.toml`), what is derived from it (`docs/install.md`,
+`docs/data-bundle.md`, `docs/publishing.md`, and `bin/kgbo`, which reads it
+at run time), and the kata issues in this
 repository that track bundle-level work. The tools themselves live and are
 released in their own repositories.
 
@@ -49,11 +53,21 @@ released in their own repositories.
 5. Verify (step 6) with `goatlassian services start`, `goatlassian status`,
    and `owcli check` per repository.
 
+## Backing up the stack's state
+
+`bin/kgbo snapshot DEST` copies every provider's machine-local state into
+`DEST`, with SQLite databases taken through the online backup API, so it is
+safe while the tools run; never copy the live directories with plain `tar`.
+To keep that state in one directory in the first place, stop the tools and
+run `bin/kgbo adopt`. See [Data Bundle](../concepts/data-bundle.md).
+
 ## Adding a provider or tool
 
 1. Add a `[providers.<name>]` table to `stack.toml` with its `role` and the
    keys that apply (`install`, `check`, `onboard`, `host.*`, `markers`,
-   `conflicts`, `goatlassian_kind`). Keep every command copy-pasteable.
+   `conflicts`, `goatlassian_kind`, and, if it keeps state outside
+   repositories, `home_env`, `home_default`, `bundle_dir`). Keep every
+   command copy-pasteable.
 2. If it is an alternative to an existing provider, add the pair to each
    other's `conflicts` when both would face agents.
 3. Update `docs/install.md` (and the README table) from the manifest.
