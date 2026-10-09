@@ -8,23 +8,37 @@ published upstream and needs nothing.
 Each step is tracked as a kata issue in this project (`kata list`); the
 epic is "Publish the kgbo stack to GitHub".
 
-## State on 2026-10-03: published
+## State on 2026-10-09: published
 
 All four repositories are public under `Hoodoo/`, MIT-licensed, with
 `main` pushed. The three tools install with `go install
 github.com/Hoodoo/<tool>/cmd/<tool>@latest`, verified in an empty GOPATH
 with `GOPROXY=direct`; `@latest` resolves to the highest tag and the
-binaries report it from their build info. First released as `v0.1.0`;
-owcli is at `v0.3.0` (`OWCLI_HOME` in v0.2.0, `relocate` in v0.3.0) and
-goatlassian at `v0.2.0` (owcli-wiki components pinned by repo root in
-v0.1.1, `relocate` in v0.2.0), all 2026-10-05. Each tool's wiki was updated
-after the rename and `owcli check` passes. A pattern scan of every
+binaries report it from their build info. First released as `v0.1.0`
+(2026-10-03). Current releases:
+
+- owcli `v0.4.0`: `OWCLI_HOME` in v0.2.0, `relocate` in v0.3.0, serving
+  behind a reverse proxy in v0.4.0 (2026-10-05).
+- bossman `v0.3.0`: serving behind a reverse proxy in v0.2.0 (2026-10-05),
+  per-session project reassignment in v0.2.1, listings that hide empty
+  Claude copies and sinks (`sink:<name>` tags, `--not-tag`) in v0.3.0
+  (2026-10-09).
+- goatlassian `v0.4.0`: owcli-wiki components pinned by repo root in
+  v0.1.1, `relocate` in v0.2.0, serving behind a reverse proxy in v0.3.0
+  (2026-10-05), sinks listed apart from unassigned sessions in v0.4.0
+  (2026-10-09).
+
+The container image pins these in `deploy/container/Dockerfile`; bump it
+with each release. Each tool's wiki is updated after every merge and
+`owcli check` passes. A pattern scan of every
 repository's full history found no credentials or `/home/...` paths.
 
 Not done yet: prebuilt binaries (kata issue b4ba).
 
-To release: `git tag -a vX.Y.Z -m vX.Y.Z && git push origin vX.Y.Z` in the
+To release: `git tag -a vX.Y.Z -m "vX.Y.Z: <summary>" && git push origin vX.Y.Z` in the
 tool's repository; `go install …@latest` picks up the highest semver tag.
+The Go module proxy can take a while to notice a new tag, so right after
+tagging use `GOPROXY=direct go install …@latest` (or name the version).
 
 The preflight below is kept as the checklist for the next tool added to
 the stack.

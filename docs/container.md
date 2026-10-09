@@ -67,8 +67,8 @@ docker run -d --name kgbo --restart unless-stopped \
 ## Behind a load balancer with IAP
 
 Each UI accepts a public name and trusts a proxy header naming the
-signed-in user (bossman v0.2.0, owcli v0.4.0, goatlassian v0.3.0, which the
-image pins). Set:
+signed-in user (bossman v0.2.0, owcli v0.4.0, goatlassian v0.3.0 or later;
+the Dockerfile pins the versions the image builds). Set:
 
 | variable | example | effect |
 | --- | --- | --- |

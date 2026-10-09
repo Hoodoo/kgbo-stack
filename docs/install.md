@@ -33,7 +33,12 @@ signals (tracked in this project).
 ## 1. Prerequisites
 
 - git, and Go ≥ 1.22 (until prebuilt binaries exist)
-- `~/.local/bin` on `PATH`
+- `$(go env GOPATH)/bin` (usually `~/go/bin`) on `PATH`, where `go install`
+  puts the tools, and `~/.local/bin`, where kata's installer and `make
+  install` put theirs. goatlassian starts the other UIs from `PATH`, so if
+  an older copy sits in a directory listed earlier it wins; check with
+  `which -a bossman`, or install into one place with
+  `GOBIN=~/.local/bin go install …`.
 - Node.js only for the alternatives (beads, OpenWiki)
 
 ## 2. Install the binaries
