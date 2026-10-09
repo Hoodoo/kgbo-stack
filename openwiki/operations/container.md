@@ -5,7 +5,7 @@ description: How the stack's services run in one container image, what it contai
 tags: [container, docker, deployment, bundle, operations]
 verified:
   - by: owcli/v0.4.0
-    at: "2026-10-05T10:41:17.026Z"
+    at: "2026-10-09T16:10:10.870Z"
 sources:
   - id: openwiki-source-715dace563ef484b6e8bd1e2
     resource: repo://.dockerignore
@@ -17,7 +17,7 @@ sources:
     resource: repo://deploy/container/kgbo-services
   - id: openwiki-source-012f2c78e3b1446dfc35803f
     resource: repo://Makefile
-generated: { by: "owcli/v0.4.0", at: "2026-10-05T10:41:44.012Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-09T16:10:30.419Z" }
 ---
 
 # Container Image
@@ -128,8 +128,8 @@ machine's absolute repository paths. Either mount the repositories at the
 same paths, read-only, or clone them anywhere and run `kgbo remap` in the
 container (see [Moving Repositories or Machines](../workflows/moving-repositories.md)).
 `remap` needs owcli v0.3.0 and goatlassian v0.2.0 or later (their
-`relocate` commands); the image pins owcli v0.4.0, bossman v0.2.0, and
-goatlassian v0.3.0.
+`relocate` commands); the image pins owcli v0.4.0, bossman v0.3.0, and
+goatlassian v0.4.0, bumped with each release.
 
 ## Verified behaviour
 

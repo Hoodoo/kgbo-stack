@@ -16,11 +16,11 @@
       "sourceFingerprint": "sha256:48f03c7d6e69d09eaedfab79f4e5f1bd9406eef423fa7f3756b0d9596031c07a"
     },
     "/openwiki/operations/container.md": {
-      "pageVersion": "sha256:baaada40861047f8830d2477af0d1c8555465d3ff83dfae1fb5f2b240a4cbef9",
+      "pageVersion": "sha256:f07e74ae9cbf3e8b925970f4fc368c4393051da15918eaab1b9b3d0b6435e576",
       "completedBy": "owcli/v0.4.0",
-      "completedRunId": "93bb90ef-ab0d-4206-beee-f737cf124d76",
-      "gitHead": "f3b07e68eb5e7e0306b04dc54626313379e4cb68",
-      "sourceFingerprint": "sha256:9508dcf15df0eb3ed76cb47fac1c9bd64e887d66ea325c5e5ebf88e283888fc3"
+      "completedRunId": "793e13a2-8bec-41f8-90b4-53b751bc5d4e",
+      "gitHead": "bd31d9a2c92b1aceb1cc4252ed8f4bf7410894cc",
+      "sourceFingerprint": "sha256:4cab59fe865181a1243a27df5d12d673da969ef9e10074e58f7259f61596dd7b"
     },
     "/openwiki/operations/gcp.md": {
       "pageVersion": "sha256:49a280a400ac7e914b0033eba0dc367f6f0d59f0478a7923cb320494352d9358",
@@ -37,11 +37,11 @@
       "sourceFingerprint": "sha256:6a7f8a5d5b170e85a3f2f8ab354e376ea2ba427462c421f0058e55355b0cea78"
     },
     "/openwiki/workflows/maintaining-the-stack.md": {
-      "pageVersion": "sha256:c9fb7656eb978d533ec9f2b08ee0eb29da9b0fedca337943ea76c01f56da49b4",
-      "completedBy": "owcli/v0.3.0",
-      "completedRunId": "9699091f-2004-40cb-b32a-e5513d76d09c",
-      "gitHead": "fac2a498c5866523c6160ad695c8e573f666a213",
-      "sourceFingerprint": "sha256:d3e3a84df0094214961d45e368f3415f49d6aacf1beeb153baef31caad306138"
+      "pageVersion": "sha256:49b45314b928616d08c7ae8f4dc1870cee4b1be8f9a378450e3801d85c3c0ac9",
+      "completedBy": "owcli/v0.4.0",
+      "completedRunId": "793e13a2-8bec-41f8-90b4-53b751bc5d4e",
+      "gitHead": "bd31d9a2c92b1aceb1cc4252ed8f4bf7410894cc",
+      "sourceFingerprint": "sha256:4cab59fe865181a1243a27df5d12d673da969ef9e10074e58f7259f61596dd7b"
     },
     "/openwiki/workflows/moving-repositories.md": {
       "pageVersion": "sha256:97db9a3d89e4abdf902147fe3a31503c723cf6976746e13429eb99a7bb2a565a",

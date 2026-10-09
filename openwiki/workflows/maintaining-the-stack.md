@@ -4,13 +4,15 @@ title: Maintaining the Stack
 description: How to onboard a repository onto the stack, add a tool or provider, publish and release one of our tools, and keep stack.toml, the docs, and the kata issues in this repository consistent.
 tags: [workflow, onboarding, publishing, release, kata]
 verified:
-  - by: owcli/v0.3.0
-    at: "2026-10-05T09:05:06.556Z"
+  - by: owcli/v0.4.0
+    at: "2026-10-09T16:10:30.314Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
   - id: openwiki-source-4295305d9bd805a055f92696
     resource: repo://bin/kgbo
+  - id: openwiki-source-cea96ae8f357252ff94e036c
+    resource: repo://deploy/container/Dockerfile
   - id: openwiki-source-07dce1e07e2253eab6205a2e
     resource: repo://docs/install.md
   - id: openwiki-source-b4b124a71e74ba72bfbe44ae
@@ -19,7 +21,7 @@ sources:
     resource: repo://LICENSE
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.3.0", at: "2026-10-05T09:05:23.722Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-09T16:10:30.419Z" }
 ---
 
 # Maintaining the Stack
@@ -94,17 +96,27 @@ README, ship agent-facing assets (such as skills) in the repository, scan
 history for secrets, refresh the tool's wiki after the change, and tag.
 
 All four repositories are public and MIT-licensed; owcli, bossman, and
-goatlassian were first released as `v0.1.0`; owcli is at `v0.3.0`
-(`OWCLI_HOME` in v0.2.0, `relocate` in v0.3.0) and goatlassian at `v0.2.0`
-(wiki components pinned by repository root in v0.1.1, `relocate` in
-v0.2.0).
+goatlassian were first released as `v0.1.0`. Current releases are owcli
+`v0.4.0` (`OWCLI_HOME` in v0.2.0, `relocate` in v0.3.0, reverse proxy in
+v0.4.0), bossman `v0.3.0` (reverse proxy in v0.2.0, project reassignment in
+v0.2.1, listings that hide empty Claude copies and sinks in v0.3.0), and
+goatlassian `v0.4.0` (wiki components pinned by repository root in v0.1.1,
+`relocate` in v0.2.0, reverse proxy in v0.3.0, sinks in v0.4.0). The
+container image pins these and is bumped with each release.
 
 ## Releasing
 
-Tag in the tool's repository: `git tag -a vX.Y.Z -m vX.Y.Z && git push
-origin vX.Y.Z`. `go install …@latest` resolves the highest semver tag, and
-the binary reports that version from its build info. Prebuilt binaries are
-not produced yet.
+Tag in the tool's repository: `git tag -a vX.Y.Z -m "vX.Y.Z: <summary>" &&
+git push origin vX.Y.Z`. `go install …@latest` resolves the highest semver
+tag, and the binary reports that version from its build info. The Go module
+proxy can lag a fresh tag, so right after tagging install with
+`GOPROXY=direct` or name the version. Then bump the pins in
+`deploy/container/Dockerfile`. Prebuilt binaries are not produced yet.
+
+`go install` writes to `$(go env GOPATH)/bin`, while kata's installer and
+`make install` use `~/.local/bin`. goatlassian starts the other UIs from
+`PATH`, so an older copy in a directory listed earlier wins; `which -a` shows
+which, and `GOBIN=~/.local/bin go install …` keeps one copy.
 
 ## Tracking work here
 
