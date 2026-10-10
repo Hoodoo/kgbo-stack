@@ -63,8 +63,9 @@ Check: `kata health`, `owcli --version`, `bossman --version`, `goatlassian servi
 ## 3. Machine-wide setup (once)
 
 ```sh
-# keep sessions before Claude Code deletes them (30 days by default)
-( crontab -l 2>/dev/null; echo '17 * * * * $HOME/.local/bin/bossman sync >/dev/null' ) | crontab -
+# keep sessions before Claude Code deletes them (30 days by default);
+# cron's PATH has neither ~/go/bin nor ~/.local/bin, so record bossman's full path
+( crontab -l 2>/dev/null; echo "17 * * * * $(command -v bossman) sync >/dev/null" ) | crontab -
 bossman sync
 
 # Claude Code: session-close skill bossman uses to tell finished from interrupted sessions
@@ -72,6 +73,28 @@ mkdir -p ~/.claude/skills/session-catalogue-close
 curl -fsSL https://raw.githubusercontent.com/Hoodoo/bossman/main/skills/session-catalogue-close/SKILL.md \
   -o ~/.claude/skills/session-catalogue-close/SKILL.md
 ```
+
+To run the services under systemd instead (Linux), write user units with
+`bin/kgbo units` from this repository: one per service, grouped under
+`kgbo.target`. bossman's unit archives sessions hourly while it runs, so it
+replaces the cron job above; use one or the other.
+
+```sh
+bin/kgbo units                     # ~/.config/systemd/user; --dry-run prints them
+systemctl --user daemon-reload
+systemctl --user enable --now kgbo.target kgbo-kata.service kgbo-owcli.service \
+  kgbo-bossman.service kgbo-goatlassian.service
+systemctl --user stop kgbo.target  # start, stop and restart act on all four
+journalctl --user -u 'kgbo-*' -f   # their logs
+loginctl enable-linger             # optional: run them without a login session
+```
+
+The units record each binary's full path, so run `bin/kgbo units` again
+after a tool moves to another directory. They set `KATA_AUTOSTART=0`: a kata
+command that found no daemon would otherwise start a second one. When kata's
+unit starts it stops any daemon a kata command already started, then takes
+over. The units take the bundle variables from `environment.d` (see
+[data-bundle.md](data-bundle.md)), which the user manager reads when you log in.
 
 Optionally keep all of the stack's state in one directory, `~/kgbo`: with
 the tools stopped, `bin/kgbo adopt` (from this repository) moves it there
@@ -143,7 +166,7 @@ goatlassian status -t shop
 ## 6. Verify the environment
 
 ```sh
-goatlassian services start         # kata daemon, owcli serve, bossman serve
+goatlassian services start         # kata daemon, owcli serve, bossman serve (or: systemctl --user start kgbo.target)
 goatlassian status                 # flags: stuck, needs-human, stale, wiki-behind, …
 owcli check                        # in each repo: exit 0 = wiki current
 goatlassian serve --open

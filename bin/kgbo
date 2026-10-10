@@ -10,6 +10,8 @@
                                      at the default locations (no variables needed)
   kgbo remap OLD NEW [--dry-run]     after repositories (or a home directory) moved:
                                      rewrite the paths every tool stored under OLD
+  kgbo units [--dir DIR] [--dry-run] write systemd user units for the services,
+                                     grouped under kgbo.target
 
 A machine uses either the variables from `kgbo env` or the symlinks from
 `kgbo adopt`, never both: kata keys its daemon on the KATA_HOME string, so a
@@ -330,6 +332,68 @@ def cmd_snapshot(manifest, args):
         print(f"{name}: {stats['databases']} database(s), {stats['files']} file(s) -> {out}")
 
 
+# The services on their default addresses, the ones goatlassian links to.
+# Each entry: unit name, tool, arguments, units it starts after.
+SERVICES = [
+    ("kgbo-kata", "kata daemon", "kata", ["daemon", "start", "--foreground"], []),
+    ("kgbo-owcli", "owcli wiki viewer", "owcli", ["serve", "--no-open", "--addr", "127.0.0.1:4321"], []),
+    # The service archives sessions while it runs, which replaces the cron job.
+    ("kgbo-bossman", "bossman session archive", "bossman",
+     ["serve", "--addr", "127.0.0.1:7788", "--sync-every", "1h"], []),
+    ("kgbo-goatlassian", "goatlassian portfolio", "goatlassian", ["serve", "--addr", "127.0.0.1:7799"],
+     ["kgbo-kata", "kgbo-owcli", "kgbo-bossman"]),
+]
+
+
+def unit_files():
+    """The unit files by name. Binaries are recorded by absolute path, and PATH
+    lists their directories: the user manager's PATH has neither ~/go/bin nor
+    ~/.local/bin, and goatlassian runs kata and git itself."""
+    tools = {tool: shutil.which(tool) for _, _, tool, _, _ in SERVICES}
+    missing = [t for t, path in tools.items() if not path]
+    if missing:
+        raise RuntimeError(f"not on PATH: {', '.join(missing)}")
+    dirs = list(dict.fromkeys(str(Path(path).parent) for path in tools.values()))
+    path = ":".join(dirs + ["/usr/local/bin", "/usr/bin", "/bin"])
+    files = {"kgbo.target": "[Unit]\nDescription=kgbo stack services\n\n[Install]\nWantedBy=default.target\n"}
+    for name, desc, tool, args, after in SERVICES:
+        deps = " ".join(f"{a}.service" for a in after)
+        lines = ["[Unit]", f"Description={desc}", "PartOf=kgbo.target"]
+        if deps:
+            lines += [f"Wants={deps}", f"After={deps}"]
+        lines += ["", "[Service]", f"Environment=PATH={path}",
+                  # A kata command that finds no daemon would start its own, and
+                  # this unit's daemon would then fail with "already listening".
+                  "Environment=KATA_AUTOSTART=0",
+                  "WorkingDirectory=%h"]
+        if tool == "kata":
+            # Take over from a daemon a kata command started before the unit,
+            # and count as started only once it answers, so units After= it
+            # find it up.
+            lines += [f"ExecStartPre={tools['kata']} daemon stop"]
+        lines += [f"ExecStart={tools[tool]} {' '.join(args)}"]
+        if tool == "kata":
+            lines += [f"ExecStartPost=/bin/sh -c 'for i in $(seq 60); do {tools['kata']} health >/dev/null 2>&1 && exit 0; sleep 1; done; exit 1'"]
+        lines += ["Restart=on-failure", "RestartSec=5", "", "[Install]", "WantedBy=kgbo.target"]
+        files[f"{name}.service"] = "\n".join(lines) + "\n"
+    return files
+
+
+def cmd_units(manifest, args):
+    out = expand(args.dir or "~/.config/systemd/user")
+    files = unit_files()
+    for name, text in files.items():
+        if args.dry_run:
+            print(f"# {out / name}\n{text}")
+            continue
+        out.mkdir(parents=True, exist_ok=True)
+        (out / name).write_text(text)
+        print(f"wrote {out / name}")
+    if not args.dry_run:
+        print("next: systemctl --user daemon-reload && systemctl --user enable --now "
+              + " ".join(files))
+
+
 def main():
     ap = argparse.ArgumentParser(prog="kgbo", description=__doc__.split("\n\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -346,10 +410,13 @@ def main():
     r.add_argument("--dry-run", action="store_true", help="show what every tool would change")
     a = sub.add_parser("adopt", help="move state into the bundle, symlink the defaults")
     a.add_argument("--dry-run", action="store_true", help="show the plan and check for open files")
+    u = sub.add_parser("units", help="write systemd user units for the services")
+    u.add_argument("--dir", help="where to write them (default ~/.config/systemd/user)")
+    u.add_argument("--dry-run", action="store_true", help="print the units instead")
     args = ap.parse_args()
     manifest = load_manifest()
     try:
-        {"env": cmd_env, "homes": cmd_homes, "snapshot": cmd_snapshot, "adopt": cmd_adopt, "remap": cmd_remap}[args.cmd](manifest, args)
+        {"env": cmd_env, "homes": cmd_homes, "snapshot": cmd_snapshot, "adopt": cmd_adopt, "remap": cmd_remap, "units": cmd_units}[args.cmd](manifest, args)
     except (OSError, RuntimeError, sqlite3.Error) as e:
         sys.exit(f"kgbo: {e}")
 

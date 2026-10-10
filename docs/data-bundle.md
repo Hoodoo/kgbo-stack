@@ -68,6 +68,8 @@ the old defaults (kata would start a second daemon on them):
 - GUI-launched apps (Claude Desktop, Codex Desktop) on Linux:
   `bin/kgbo env --plain > ~/.config/environment.d/kgbo.conf`, then log in
   again; on macOS use `launchctl setenv` for each variable;
+- systemd user units (`bin/kgbo units`): the same `environment.d` file,
+  which the user manager reads at login;
 - cron: put the `bin/kgbo env --plain` lines at the top of the crontab,
   since cron reads no profile.
 
