@@ -5,7 +5,7 @@ description: What kgbo-stack is, what each file in it is for, and which page or 
 tags: [quickstart, overview, stack]
 verified:
   - by: owcli/v0.4.0
-    at: "2026-10-05T09:32:54.380Z"
+    at: "2026-10-10T14:11:10.499Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
@@ -15,6 +15,8 @@ sources:
     resource: repo://deploy/gcp/main.tf
   - id: openwiki-source-6215ef1e20210625bdbea089
     resource: repo://docs/data-bundle.md
+  - id: openwiki-source-07dce1e07e2253eab6205a2e
+    resource: repo://docs/install.md
   - id: openwiki-source-47d02fca3524898d5aae2b3b
     resource: repo://LICENSE
   - id: openwiki-source-012f2c78e3b1446dfc35803f
@@ -23,7 +25,7 @@ sources:
     resource: repo://README.md
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.4.0", at: "2026-10-05T09:32:54.546Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-10T14:11:10.634Z" }
 ---
 
 # Quickstart
@@ -31,7 +33,7 @@ generated: { by: "owcli/v0.4.0", at: "2026-10-05T09:32:54.546Z" }
 kgbo-stack is the organizational repository for a local "Atlassian suite"
 for agent-driven development: **k**ata (issue tracker), **g**oatlassian
 (portfolio across repositories), **b**ossman (agent session archive and
-metrics), and **o**wcli (grounded repository wiki). Its only code is `bin/kgbo`, a small script for the data bundle and for moving repositories. It
+metrics), and **o**wcli (grounded repository wiki). Its only code is `bin/kgbo`, a small script for the data bundle, for moving repositories, and for writing systemd user units for the services. It
 defines how the tools form one bundle, documents how to install the bundle
 and point it at existing repositories, and tracks bundle-level work in its
 own kata project.
@@ -51,7 +53,7 @@ working environment needs, and each provider is a tool that can do it
 | `docs/data-bundle.md` | keeping all of the stack's state in one directory, and consistent backups |
 | `docs/moving.md` | rewriting stored paths after repositories move or on a new machine |
 | `docs/publishing.md` | publishing and releasing our tools (owcli, bossman, goatlassian) |
-| `bin/kgbo` | the bundle tool: `env`, `homes`, `snapshot`, `adopt`, `remap`; reads `stack.toml` |
+| `bin/kgbo` | the bundle tool: `env`, `homes`, `snapshot`, `adopt`, `remap`, `units`; reads `stack.toml` |
 | `deploy/container/`, `Makefile` | the container image for the stack's services (`make image`) |
 | `docs/container.md` | running that image with the bundle as a volume |
 | `deploy/gcp/`, `docs/gcp.md` | Terraform for the image on a GCP VM behind a load balancer with IAP |
@@ -68,6 +70,7 @@ working environment needs, and each provider is a tool that can do it
 | add a provider or tool | [Maintaining the Stack](workflows/maintaining-the-stack.md) |
 | publish or release a tool | `docs/publishing.md` and [Maintaining the Stack](workflows/maintaining-the-stack.md) |
 | move state into one directory, or back it up | `docs/data-bundle.md` and [Data Bundle](concepts/data-bundle.md) |
+| run the services on a workstation, under systemd | `docs/install.md` step 3 and [Local Services](operations/local-services.md) |
 | build or run the services in a container | `docs/container.md` and [Container Image](operations/container.md) |
 | host the stack on GCP behind IAP | `docs/gcp.md` and [GCP Deployment](operations/gcp.md) |
 | move repositories or set up a new machine | `docs/moving.md` and [Moving Repositories or Machines](workflows/moving-repositories.md) |

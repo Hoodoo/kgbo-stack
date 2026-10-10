@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:f95401f3353ac9912f5b276a11ec57b6a96d89b2a1a4167cb3a601ab945c18b4",
+  "claims": [
+    {
+      "id": "claim_9ccac9316c1b98476818e850ddd41ee9",
+      "statement": "bin/kgbo units writes systemd user units to ~/.config/systemd/user by default, or to --dir, and --dry-run prints them instead.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L382-L391",
+          "version": "repo-lines-v1:sha256:2c75aa7887bf30b259db6b0fefa02e76276ed2a618531532586dd440b334c235:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhMmViYjRjYmIzYjg5YzFiYzA2OWU5M2VlMjA4YTIwYTU3MjRiMzA1ZjUyNDE5MWEzYzE3ZWRjMWRiYTJmZmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4YjJjYzJjNDQ1YmEyNzFhYjA1ZTgzNTRjODQwYTRmOTYzZTQyMmE3YTU3YWYxOTgxODAyY2ZiN2YzNDFhZGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYwNGM5N2EwMzRhN2Q5NGQ5MzEzYWZhMWYyMTlhOGJkMDAzMjlmYjYxMjk3YjI5OWNmZjI4ZDg3MDBjYTBmMjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTJjNjdkNDJhOTdmYmVhYzI2YjQ5MTJiNjQzOTY3YzQ1MGUyNTI1ZmMwZGEwNTJhMDk5OGYyODQ1ZjBjN2YifQ"
+        },
+        {
+          "resource": "repo://bin/kgbo#L411-L420",
+          "version": "repo-lines-v1:sha256:7b6c39f49fec367e821779c533855177151c4271e2d3e43252cf41539005a331:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhMzFiYWIwY2IwNTk0NDU5Yzg5ZmViYTk0NzJjYWY5ZDE3MzZjYzBmNWJmNzRkYjMyNDdhNTkwZjc3MWYwMDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY3ZTY0YmIyN2NkNWMwYjg0NDE3YmEyZjg2YzMzZjEzZTQ5YjUxYzQ4MWU2NjAyNWRhYjk2MGZjY2RlNTRkNzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVmMzFkNTlmZWEzMzU1YWQ1Y2IxMmFlNmU0NDU1OTczNWIyNTAyYjRhZjY4ZjU5ZmE0NGQ2Zjc2Y2JkMDI1MzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ0NWU3ODEyYWJlMTE3MjgxYzBjNjU5ZWY3OGZmNDRiNTg4MmY1YjhiYzFjOWY3MjlmZTljYjIzY2ZlMzMzNWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_872d59fcc3aed46670a5b82b8ec8ff72",
+      "statement": "The SERVICES table runs kata daemon start --foreground, owcli serve on 127.0.0.1:4321, bossman serve on 127.0.0.1:7788 with --sync-every 1h, and goatlassian serve on 127.0.0.1:7799.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L337-L345",
+          "version": "repo-lines-v1:sha256:b3afd0e3c3c8456317584faaba6e17fb1a7986b58a8cf294c52dc0a328937001:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmE1YWE3ZjkxNjE1YWE4MDc2YjkwM2NlYzA5YjIzNWE0YzNjNzNhY2U0NzIwOGRhYmMwZDQ1OTBhODc1ZGE4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk0MTZlMDlmNzhiYTMxNmMwMzI1NjgyMTNiODU1ZWU3NTZlNDE1NjVkOTE4ZjA5NTE5YzgxZmQ2MjBmNDA2MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmVhZTM3NGIxMWMwMzRhODI1OTcxZTgzZWM5OTE5YTU5MmNlMzg4N2RhNDdhYWQ0ZGI5YmJmM2JkNzBmODMzOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDVmYWYwMjMxZDlhMjU1NDBhMzFjNmU4OWIzMzk5NDBlNmI2YTZlZjMwMTc1NGVmYzgyNTA1YTM2YjBhYmJkMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0480c74575d0498513b9657f8d04536c",
+      "statement": "The units use the same loopback addresses as the container's kgbo-services defaults.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L337-L345",
+          "version": "repo-lines-v1:sha256:b3afd0e3c3c8456317584faaba6e17fb1a7986b58a8cf294c52dc0a328937001:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmE1YWE3ZjkxNjE1YWE4MDc2YjkwM2NlYzA5YjIzNWE0YzNjNzNhY2U0NzIwOGRhYmMwZDQ1OTBhODc1ZGE4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk0MTZlMDlmNzhiYTMxNmMwMzI1NjgyMTNiODU1ZWU3NTZlNDE1NjVkOTE4ZjA5NTE5YzgxZmQ2MjBmNDA2MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmVhZTM3NGIxMWMwMzRhODI1OTcxZTgzZWM5OTE5YTU5MmNlMzg4N2RhNDdhYWQ0ZGI5YmJmM2JkNzBmODMzOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDVmYWYwMjMxZDlhMjU1NDBhMzFjNmU4OWIzMzk5NDBlNmI2YTZlZjMwMTc1NGVmYzgyNTA1YTM2YjBhYmJkMiJ9"
+        },
+        {
+          "resource": "repo://deploy/container/kgbo-services#L19-L21",
+          "version": "repo-lines-v1:sha256:12f35dcf1eca0eaa51aed08723aa1b34c4fb6610ec26ad1438664e3e13b372ea:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODhiMWMyOTUyNjk5YjY5ZGY1YTU1NjRiOTkzYzBlMjg0YTJmZDQ1NzMzZTg3OTNiZTA4NDlkNjNhNzJlYmE5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmI1N2ZhYTA0NjdlYTg0M2VkMTI3MmRiZjFmMDE5NmJlOWIzNDg3ZDg1YzkwYmIxMjg5YThjYjYwNDRkNzY3OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODkxMzU3NDVmMjQ3NmJlOWYzYjczYzkwMTJhMDVlNzM4NTY5ZDllNTVkZGE5ODQwNGVmNWIyMzczNjJkYTc1MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTE3NGM3MmExNzk0NDc4Y2IxNmQ5ZjUzMDQwMWJkYTAyNTkyN2FhY2M5NjkzNjllZDBhYjFjZGQyZGRiMDMxMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b082204cb4cbbb1caa0185deada736e8",
+      "statement": "Each service is PartOf and WantedBy kgbo.target, which is WantedBy default.target, and goatlassian Wants and starts After the kata, owcli and bossman units.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L343-L344",
+          "version": "repo-lines-v1:sha256:fae2dbf727ff76efc6bde0de0ac4e8be38abc4be8a2f3d01459e7b4ae479cc67:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmUyMzY4ZDkxZTFkYTkzNWEyMWI3OTlhMmI5YTQ4MjJjYmE5ZGM3OWNjZGQyNmRkOTc5N2Q4ZDUxODkwYjA2NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjhmZWRlODIzY2Q1YTc3MDBkNThhY2Y0M2FmN2Q5MzAxZmZkZjgzMTEwMmIwYjUyMzQ5MGJkMTAyMWU2ZDlmYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDFkMTdmMWZjMDQxMDAxZWRlNzAwM2Y0ZjE5YmRjYTdkN2IxZTc4NjIzM2NiMDRmNDhjZGEyNDVlOWQ5NjU2MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDNkMTcxZGU3NTQzMWEwMjFhMGQ5NGZhNzZmYWJmMGQ3MTM5Yzg5OGMxYTBiNDRiNDNjYTYwOTAzZmExYjg0NSJ9"
+        },
+        {
+          "resource": "repo://bin/kgbo#L358-L363",
+          "version": "repo-lines-v1:sha256:5fbcc3461a801f35e180ec3e41a346c7837b2601826a11d900ca3024d54ae657:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTY3ZTQyYjVkMWM5Y2U4OWUwZmZlMTY5NzdhZmUzODIxYjJkZjcyNTljZWZkZjU0NmYwMTMxMzNiYTM2MGE4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGFhMTUxOTRhOGI0MjI0NjVkY2FkYWMxNWI5ZjRjMTg4NzY3MDJmYjliMWNiMmUyYmVkNzE1ODY0MzY1NTI3ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGRhZTc3NWY4MDY1NjIyN2EzOGQ2MzNhN2U5YzIwMWYyMTA3N2RmZjI3ZjIzNTRlM2FkNGM4ZmE0MjI1MDZlZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODBhNzU4OTU5Nzk3NWM3ODFhMjljMDZkMmY3ZGE1MTVmYjVlNDFiYjNjZDYzZDE3NjEyNTc1ZjVhMzg1ZDNjMSJ9"
+        },
+        {
+          "resource": "repo://bin/kgbo#L377-L377",
+          "version": "repo-lines-v1:sha256:df757190ecc8dc2756c2c859d3981ea7d588050c4c330cda5219b0aa2b113e97:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGY3NTcxOTBlY2M4ZGMyNzU2YzJjODU5ZDM5ODFlYTdkNTg4MDUwYzRjMzMwY2RhNTIxOWIwYWEyYjExM2U5NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGY3NTcxOTBlY2M4ZGMyNzU2YzJjODU5ZDM5ODFlYTdkNTg4MDUwYzRjMzMwY2RhNTIxOWIwYWEyYjExM2U5NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2IzYTMxYmI3NDBhMDM3NmE1YmRlMWMwNTkyMjZiZDU5ODQ3ZjU3ZDVmNWIxNTUxNDk4MDQ3MTk2ZjI0MjUyOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGRkMjQ1NGVhMTcyZDVlN2I4Y2YzOWFlNjllYjk2N2Q5YWM3Mjk1NmI5YWY5OWRhMTc4NTk3MGM0MjU3MDFkZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cab31c5f77c853664c9dc640d54ae51e",
+      "statement": "Every unit restarts on failure after 5 seconds and runs in the home directory.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L368-L368",
+          "version": "repo-lines-v1:sha256:5f91223ed138c78f23d61903ae970b74d338747b6d527e8eb428e2934377406b:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWY5MTIyM2VkMTM4Yzc4ZjIzZDYxOTAzYWU5NzBiNzRkMzM4NzQ3YjZkNTI3ZThlYjQyOGUyOTM0Mzc3NDA2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWY5MTIyM2VkMTM4Yzc4ZjIzZDYxOTAzYWU5NzBiNzRkMzM4NzQ3YjZkNTI3ZThlYjQyOGUyOTM0Mzc3NDA2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDg2NDAwMDhmMmI1MzA0ODcwYTgzNDA4ZGEwOGQ2ZDdlZmM4ZDZlNWM5MmE0NTg0ZWQzYWU3Yzk3NDBkNDU2NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTBiOWRmODVkNmM5YjdiOTVmZjk1NGFlZjA4NjE2YWJhOGYzYjRiNmRjYmJkZmE4YTA5ZjQwZGExM2ZhNTBkYiJ9"
+        },
+        {
+          "resource": "repo://bin/kgbo#L377-L377",
+          "version": "repo-lines-v1:sha256:df757190ecc8dc2756c2c859d3981ea7d588050c4c330cda5219b0aa2b113e97:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGY3NTcxOTBlY2M4ZGMyNzU2YzJjODU5ZDM5ODFlYTdkNTg4MDUwYzRjMzMwY2RhNTIxOWIwYWEyYjExM2U5NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGY3NTcxOTBlY2M4ZGMyNzU2YzJjODU5ZDM5ODFlYTdkNTg4MDUwYzRjMzMwY2RhNTIxOWIwYWEyYjExM2U5NyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2IzYTMxYmI3NDBhMDM3NmE1YmRlMWMwNTkyMjZiZDU5ODQ3ZjU3ZDVmNWIxNTUxNDk4MDQ3MTk2ZjI0MjUyOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOGRkMjQ1NGVhMTcyZDVlN2I4Y2YzOWFlNjllYjk2N2Q5YWM3Mjk1NmI5YWY5OWRhMTc4NTk3MGM0MjU3MDFkZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_bcffe0f9f04480b065ad7026b74d9144",
+      "statement": "kgbo units only writes files and prints the systemctl daemon-reload and enable --now command to run next.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L389-L394",
+          "version": "repo-lines-v1:sha256:5f1289ce9d29ba1c57b53afa6eab89179e0430f2b23041b7807e342a47174093:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzBiZTE3N2YxMDQ3NmRlNWYyNThmMDJkY2E2ZmFhZjJhMjg2MGVmZjhiYWM4NTVjODgyZDg5MTNkMDlhOWZlOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2I5MjgyMjg0ZDcyMTVlOWI5MzZmMWIzOTU2MGZjZDBlY2Y1ZjhhZjYwMzkyMDVjMzE0MWJhZDM0OTdkNGYzMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjhmMTVjMjhmNDFkMGExZmZlMjNmNmJkNzAyYjZmZjQ0Yzc2YWY3ZGU3OTk3MTIyNWYxYjk0ZjIxMjgwYWRiNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODkzYmQ2NmUyYmI3MWYzYjhhOTI0MDY0YmJmN2IwN2M1OTAzYTc3M2ZhNGY4YzM1NDYwNjAzODY2NzFkM2E3MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_77258087bb11f8dcf2e26da4579b593d",
+      "statement": "unit_files resolves each tool with shutil.which, fails when one is missing from PATH, and writes absolute ExecStart paths plus a PATH of the tools' directories followed by /usr/local/bin:/usr/bin:/bin.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L348-L357",
+          "version": "repo-lines-v1:sha256:6887d48fe7b1515d2ae9b28720251ff86bff55325160fe1a36e142af844f4f63:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjMzA1Zjg2Mjg5MjZjNmE4ZmM4YTA0MTIyZjMwMWY5ZGIzY2UwOTQ2OTg4YTY3ZTVmZGY4ZjhjNmIyMWViNjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViY2M0Y2UxYmNlYTVlMzAxMDBhZGNjMzZlZWJjNGVhZTIyYjM2ZmFhMzczNzI2N2QyYmY0ZDUxZTc3NTMwNWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQzZDE3MWRlNzU0MzFhMDIxYTBkOTRmYTc2ZmFiZjBkNzEzOWM4OThjMWEwYjQ0YjQzY2E2MDkwM2ZhMWI4NDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllNjQ0MDg1YmNkNDI5YTI5Y2FjNGU0OWVhNDg0MTYzNzU4YjFmOTNkYzZhMDUyODQyZjU4NWM5ZTQ3YjUzYTUifQ"
+        },
+        {
+          "resource": "repo://bin/kgbo#L374-L374",
+          "version": "repo-lines-v1:sha256:a9a815eba371785e78702e8e4fff0a02f0ce290c3cd95d6174cd9e511652be02:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTlhODE1ZWJhMzcxNzg1ZTc4NzAyZThlNGZmZjBhMDJmMGNlMjkwYzNjZDk1ZDYxNzRjZDllNTExNjUyYmUwMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTlhODE1ZWJhMzcxNzg1ZTc4NzAyZThlNGZmZjBhMDJmMGNlMjkwYzNjZDk1ZDYxNzRjZDllNTExNjUyYmUwMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWEyZWFjM2JmZmQ2NTkwNjEzZjg0NTNiMzcwZWEzZDMxMjQ5Zjk5YjA0YzNkOTkwN2ZhODVkNGQ3ZmIyMjI5MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzc5N2RmYThhMzdjYjNmMDhlZjhlNWQwMWE5YTU4MTBjMGM3MGJmNmRiZDM3NmVmMTU0ZTMyNDBlZTYzNTk3OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b216c714e5902e49cedd57b6ef4e6814",
+      "statement": "The bossman cron line records the path from command -v bossman at install time because cron's PATH has neither ~/go/bin nor ~/.local/bin, and stack.toml's schedule does the same.",
+      "evidence": [
+        {
+          "resource": "repo://docs/install.md#L66-L68",
+          "version": "repo-lines-v1:sha256:c9bf08ec7b11c8f7ec37c530826db78629a71e0c242897c6f6479167f3010fe0:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWYxZmE0NDA2ODk4OGIxNmYyZmIzYjFmYzA1ZGExZWU2YzFlMzE4MDk3ZTZkMGI1YjA5ZjUzM2ZlNDU0YWVlYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzQzZDgyNTBiNGQ0ZWUzZTQwMWUzMTQ1ODAxZmE0YzYyZWRhZTk4ZDYyYjMzMjY2ZGM1ZTM2Y2Y5NTg5N2NkNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGJiYzg2MjMxNjQ2ZjA3NmYxM2U0MWQ4ZGUyZDQwYjI1ODc4NDg5YWYzZGI2YjMyNDkwZjBmZTY3Y2MzYjFkOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzUwNGQwMGRhNmJlYjE3Yjc1NDVhNzc4N2UxMTNhYmE0MDdjMjI5YTMwMTNlNjk2ZTc1YThmY2VmYTJlMWFlNCJ9"
+        },
+        {
+          "resource": "repo://stack.toml#L131-L131",
+          "version": "repo-lines-v1:sha256:c630b421d85c5dccb057a69c479cea8562459b407ac7111b97fe61d02a84ecdb:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzYzMGI0MjFkODVjNWRjY2IwNTdhNjljNDc5Y2VhODU2MjQ1OWI0MDdhYzcxMTFiOTdmZTYxZDAyYTg0ZWNkYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzYzMGI0MjFkODVjNWRjY2IwNTdhNjljNDc5Y2VhODU2MjQ1OWI0MDdhYzcxMTFiOTdmZTYxZDAyYTg0ZWNkYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmZkOGQyYzNmY2ZlYmUxM2ViMjIwMTNiYWJmMGE3ZjdmYWYzMTIyNGU5NmNhOTUzOTQ3MTNhMGRkOTAyNWM4ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2VlMTFmYmYzMzI1MWVjZTMyMTY1Yjk3NTIxMTdmOWZmYTg4ZDdmMWY3OWNmMTFkMDNmY2Y1MWVjNWI2MTIzZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_fcfd5930af931f9e356fe680a2eff0e9",
+      "statement": "Every unit sets KATA_AUTOSTART=0 so a kata command cannot start a second daemon, as the container image also does.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L364-L367",
+          "version": "repo-lines-v1:sha256:567385459fb0b0e4a8137e826fcbda97269ea2bc3e0c03dcf134955030e4c934:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjlhYzcyYzIwNDIxYjBlNTQyYThjNDkyNGM4ZTMzN2M5MjIwYTk2NjhjN2EwYzNhODQzNmMyODI2NWMyOWExYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODY4ZGZiYmU5Nzg2NzZlNDVhZDM5ZTc3MmM2NzQ2YTI2YWI3ZTYwMjIyYTQxOGNmYjNhZWEyMTZhYjkxMWZlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTUwYTYwYWVlZmI3ODM5NTg5MzhiYmY1MTE4Y2Y0OGViNjRiZjQzNmFiNGU3YzUxYTA3ZmRlMDBmNjE2ZTI4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDVmNjk0N2NlZTlhNGNmODRiNWVmOGFlNzYyOTE0ZmIyYzY1NWZkMTQxZWQyZWVkM2IxMTFiZjc4ZjZhOWVjOSJ9"
+        },
+        {
+          "resource": "repo://deploy/container/Dockerfile#L45-L45",
+          "version": "repo-lines-v1:sha256:7e1ff46021af51e2ae491976e4dd0718004dced05c21267bc43543b935b4f83c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2UxZmY0NjAyMWFmNTFlMmFlNDkxOTc2ZTRkZDA3MTgwMDRkY2VkMDVjMjEyNjdiYzQzNTQzYjkzNWI0ZjgzYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2UxZmY0NjAyMWFmNTFlMmFlNDkxOTc2ZTRkZDA3MTgwMDRkY2VkMDVjMjEyNjdiYzQzNTQzYjkzNWI0ZjgzYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODY4NGI1ZjM1MDAyMmQxNDZjMzA4ZTc3ZWNhZTI5ZGZkYmNmYmNkOTY3MTk2YzMyNWJjOTZmYmUxNjAxMDQyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2Y1YzRlYmE2MzE4Yzc1YWQ1MTY1YWYyYWUwM2MwYjVmZWMxYWRjZGJlMjM3MWZkNjRjNTdkN2ZiMjA2Zjg3ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_50e7608a4116d58ede444b316e280631",
+      "statement": "kgbo-kata.service runs kata daemon stop before starting, to take over from an autostarted daemon, and polls kata health for up to 60 seconds after starting so units ordered after it find the daemon up.",
+      "evidence": [
+        {
+          "resource": "repo://bin/kgbo#L369-L376",
+          "version": "repo-lines-v1:sha256:ea5c8f7a5e2db25170ba01ae3b73b04d4bce11edc3dfeadf0e6a84adbba44670:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZmUzMWEwN2VkMjRkMWM3MWExNTFmMDFhMTIxODgwMjU1ZjYxOTk5NTlmYWI0ODVkMWQ3MTI4ZTMzNjFlZThkYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWZmOGZlNTBiMzQyNDIwNDJmZDBhZjY3NGY0NzdlMmVkM2MwYWE3NmJlZDM3Y2FlOTBlNjliNjE4MDE4YWJmYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjRkYzA0NmE4Mjk0ZDczYzRlZWVkYzg1ZThlZWU3NTY5OGEyMjcwODUwMjQ3MjdhM2M3MjViNmFhNjFiZGMyZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTRkMTRkNTM3MmMyZTBiZTJmM2ZiNWVjOTc4OWFkMmUzNjJmMDQxMWE5ZDY5YzU5YTkwNWE4YmEzMGI1MjhlZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_8496ef61cd4757cdb2b1fb10a927c38b",
+      "statement": "The units take the bundle variables from environment.d, which the user manager reads at login.",
+      "evidence": [
+        {
+          "resource": "repo://docs/data-bundle.md#L64-L74",
+          "version": "repo-lines-v1:sha256:db5c29e52d283d3687ae507b8ea2c99f9686f5e62f9038c1f6630e40b7125da2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3MTMyOTQ1MGEyZTNlM2Y0YWZhZDMwODM1NjE2N2UyMzkxZjc3YTg5N2E2ODdlMTg1MTJlYzA4Yjg5YjRkMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxYjM2N2UzNmU2Y2Q1MzViMThkMWM3Y2U4ODFmYjZjOGQyOWFiMTJjZjNlNGUyZDNkY2E1YjFhZDA5Mzc5OWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzNGUzZDU3NDc1MjRjNTRjZGQ3MjY5NzJjOGQyZGI1NjRmY2JlYWJlZTZhYzljMDQ0ZjNiNzY5MzJlZGUyZTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBhM2I1ZjM4MjIxYWMzMDBlMWE5YjVkMDVmMDQzYTQxNzNlOTQyMzhhYTBiOTExNWM5MTJjZjZhMTA0N2NkNGQifQ"
+        },
+        {
+          "resource": "repo://docs/install.md#L96-L97",
+          "version": "repo-lines-v1:sha256:ff9fe3eb3264ffce76f7308b4097d570a3df62bc2fd044edef4c3ec2b106008b:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmM1YmIxM2Y1M2ZjODY4NTIwYWNhODg5Yjg5NGVmZjIyZDA3MGI4NzlmZWU0NWI3ZWFiOTcxMzk4NThiNTQ4OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGQ3NWU1MTFiYjA2MzEyNTc1YjhjY2M2OGJmODM0YzE4NGJlMjI4ZjBkNDA3NjQ5MTRlODg0NGYzYjA2N2MzMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDc2ZGI2OTM0ZDQ0MTk5ZGYwMjY4YjRhMmFjOTZkNjU4YmNmNzU1OGRjMTczOWIyZTRiYzdmMmJmNmI5MDdlOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmNkZWUyYTdlYjlmMWQ4MGRlMzA5YmYzZjMzZjI4OThlYTFiNTMxZWI1NTlkNmM0YjcwZWNkYjk2MGZiN2IzNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5a3337bffc0f0b522f73387913519e55",
+      "statement": "bossman's unit syncs hourly while running and replaces the cron job; docs say to use one or the other, and lingering keeps the units running without a login session.",
+      "evidence": [
+        {
+          "resource": "repo://docs/install.md#L77-L90",
+          "version": "repo-lines-v1:sha256:9678cf5e4946ac508c7c795d7d4a3a945bd14c4560b30fd3800fcbeabe2ed200:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyYTk2ZGRmYjhkYzRiNmMwYWZmYTE3NGE0MTA0NzI4ODhlOWNhNWVjODMwMjhlYjk0YjFlODc5Nzc1ZDU4ZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU5NTE1OWFlMjQ1OWQxNmEyNmViMmI4NWNmMGU4ZTE3MWNhNmM4MDI4YzVlMzY2NGU2MWY3NDJlZGEzYWVjZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFlMjg2MThhNjRlOWM2ZDNhYzBkOTY1ZTc2OTc1N2YxMDg5NTJiOGYzMmQyOGM2YmEwMWYzMDcwOWVlNWIwZGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6997604fa28c270693299cd9a6ea103e",
+      "statement": "Step 6 of the install guide lists goatlassian services start and systemctl --user start kgbo.target as the two ways to start the services.",
+      "evidence": [
+        {
+          "resource": "repo://docs/install.md#L169-L169",
+          "version": "repo-lines-v1:sha256:ec25f112d5f87dd903e579ead0cf60a7ae751345c0e2a69cb50bd90d2ca9227d:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWMyNWYxMTJkNWY4N2RkOTAzZTU3OWVhZDBjZjYwYTdhZTc1MTM0NWMwZTJhNjljYjUwYmQ5MGQyY2E5MjI3ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWMyNWYxMTJkNWY4N2RkOTAzZTU3OWVhZDBjZjYwYTdhZTc1MTM0NWMwZTJhNjljYjUwYmQ5MGQyY2E5MjI3ZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODM0NjBiOWVjMTFlMjA3N2Y4ZjMzZDk5NjY3MjM1N2FlMWE0NGQ2MWI3M2ZmZGFhMWUxMjNjNWJhZmY0OGMyNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmM3NGM1NWRiMjM5ZGFmZmJmNTZkMGU4NDZlZGJlNGQ1OWNmNmZjYTg3NjY0ZjQ2NWFjYTZhZTFjZjgwMzEzYSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "owcli/v0.4.0",
+    "at": "2026-10-10T14:10:23.401Z"
+  }
+}

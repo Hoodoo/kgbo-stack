@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:a356143d9df1909d3d77d263c02ee08c8c7683a07ed6fee666d21a72e8463fa8",
+  "pageVersion": "sha256:06296fd3fca629ce6be0075f3c7534dfdb9bd1c2f748a4b6825c9931deb0342f",
   "claims": [
     {
       "id": "claim_fc72b3a441bb8c4e9837ff7caec07238",
@@ -45,7 +45,7 @@
           "version": "repo-lines-v1:sha256:a727445cfe39a997bdde04206eb8f9583fdf813fc6ec243bc0f6a14a581d6418:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGJhYjEyNjY1ZDk4YWVmMDIxYmE2NDk1M2M2MWIwZWQ4YTkwOGNmYjU2YTFjMDFlMmZjYjRiMDUyYjcxYTJhMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzY1ZmQ0M2QxMGM4YThlYmY2OTBkNjNjNDYxYTg4MDNkYTYzMDliZDdlZjBkMWZkNWMxMzY2NmRhZGNiODNiYiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
         },
         {
-          "resource": "repo://README.md#L42-L44",
+          "resource": "repo://README.md#L43-L45",
           "version": "repo-lines-v1:sha256:ec2e6a9e6c5b83dc447094d0bba92059c0d8fef10d2914968d9be1e0a27bcbbe:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMTgzNDY2MzFlMGE5YzBjMDBkNTM4ZjI3MTZkMzc4MDMwMTczYTkyNGEzNGFhOTk2YTYyNmZjMmZmNmE0OGZmNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGE2ODQyYzhhMGVmODU5MGU4ZWQ3ZjQ4YTE5YzdhNTNlY2MyNmNjOTVkODc4NWFlNDBjNjU3NWNjMWU3ODJhZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTQxNGRlZTI2MmJhYTVlOTg2MzNjMGZhNzBjZjc1MmU0NWE2YWVlOWY0Y2UyNDExNDhkYzI1YmVkZmNjZTAwYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDMwNDU1OGQ4YzMzZThjYWNlNTQxMDAwM2EwZjMxMTdkODQyMmE3ZDBhOWQ2OGFkZDY0OTBmMGM4ZWVkMWNhZiJ9"
         }
       ]
@@ -72,14 +72,14 @@
     },
     {
       "id": "claim_f6014ef1164134b8000a6d97ebec3535",
-      "statement": "bin/kgbo offers env, homes, snapshot, adopt, and remap subcommands for the data bundle and moved repositories, driven by stack.toml.",
+      "statement": "bin/kgbo offers env, homes, snapshot, adopt, remap, and units subcommands for the data bundle, moved repositories, and systemd user units, driven by stack.toml.",
       "evidence": [
         {
-          "resource": "repo://bin/kgbo#L1-L14",
-          "version": "repo-lines-v1:sha256:69b713bb8a898162b5bb67fe3b1adda5bc14d8d4bf2e939e6193d9c218ccb904:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2ODJjYmRiNGM4YjA3NTE4YmY0ODZjNTg5OTBmYzM5MTc4M2FhMjBhOTE2YmZiMjdhZDIxMWViMWQ1YzM2NDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1NzFhNjdkODk4MjI4ZjViODllZmY4ZTI0NjBmOThiOTlkNWFlMDYxNjZhZDU4MjJmOTY4YzZlZjI0MGMyYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZjMDhhYjliMjkzNGFkYWRkMGEzN2YzNjc3M2EwZDkyOTA4MmZmNTVlZWViNzc5ZTdkMWNhNTRlYzgwZDYyOWUifQ"
+          "resource": "repo://bin/kgbo#L1-L16",
+          "version": "repo-lines-v1:sha256:dd7a0bb5b9e73327ce4124a3be9190c831e02bb50068fa78b565ba17e3201956:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2ODJjYmRiNGM4YjA3NTE4YmY0ODZjNTg5OTBmYzM5MTc4M2FhMjBhOTE2YmZiMjdhZDIxMWViMWQ1YzM2NDIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1NzFhNjdkODk4MjI4ZjViODllZmY4ZTI0NjBmOThiOTlkNWFlMDYxNjZhZDU4MjJmOTY4YzZlZjI0MGMyYmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZjMDhhYjliMjkzNGFkYWRkMGEzN2YzNjc3M2EwZDkyOTA4MmZmNTVlZWViNzc5ZTdkMWNhNTRlYzgwZDYyOWUifQ"
         },
         {
-          "resource": "repo://bin/kgbo#L39-L39",
+          "resource": "repo://bin/kgbo#L41-L41",
           "version": "repo-lines-v1:sha256:b5260fc3f0efdbdb35685ea986dfae75ae8ab89708b34d146722c139ab4fa217:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjUyNjBmYzNmMGVmZGJkYjM1Njg1ZWE5ODZkZmFlNzVhZThhYjg5NzA4YjM0ZDE0NjcyMmMxMzlhYjRmYTIxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjUyNjBmYzNmMGVmZGJkYjM1Njg1ZWE5ODZkZmFlNzVhZThhYjg5NzA4YjM0ZDE0NjcyMmMxMzlhYjRmYTIxNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzQ2Njg3ZjRkNjM1ZGUwZWMxZTZkN2I5MjJjNzQ4YjMwMGI0ZWY1NDQ2Mjg1NjJkMTc0NmIyYjhlODU3OGI4NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTZlNmIzMDJkNDMyY2ZjZDQxOTkxNTg0N2UzMzhkNzVjZmQ1YmI3ZWY4ZTc2ZGIyYzQyODgxNGFjZTQxZmM3MCJ9"
         }
       ]
@@ -89,7 +89,7 @@
       "statement": "docs/data-bundle.md documents the one-directory bundle and consistent backups, and the README links it.",
       "evidence": [
         {
-          "resource": "repo://README.md#L30-L32",
+          "resource": "repo://README.md#L31-L33",
           "version": "repo-lines-v1:sha256:cbe42a93875e410070a8063dd073ab029cbf79c52b90feb0d505ff5a98d8ff69:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzUyMDQyMzk3ZmI5MjY1YWFlYzE0OThkYzhmMDAxMWEyNDFiNmM1YjViY2QyMjJjZDk3MmIwZDE4YTZiMDNkNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWQ4OWU4YjU0ODY5MjVmMjlhNzZjMTM3NTEzMGEwYzRmM2YxYmIwMTUzM2U5ODJmZjJiYjNkYzQ5ZWMyODRiNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOThkY2YxYzhiYjRlMzk3NWJiNGYwNDZhMmNmMTJjMWMxZTFjMDExOGEyNWJmZDRmZDZjNGEzZjE4OWZjMzFiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTQxNGRlZTI2MmJhYTVlOTg2MzNjMGZhNzBjZjc1MmU0NWE2YWVlOWY0Y2UyNDExNDhkYzI1YmVkZmNjZTAwYSJ9"
         },
         {
@@ -107,7 +107,7 @@
           "version": "repo-lines-v1:sha256:cce528c0bdc1be20cb3ef7560daa84fab2ebd5ef5b7869fb8418f4607f4820fd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0ZjdhMmIxNmQyNDRjMjU4NmIyMGU2OGNhMTZlMzc4MTg1Yjc5MzNjNzFkOWFhMjJhNzM0YTNiZjJiOWFjZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkMTVlYzViMWRmNjAwMDA2M2QyZDMwODM5OTJiMzI2MjdmNjI4YzI2ZjFhMmY2M2I5ODJlZWRkMzEwZDgyMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         },
         {
-          "resource": "repo://README.md#L35-L36",
+          "resource": "repo://README.md#L36-L37",
           "version": "repo-lines-v1:sha256:7f14113fca6e3918369b56cfa590ad2e6eb463bf49dcbdd7acd100b5bd402261:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjJkY2I3NWM4ZWRhZDBjNGYxOGM3MTY0Mzg0MTY4ZjcxNDczNDdjYTVlZmM5M2U2Zjc1MzA0YWNiZDcyZmUzYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjQ5ZjZlMDI0MGNkYTJiNzc1OTcwMjFlZWM2NTM2NWY4ODg5NjU2ZTc0ZTY4MmI0ZTA2ZTMzODFmMDJlOTU0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzI5YWQyMTY1MjQzZDE2YWE4NzViYWQxNjUyZTc0NjM0OGI2YzMxZWU3MDkyOTEwZDc2YTBhY2FhMjhkYjY2OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMmM0NGEwYWQ1ZWQ4MDkwZTFiNWIwZTVmMzQxY2FlOWNlYzZmZmNkMjliZjkxM2MwMzkwNmY1ZGIwYWI0YmRlOSJ9"
         }
       ]
@@ -117,7 +117,7 @@
       "statement": "deploy/gcp holds Terraform for the image on a GCP VM behind a load balancer with IAP, documented in docs/gcp.md and linked from the README.",
       "evidence": [
         {
-          "resource": "repo://README.md#L37-L38",
+          "resource": "repo://README.md#L38-L39",
           "version": "repo-lines-v1:sha256:79fc54ba4f31985bbbe7510e0c2de81945b512cca1fb1132b91c95440d98d0f5:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTFhNTZlMjM3Njc2MzZkOTJjNjIyZDQ3YTllMzg1ZjAwMzU1MzA1YjYyNTQxZmYyODRiNmU2ODUzZGE1ODI0MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWMxMTIxNDYwNTQ0Mjg5NmZlNThiZjc1OTI3ZDFlY2ZlOTQ0N2NmMmU4YWY1MDVjNjNkOWE1ZGZlYTVjOWFhYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTg0ODBlYTBjMzVhODk5ZTNmOGI2YzlkNGU2MDZjZDlkMWQ5OTg0OTdjY2U4ZDk2ZGQ3ZTYyNjExZWU4ZjMzMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTQxNGRlZTI2MmJhYTVlOTg2MzNjMGZhNzBjZjc1MmU0NWE2YWVlOWY0Y2UyNDExNDhkYzI1YmVkZmNjZTAwYSJ9"
         },
         {
@@ -125,10 +125,20 @@
           "version": "repo-lines-v1:sha256:88b76a7b5438fb8c25a7187e25bdec1c620dc97b033dece380befe9412b7ad62:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4NzI1ZGNiZWU0MjIzMTRlMWI4ZTFlMGU1ZjMxMDJmYjViZTY4OGYwMTlmZDg4M2M5ODJjYzljNDRkNmU1OTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUzN2MyODllMDI0Y2E4NDRhNjM5MDViN2E1ZDA3NGJlODg1Zjg0NjFlZmEwZGY1ZjUwZTlmYTQ4NTIyN2E1MTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYwNjUyYjI1NmUzMzE5N2RkMjUwNDI3OWM3Y2NlNzczM2IyMmE4N2E5N2E5N2ViNjk5MTk2MWMzZDMxOWM5NzIifQ"
         }
       ]
+    },
+    {
+      "id": "claim_b5657a2ede3199c163d77ade32bcbe20",
+      "statement": "Running the services under systemd on a workstation is covered in step 3 of the install guide.",
+      "evidence": [
+        {
+          "resource": "repo://docs/install.md#L77-L97",
+          "version": "repo-lines-v1:sha256:9266116d138057d56024029bc7165650d096ad4953c8383c5adfee9ff28db333:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyYTk2ZGRmYjhkYzRiNmMwYWZmYTE3NGE0MTA0NzI4ODhlOWNhNWVjODMwMjhlYjk0YjFlODc5Nzc1ZDU4ZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkNzVlNTExYmIwNjMxMjU3NWI4Y2NjNjhiZjgzNGMxODRiZTIyOGYwZDQwNzY0OTE0ZTg4NDRmM2IwNjdjMzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU5NTE1OWFlMjQ1OWQxNmEyNmViMmI4NWNmMGU4ZTE3MWNhNmM4MDI4YzVlMzY2NGU2MWY3NDJlZGEzYWVjZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjZGVlMmE3ZWI5ZjFkODBkZTMwOWJmM2YzM2YyODk4ZWExYjUzMWViNTU5ZDZjNGI3MGVjZGI5NjBmYjdiMzcifQ"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "owcli/v0.4.0",
-    "at": "2026-10-05T09:32:54.380Z"
+    "at": "2026-10-10T14:11:10.499Z"
   }
 }

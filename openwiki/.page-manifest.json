@@ -29,19 +29,26 @@
       "gitHead": "f3b07e68eb5e7e0306b04dc54626313379e4cb68",
       "sourceFingerprint": "sha256:9508dcf15df0eb3ed76cb47fac1c9bd64e887d66ea325c5e5ebf88e283888fc3"
     },
-    "/openwiki/quickstart.md": {
-      "pageVersion": "sha256:a356143d9df1909d3d77d263c02ee08c8c7683a07ed6fee666d21a72e8463fa8",
+    "/openwiki/operations/local-services.md": {
+      "pageVersion": "sha256:f95401f3353ac9912f5b276a11ec57b6a96d89b2a1a4167cb3a601ab945c18b4",
       "completedBy": "owcli/v0.4.0",
-      "completedRunId": "d2c94be3-d6da-4930-b1bb-42d0352d11b3",
-      "gitHead": "c8215c0833e9aaa9ef5caaacb1fc229e51ba1256",
-      "sourceFingerprint": "sha256:6a7f8a5d5b170e85a3f2f8ab354e376ea2ba427462c421f0058e55355b0cea78"
+      "completedRunId": "919a23f4-47d8-4c66-b954-71b82278ce33",
+      "gitHead": "b613ff3657079deb75faa0012bf5246bb93d7415",
+      "sourceFingerprint": "sha256:05ea97d9ead9cbd8d591dfb8bbcef4985878abf8d12bef59d0937f28a4d1b441"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:06296fd3fca629ce6be0075f3c7534dfdb9bd1c2f748a4b6825c9931deb0342f",
+      "completedBy": "owcli/v0.4.0",
+      "completedRunId": "919a23f4-47d8-4c66-b954-71b82278ce33",
+      "gitHead": "b613ff3657079deb75faa0012bf5246bb93d7415",
+      "sourceFingerprint": "sha256:05ea97d9ead9cbd8d591dfb8bbcef4985878abf8d12bef59d0937f28a4d1b441"
     },
     "/openwiki/workflows/maintaining-the-stack.md": {
-      "pageVersion": "sha256:49b45314b928616d08c7ae8f4dc1870cee4b1be8f9a378450e3801d85c3c0ac9",
+      "pageVersion": "sha256:a017ff6b95df0ae53aebdb1134a0c1332e58cf5edb30314890d380fbe2974057",
       "completedBy": "owcli/v0.4.0",
-      "completedRunId": "793e13a2-8bec-41f8-90b4-53b751bc5d4e",
-      "gitHead": "bd31d9a2c92b1aceb1cc4252ed8f4bf7410894cc",
-      "sourceFingerprint": "sha256:4cab59fe865181a1243a27df5d12d673da969ef9e10074e58f7259f61596dd7b"
+      "completedRunId": "919a23f4-47d8-4c66-b954-71b82278ce33",
+      "gitHead": "b613ff3657079deb75faa0012bf5246bb93d7415",
+      "sourceFingerprint": "sha256:05ea97d9ead9cbd8d591dfb8bbcef4985878abf8d12bef59d0937f28a4d1b441"
     },
     "/openwiki/workflows/moving-repositories.md": {
       "pageVersion": "sha256:97db9a3d89e4abdf902147fe3a31503c723cf6976746e13429eb99a7bb2a565a",

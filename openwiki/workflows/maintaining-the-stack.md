@@ -5,7 +5,7 @@ description: How to onboard a repository onto the stack, add a tool or provider,
 tags: [workflow, onboarding, publishing, release, kata]
 verified:
   - by: owcli/v0.4.0
-    at: "2026-10-09T16:10:30.314Z"
+    at: "2026-10-10T14:10:53.459Z"
 sources:
   - id: openwiki-source-ddd99e512061ee9eb0ed82e9
     resource: repo://.kata.toml
@@ -21,12 +21,13 @@ sources:
     resource: repo://LICENSE
   - id: openwiki-source-1a91849fbfee35c0f5eed2a6
     resource: repo://stack.toml
-generated: { by: "owcli/v0.4.0", at: "2026-10-09T16:10:30.419Z" }
+generated: { by: "owcli/v0.4.0", at: "2026-10-10T14:11:10.634Z" }
 ---
 
 # Maintaining the Stack
 
-kgbo-stack's only code is `bin/kgbo`, the data-bundle script. Maintaining
+kgbo-stack's only code is `bin/kgbo`, the script for the data bundle and the
+systemd user units. Maintaining
 the repository means keeping three things in step: the manifest
 (`stack.toml`), what is derived from it (`docs/install.md`,
 `docs/data-bundle.md`, `docs/publishing.md`, and `bin/kgbo`, which reads it
@@ -41,8 +42,10 @@ released in their own repositories.
 [Roles and Providers](../concepts/roles-and-providers.md):
 
 1. Choose one provider per role (step 0) and install the binaries (step 2).
-2. Machine-wide setup once (step 3): a cron entry for `bossman sync`, the
-   `session-catalogue-close` skill fetched from the bossman repository,
+2. Machine-wide setup once (step 3): a cron entry for `bossman sync`
+   (written with bossman's full path), the `session-catalogue-close` skill
+   fetched from the bossman repository, optionally systemd user units for the
+   services (`bin/kgbo units`, see [Local Services](../operations/local-services.md)),
    and making sure upstream OpenWiki is not wired into agents when owcli is
    the knowledge provider.
 3. In each repository (step 4): `kata init --with-agents`, `kata init
@@ -52,8 +55,9 @@ released in their own repositories.
 4. Group related repositories (step 5): an owcli workspace for shared wiki
    search, and a goatlassian tag across the per-repository projects
    (`goatlassian status -t <tag>`).
-5. Verify (step 6) with `goatlassian services start`, `goatlassian status`,
-   and `owcli check` per repository.
+5. Verify (step 6) with `goatlassian services start` (or
+   `systemctl --user start kgbo.target`), `goatlassian status`, and
+   `owcli check` per repository.
 
 ## Backing up the stack's state
 
